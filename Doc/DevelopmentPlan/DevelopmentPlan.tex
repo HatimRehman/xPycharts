@@ -1,0 +1,116 @@
+\documentclass{article}
+
+\usepackage{booktabs}
+\usepackage{tabularx}
+
+\title{SE 3XA3: Development Plan\\xPyCharts}
+
+\author{Team 4, xPy
+		\\ Hatim Rehman (rehmah3)
+		\\ Louis Bursey (burseylj)
+		\\ Sarthak Desai (desaisa3)
+}
+
+\date{}
+
+\input{../Comments}
+
+\begin{document}
+
+\begin{table}[hp]
+\caption{Revision History} \label{TblRevisionHistory}
+\begin{tabularx}{\textwidth}{llX}
+\toprule
+\textbf{Date} & \textbf{Developer(s)} & \textbf{Change}\\
+\midrule
+Date1 & Name(s) & Description of changes\\
+Date2 & Name(s) & Description of changes\\
+... & ... & ...\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\newpage
+
+\maketitle
+%Hatim
+
+The purpose of the xPyCharts Software Development plan is to collect all the necessary information to complete the project in an organized method. Team members will refer to the development plan to understand what they need to do and why they need to do it. It will also be a reference to look back to for decisions that are made in the future. 
+
+This document describes the overall plan to be used by the xPyCharts project. There consists a Gantt Chart in the Project Schedule that shows a tentative flow of events required for the completion of the project.
+
+The document consists of the following sub-sections:
+\begin{description}
+  \item[$\cdot$] Team Meeting Plan
+  \item[$\cdot$] Team Communication Plan
+  \item[$\cdot$] Team Member Roles
+  \item[$\cdot$] Git Workflow Plan
+  \item[$\cdot$] Proof of Concept Demonstration Plan
+  \item[$\cdot$] Technology
+  \item[$\cdot$] Coding Style
+  \item[$\cdot$] Project Schedule
+  \item[$\cdot$] Project Review
+  
+\end{description}
+
+The development plan will be revised in the future to make any necessary changes, and to fill in the Project Review section. 
+
+\section{Team Meeting Plan} %Louis
+Our team will hold regular meetings on Tuesdays and Thursdays, for about two hours. We will meet either in a free room in MDCL or in the Thode Library.
+
+Meetings will begin with a discussion of the tasks completed for this meeting. If a task has not been completed, a plan will be made to complete it, and we will discuss the reasons this task was not completed.
+
+  Meetings will be chaired by the person most knowledgeable about the meeting's focus. Team members should come to the meeting with their tasks completed, aware of the current state of the project, and aware of the next steps planned. They should also prepare agenda items that they feel important to discuss. 
+
+  The Scribe will take minutes and draft agendas from the items brought by team members and upcoming milestones. Each agenda item should be phrased as a question, and should be unbiased, e.g.\ \textit{What Language Should We Use} is better practice than \textit{Should We Use C++?}.
+
+  The meeting should follow the structure of the agenda. Important decisions will ideally be decided by consensus. If a discussion stagnates and moves alloted time without the group reaching a consensus, a decision will be made by vote.
+  
+  Meetings will end with the scribe writing a brief summary of the decisions made and the tasks to be completed. We will also briefly reflect on the effectiveness of the meeting, and the things that can be done to make meetings more productive.
+\section{Team Communication Plan} %Sarthak
+
+The primary communication method for all issues regarding the project will be Facebook. We have created a facebook page dedicated to our project. In this manner any important announcements can be posted on the page and discussions can be carried out in a chat. We have exchanged phone numbers in case we need to discuss issues verbally. 
+
+\section{Team Member Roles} %Sarthak
+
+\begin {description}
+  \item[$\cdot$] Team Leader/Programmer: Hatim Rehman
+  \item[$\cdot$] Scribe/Programmer: Sarthak Desai
+  \item[$\cdot$] LateX Expert/Programmer: Louis Bursey
+\end {description}
+
+We have currently picked the roles given each individuals familiarity within each category. The experts in each of the category will be supporting the other team members. All members of the team are also working towards learning Git and familiarizing themselves with other required applications.
+
+\section{Git Workflow Plan}
+%ask ta
+
+\section{Proof of Concept Demonstration Plan} %Hatim
+
+The demonstration will consist of a graphical interface displaying the X and Y axes that are dynamically generated. The resulting Cartesian Coordinate system must be able to plot (x, y) pairs. 
+\begin{description}
+  \item[$\bullet$]  \textbf{Difficulties that may arise in implementation:} \\
+  	Plotting will be the challenge once the axes are drawn. The coordinate system in the code will have to refer to the the system drawn on the graphics template, while being written in the coordinate system of the panel window. 
+
+\item[$\bullet$]  \textbf{Difficulties that may arise in testing:} \\
+Manual testing will not be an issue as we can simply compare data plotted by the program against the same data plotted on an online tool (such as WolframAlpha).\\ \\
+Automated testing, however, will be a challenge if we want to compare two image files to check if the graph is accurate. One way to automate would be to create a bitmap of the program's output, and superimpose it onto another bitmap created by an online tool (such as WolframAlpha) and measure the differences. A discrepancy of z (to be determined) will allow us to measure correctness. 
+
+\item[$\bullet$]  \textbf{Required libraries and portability:} \\
+The program will use as many standard Python libraries as possible to ensure maximum portability. When an external library is required, preference will be given to the most updated library to ensure future maintainability. 
+
+\end{description}
+
+\section{Technology} %Louis
+This project will be developed in the Python programming language. To aid in project management, we will use the free version of the PyCharm IDE.  For automated testing, we will use the ImageMagick image comparison tool and the test files provided in the JCharts project.
+
+\section{Coding Style} %Louis
+We will adhere to the PEP 8 for Python style. Thorough and meaningful commenting is expected in all code.
+
+\section{Project Schedule}
+
+%Will have pointer to Gantt chart
+
+\section{Project Review} 
+%igonore for 1st iteration
+
+\end{document}
