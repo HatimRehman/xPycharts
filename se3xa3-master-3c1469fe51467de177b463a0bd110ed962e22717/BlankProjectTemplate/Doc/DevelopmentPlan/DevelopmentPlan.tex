@@ -3,12 +3,12 @@
 \usepackage{booktabs}
 \usepackage{tabularx}
 
-\title{SE 3XA3: Development Plan\\Title of Project}
+\title{SE 3XA3: Development Plan\\xPyCharts}
 
-\author{Team \#, Team Name
-		\\ Student 1 name and macid
-		\\ Student 2 name and macid
-		\\ Student 3 name and macid
+\author{Team 4, xPy
+		\\ Hatim Rehman (rehmah3)
+		\\ Louis Bursey (burseylj)
+		\\ Sarthak Desai (desaisa3)
 }
 
 \date{}
@@ -34,7 +34,21 @@ Date2 & Name(s) & Description of changes\\
 
 \maketitle
 %Hatim
-Put your introductory blurb here.
+The purpose of the xPyCharts Software Development plan is to collect all the necessary information to complete the project in an organized method. Team members will refer to the development plan to understand what they need to do and why they need to do it. It will also be a reference to look back to for decisions that are made in the future. This document describes the overall plan to be used by the xPyCharts project. There consists a Gantt Chart in the Project Schedule that shows a tentative flow of events required for the completion of the project.The document consists of the following sub-sections:
+\begin{description}
+  \item[$\cdot$] Team Meeting Plan
+  \item[$\cdot$] Team Communication Plan
+  \item[$\cdot$] Team Member Roles
+  \item[$\cdot$] Git Workflow Plan
+  \item[$\cdot$] Proof of Concept Demonstration Plan
+  \item[$\cdot$] Technology
+  \item[$\cdot$] Coding Style
+  \item[$\cdot$] Project Schedule
+  \item[$\cdot$] Project Review
+  
+\end{description}
+
+The development plan will be revised in the future to make any necessary changes, and to fill in the Project Review section. 
 
 \section{Team Meeting Plan} %Louis
 Our team will hold regular meetings on Tuesdays and Thursdays, for about two hours. We will meet either in a free room in MDCL or in the Thode Library.
@@ -56,6 +70,20 @@ Meetings will begin with a discussion of the tasks completed for this meeting. I
 %ask ta
 
 \section{Proof of Concept Demonstration Plan} %Hatim
+
+The demonstration will consist of a graphical interface displaying the X and Y axes that are dynamically generated. The resulting Cartesian Coordinate system must be able to plot (x, y) pairs. 
+\begin{description}
+  \item[$\bullet$]  \textbf{Difficulties that may arise in implementation:} \\
+  	Plotting will be the challenge once the axes are drawn. The coordinate system in the code will have to refer to the the system drawn on the graphics template, while being written in the coordinate system of the panel window. 
+
+\item[$\bullet$]  \textbf{Difficulties that may arise in testing:} \\
+Manual testing will not be an issue as we can simply compare data plotted by the program against the same data plotted on an online tool (such as WolframAlpha).\\ \\
+Automated testing, however, will be a challenge if we want to compare two image files to check if the graph is accurate. One way to automate would be to create a bitmap of the program's output, and superimpose it onto another bitmap created by an online tool (such as WolframAlpha) and measure the differences. A discrepancy of z (to be determined) will allow us to measure correctness. 
+
+\item[$\bullet$]  \textbf{Required libraries and portability:} \\
+The program will use as many standard Python libraries as possible to ensure maximum portability. When an external library is required, preference will be given to the most updated library to ensure future maintainability. 
+
+\end{description}
 
 \section{Technology} %Louis
 This project will be developed in the Python programming language. To aid in project management, we will use the free version of the PyCharm IDE.  For automated testing, we will use the ImageMagick image comparison tool and the test files provided in the JCharts project.
