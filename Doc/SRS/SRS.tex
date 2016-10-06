@@ -13,6 +13,7 @@
 }
 \usepackage[round]{natbib}
 
+
 \newmdenv[linecolor=black]{reqbox}
 
 \title{SE 3XA3: Development Plan\\XPyCharts}
@@ -88,20 +89,48 @@ User characteristics should go under assumptions.
 
 \subsection{Functional Requirements}
 
-\section{Non-functional Requirements} %lLouis
+\section{Non-functional Requirements} %Louis
 
 \subsection{Look and Feel Requirements}
-
-\subsection{Usability and Humanity Requirements}
-
+%
+%-----------Visually appealing
+%
 \begin{reqbox}
 %---
 \begin{tabular}{ccc}
-Requirement \#: & Requirement Type: 10 & Event/Use case \#: \\
+Requirement \#: & Requirement Type: 10a & Event/Use case \#: \\
+\end{tabular} \\
+%---
+\textbf{Description:} The graphs produced should be visually appealing and look professional \\
+\textbf{Rationale:} The programmer may be producing graphs for presentations, and will appreciate a good looking product \\
+\textbf{Originator:} Louis Bursey\\
+\textbf{Fit Criterion:} 70\% of people surveyed believe that graphs are visually appealing and look professional  \\
+%---
+\begin{tabular}{ll}
+\textbf{Customer Satisfaction:} 5 & \textbf{Customer Dissatisfaction:} 5 \\
+\textbf{Priority:} High & \textbf{Conflicts:} None\\
+\end{tabular} \\
+%---  
+\textbf{Supporting Materials:} None \\
+\textbf{History:} Created October 5, 2016
+%--
+\end{reqbox}
+%
+% No style req.
+%
+\subsection{Usability and Humanity Requirements}
+
+%
+%-----------Easy to use
+%
+\begin{reqbox}
+%---
+\begin{tabular}{ccc}
+Requirement \#: & Requirement Type: 11a & Event/Use case \#: \\
 \end{tabular} \\
 %---
 \textbf{Description:} The product should be easy to implement for novice Python programmers \\
-\textbf{Rationale:} The programmer using this library is more productive if they don't have to learn a convoluted library
+\textbf{Rationale:} The programmer using this library should be able to focus on their program, not on using this library \\
 \textbf{Originator:} Louis Bursey\\
 \textbf{Fit Criterion:} 80\% of programmers familiar with Python successfully use the product  \\
 %---
@@ -115,8 +144,206 @@ Requirement \#: & Requirement Type: 10 & Event/Use case \#: \\
 %--
 \end{reqbox}
 
-\subsection{Performance Requirements}
+%
+%-----------Language
+%
+\begin{reqbox}
+%---
+\begin{tabular}{ccc}
+Requirement \#: & Requirement Type: 11b & Event/Use case \#: \\
+\end{tabular} \\
+%---
+\textbf{Description:} When natural language is required, this product will use English \\
+\textbf{Rationale:} Python is written in English \\
+\textbf{Originator:} Louis Bursey\\
+\textbf{Fit Criterion:}  No non-English natural language is used in the product \\
+%---
+\begin{tabular}{ll}
+\textbf{Customer Satisfaction:} 5 & \textbf{Customer Dissatisfaction:} 5 \\
+\textbf{Priority:} Medium & \textbf{Conflicts:} None\\
+\end{tabular} \\
+%---  
+\textbf{Supporting Materials:} None \\
+\textbf{History:} Created October 5, 2016
+%--
+\end{reqbox}
+%
+% No personalization unless you mean the actual graphs, I believe that would be a functional requirement
+%
+%
+%-----------Quick to learn
+%
+\begin{reqbox}
+%---
+\begin{tabular}{ccc}
+Requirement \#: & Requirement Type: 11c & Event/Use case \#: \\
+\end{tabular} \\
+%---
+\textbf{Description:} The programmer using this product should quickly be able to learn how to use this product \\
+\textbf{Rationale:} Programmers who face a steep learning curve will be discouraged from using this product \\
+\textbf{Originator:} Louis Bursey\\
+\textbf{Fit Criterion:}  Programmers familiar with Python are able to produce graphs within an average twenty minutes of acquiring the library \\
+%---
+\begin{tabular}{ll}
+\textbf{Customer Satisfaction:} 5 & \textbf{Customer Dissatisfaction:} 5 \\
+\textbf{Priority:} Medium & \textbf{Conflicts:} None\\
+\end{tabular} \\
+%---  
+\textbf{Supporting Materials:} None \\
+\textbf{History:} Created October 5, 2016
+\end{reqbox}
+%
+%-----------Error messages
+%
+\begin{reqbox}
+%---
+\begin{tabular}{ccc}
+Requirement \#: & Requirement Type: 11d & Event/Use case \#: \\
+\end{tabular} \\
+%---
+\textbf{Description:} When used incorrectly, the product should generate error messages that are easy to understand \\
+\textbf{Rationale:} Knowing when and how the library is being used incorrectly will help developers use the library more efficiently. \\
+\textbf{Originator:} Louis Bursey\\
+\textbf{Fit Criterion:}  80\% of programmers using the library for the first time can understand the error messages they create \\
+%---
+\begin{tabular}{ll}
+\textbf{Customer Satisfaction:} 5 & \textbf{Customer Dissatisfaction:} 5 \\
+\textbf{Priority:} High & \textbf{Conflicts:} None\\
+\end{tabular} \\
+%---  
+\textbf{Supporting Materials:} None \\
+\textbf{History:} Created October 5, 2016
+%--
+\end{reqbox}
+%
+% No accessibility, outside of the scope of this project
+%
 
+\subsection{Performance Requirements}
+%
+%-----------Speed
+%
+\begin{reqbox}
+%---
+\begin{tabular}{ccc}
+Requirement \#: & Requirement Type: 12a & Event/Use case \#: \\
+\end{tabular} \\
+%---
+\textbf{Description:} The product should generate graphs in a timely manner \\
+\textbf{Rationale:} The program should not take so long that it slows down the programmer's workflow \\
+\textbf{Originator:} Louis Bursey\\
+\textbf{Fit Criterion:}  The library takes under 20 seconds to generate graphs of a reasonable size \\
+%---
+\begin{tabular}{ll}
+\textbf{Customer Satisfaction:} 5 & \textbf{Customer Dissatisfaction:} 5 \\
+\textbf{Priority:} High & \textbf{Conflicts:} None\\
+\end{tabular} \\
+%---  
+\textbf{Supporting Materials:} None \\
+\textbf{History:} Created October 5, 2016
+%--
+\end{reqbox}
+%
+% No safety critical requirements
+%
+
+%
+%-----------Precision                                                     %confirm on precision
+%
+\begin{reqbox}
+%---
+\begin{tabular}{ccc}
+Requirement \#: & Requirement Type: 12c & Event/Use case \#: \\
+\end{tabular} \\
+%---
+\textbf{Description:} The product should produce accurate graphs \\
+\textbf{Rationale:} Visual representations of data are useless if they don't represent data faithfully \\
+\textbf{Originator:} Louis Bursey\\
+\textbf{Fit Criterion:}  Graphs produced should have no less than 20\% difference between it and a graph generated by JCharts  \\
+%---
+\begin{tabular}{ll}
+\textbf{Customer Satisfaction:} 5 & \textbf{Customer Dissatisfaction:} 5 \\
+\textbf{Priority:} High & \textbf{Conflicts:} None\\
+\end{tabular} \\
+%---  
+\textbf{Supporting Materials:} None \\
+\textbf{History:} Created October 5, 2016
+%--
+\end{reqbox}
+%
+%-----------Reliability
+%
+\begin{reqbox}
+%---
+\begin{tabular}{ccc}
+Requirement \#: & Requirement Type: 12d & Event/Use case \#: \\
+\end{tabular} \\
+%---
+\textbf{Description:} The product should always be available \\
+\textbf{Rationale:} The product cannot unexpectedly go out of service, as programmers will depend on its availability \\
+\textbf{Originator:} Louis Bursey\\
+\textbf{Fit Criterion:}  The product is always available  \\
+%---
+\begin{tabular}{ll}
+\textbf{Customer Satisfaction:} 1 & \textbf{Customer Dissatisfaction:} 5 \\
+\textbf{Priority:} High & \textbf{Conflicts:} None\\
+\end{tabular} \\
+%---  
+\textbf{Supporting Materials:} None \\
+\textbf{History:} Created October 5, 2016
+%--
+\end{reqbox}
+%
+%-----------Robustness
+%
+\begin{reqbox}
+%---
+\begin{tabular}{ccc}
+Requirement \#: & Requirement Type: 12e & Event/Use case \#: \\
+\end{tabular} \\
+%---
+\textbf{Description:} The library will not stall out, if used incorrectly it will always display error messages and abort\\
+\textbf{Rationale:} Programmers using the library will depend on graphs not stalling out their programs \\
+\textbf{Originator:} Louis Bursey\\
+\textbf{Fit Criterion:}    Errors in use always create error messages and aborts, not stalls\\
+%---
+\begin{tabular}{ll}
+\textbf{Customer Satisfaction:} 1 & \textbf{Customer Dissatisfaction:} 5 \\
+\textbf{Priority:} High & \textbf{Conflicts:} None\\
+\end{tabular} \\
+%---  
+\textbf{Supporting Materials:} None \\
+\textbf{History:} Created October 5, 2016
+%--
+\end{reqbox}
+%
+%-----------Capacity                     %%%confirm on graph size
+%
+\begin{reqbox}
+%---
+\begin{tabular}{ccc}
+Requirement \#: & Requirement Type: 12f & Event/Use case \#: \\
+\end{tabular} \\
+%---
+\textbf{Description:} The library will be able to produce graphs with up to 500 data points \\
+\textbf{Rationale:} Programmers using the library will want to build graphs from large data sets \\
+\textbf{Originator:} Louis Bursey\\
+\textbf{Fit Criterion:}  Graph with up to 500 data points can be generated without problems\\
+%---
+\begin{tabular}{ll}
+\textbf{Customer Satisfaction:} 1 & \textbf{Customer Dissatisfaction:} 5 \\
+\textbf{Priority:} High & \textbf{Conflicts:} None\\
+\end{tabular} \\
+%---  
+\textbf{Supporting Materials:} None \\
+\textbf{History:} Created October 5, 2016
+%--
+\end{reqbox}
+%
+% No scalability
+%
+% No longevity
+%
 \subsection{Operational and Environmental Requirements}
 
 \subsection{Maintainability and Support Requirements}
@@ -128,6 +355,8 @@ Requirement \#: & Requirement Type: 10 & Event/Use case \#: \\
 \subsection{Legal Requirements}
 
 \subsection{Health and Safety Requirements} %end Louis
+
+A graphing library does not pose any serious health and safety risks.
 
 This section is not in the original Volere template, but health and safety are
 issues that should be considered for every engineering project.
