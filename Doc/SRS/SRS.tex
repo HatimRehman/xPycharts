@@ -1,6 +1,7 @@
 \documentclass[12pt, titlepage]{article}
 
 \usepackage{booktabs}
+\usepackage{graphicx}
 \usepackage{tabularx}
 \usepackage{hyperref}
 \usepackage{mdframed}
@@ -16,7 +17,7 @@
 
 \newmdenv[linecolor=black]{reqbox}
 
-\title{SE 3XA3: Development Plan\\XPyCharts}
+\title{SE 3XA3: Requirements Document\\xPyCharts}
 
 \author{Team 4, xPy
 		\\ Hatim Rehman (rehmah3)
@@ -42,8 +43,7 @@
 \begin{tabularx}{\textwidth}{p{3cm}p{2cm}X}
 \toprule {\bf Date} & {\bf Version} & {\bf Notes}\\
 \midrule
-Date 1 & 1.0 & Notes\\
-Date 2 & 1.1 & Notes\\
+Oct. 10, 2016 & 1.0 & Revision 0\\
 \bottomrule
 \end{tabularx}
 \end{table}
@@ -76,14 +76,35 @@ to the template, you should explicity state what modifications were made.
 \subsection{Relevant Facts and Assumptions}
 
 User characteristics should go under assumptions.
-
+\clearpage
 \section{Functional Requirements}
 
 \subsection{The Scope of the Work and the Product}
 
 \subsubsection{The Context of the Work}
-
+The context can be seen by the following visual, describing user interaction with the program and program response. \\
+		
+	\begin{figure}[!htb]
+		\includegraphics[scale=0.8]{img/ContextDiagram.png}
+		\caption{Context Diagram}
+	\end{figure}
+	
 \subsubsection{Work Partitioning}
+
+\begin{center}
+\begin{table}[!hpb]
+    \begin{tabular}{ |c|p{11cm}|}
+	\hline
+	Event No. & Event\\ \hline
+	1 & Create the (cartesian) coordinate system that is centered within a window.\\ \hline
+	2 & Add labels to the coordinate system. \\ \hline
+	3 & Plot sample points.\\ \hline
+	4 & Construct a line that joins two points together.\\ \hline
+	5 & Finishing edits (i.e input checking and error handling).\\ \hline
+    \end{tabular}
+    \caption{Work Partitioning}
+\end{table}
+\end{center}
 
 \subsubsection{Individual Product Use Cases}
 
@@ -183,6 +204,7 @@ User characteristics should go under assumptions.
 \textbf{History:} Created October 10, 2016
 %--
 \end{reqbox}
+\clearpage
 
 \section{Non-functional Requirements} %Louis
 
@@ -581,6 +603,7 @@ There are no legal requirements for this project
 
 A graphing library does not pose any serious health and safety risks.
 
+\clearpage
 \section{Project Issues}
 
 \subsection{Open Issues}
