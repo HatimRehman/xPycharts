@@ -89,6 +89,101 @@ User characteristics should go under assumptions.
 
 \subsection{Functional Requirements}
 
+\begin{reqbox}
+%---
+\begin{tabular}{ccc}Requirement \#: 1
+\end{tabular} \\
+%---
+\textbf{Description:} The software shall read data given to it.\\
+\textbf{Rationale:} Data is needed to construct a graph. \\
+\textbf{Originator:} Hatim Rehman \\
+\textbf{Fit Criterion:} The data used by the program is identical to the data given to it.\\
+%---
+\begin{tabular}{ll}
+\textbf{Customer Satisfaction:} 5 & \textbf{Customer Dissatisfaction:} 5 \\
+\textbf{Priority:} High & \textbf{Conflicts:} 2,3,4,5\\
+\end{tabular} \\
+%---  
+\textbf{History:} Created October 10, 2016
+%--
+\end{reqbox}
+
+\begin{reqbox}
+%---
+\begin{tabular}{ccc}Requirement \#: 2
+\end{tabular} \\
+%---
+\textbf{Description:} The software will raise an exception if the data format cannot be plotted, and stop the program. \\
+\textbf{Rationale:} It is safer to stop the program after it is realized the data points do not meet the expected format, versus letting the program proceed to unexpected behaviour. \\
+\textbf{Originator:} Hatim Rehman \\
+\textbf{Fit Criterion:} The program execution halts when improper data is entered.\\
+%---
+\begin{tabular}{ll}
+\textbf{Customer Satisfaction:} 5 & \textbf{Customer Dissatisfaction:} 5 \\
+\textbf{Priority:} High & \textbf{Conflicts:} 3,4,5\\
+\end{tabular} \\
+%---  
+\textbf{History:} Created October 10, 2016
+%--
+\end{reqbox}
+
+\begin{reqbox}
+%---
+\begin{tabular}{ccc}Requirement \#: 3
+\end{tabular} \\
+%---
+\textbf{Description:} The software will construct a coordinate system that will fit all the data points.\\
+\textbf{Rationale:} This ensures the coordinate system is always dynamically generated to work for all data sets. \\
+\textbf{Originator:} Hatim Rehman \\
+\textbf{Fit Criterion:} The maximum value on the xy axes is $\geq$ maximum x, y in data set.\\
+%---
+\begin{tabular}{ll}
+\textbf{Customer Satisfaction:} 5 & \textbf{Customer Dissatisfaction:} 5 \\
+\textbf{Priority:} High & \textbf{Conflicts:} 4,5\\
+\end{tabular} \\
+%---  
+\textbf{History:} Created October 10, 2016
+%--
+\end{reqbox}
+
+\begin{reqbox}
+%---
+\begin{tabular}{ccc}Requirement \#: 4
+\end{tabular} \\
+%---
+\textbf{Description:} The software shall plot all the data points.\\
+\textbf{Rationale:} The user will want all the data plotted. \\
+\textbf{Originator:} Hatim Rehman \\
+\textbf{Fit Criterion:} All data points exist on the generated graph.\\
+%---
+\begin{tabular}{ll}
+\textbf{Customer Satisfaction:} 5 & \textbf{Customer Dissatisfaction:} 5 \\
+\textbf{Priority:} High & \textbf{Conflicts:} 5\\
+\end{tabular} \\
+%---  
+\textbf{History:} Created October 10, 2016
+%--
+\end{reqbox}
+
+\begin{reqbox}
+%---
+\begin{tabular}{ccc}Requirement \#: 5
+\end{tabular} \\
+%---
+\textbf{Description:} The software will connect a line that passes through all the data points if the data points are a function of x.\\
+\textbf{Rationale:} Imposing a constraint on only graphing functions ensures validity and correctness (a function only has one interpretation), whereas graphing relations introduces ambiguity in the shape of the line. \\
+\textbf{Originator:} Hatim Rehman \\
+\textbf{Fit Criterion:} A line passes through all the points if there is only one y value for each x.\\
+%---
+\begin{tabular}{ll}
+\textbf{Customer Satisfaction:} 5 & \textbf{Customer Dissatisfaction:} 5 \\
+\textbf{Priority:} High & \textbf{Conflicts:} None\\
+\end{tabular} \\
+%---  
+\textbf{History:} Created October 10, 2016
+%--
+\end{reqbox}
+
 \section{Non-functional Requirements} %Louis
 
 \subsection{Look and Feel Requirements}
@@ -98,7 +193,7 @@ User characteristics should go under assumptions.
 \begin{reqbox}
 %---
 \begin{tabular}{ccc}
-Requirement \#: & Requirement Type: 10a & Event/Use case \#: \\
+Requirement \#: 1& Requirement Type: 10a & Event/Use case \#: \\
 \end{tabular} \\
 %---
 \textbf{Description:} The graphs produced should be visually appealing and look professional \\
