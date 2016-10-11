@@ -93,6 +93,7 @@ The context can be seen by the following visual, describing user interaction wit
 
 \begin{center}
 \begin{table}[!hpb]
+    \caption{Work Partitioning} 
     \begin{tabular}{ |c|p{11cm}|}
 	\hline
 	Event No. & Event\\ \hline
@@ -102,11 +103,27 @@ The context can be seen by the following visual, describing user interaction wit
 	4 & Construct a line that joins two points together.\\ \hline
 	5 & Finishing edits (i.e input checking and error handling).\\ \hline
     \end{tabular}
-    \caption{Work Partitioning}
+
 \end{table}
 \end{center}
 
 \subsubsection{Individual Product Use Cases}
+
+Because of the nature of the product, a universal use case exists: 
+
+\begin{reqbox}
+    \begin{tabular}{l p{10cm}}
+
+	\bf{Use Case \#: 1} & \\
+	 & \\
+	{\bfseries Scenario: } 	& 	Constructing a graph from a set of data.	\\
+	{\bfseries Trigger: }   		& 	User request. 					\\
+	{\bfseries Precondition: } 	&	Data inputted in the correct format.		\\
+	{\bfseries PostCondition } 	& 	Graph generated and outputted to the user's screen.				\\
+
+    \end{tabular}
+\end{reqbox}
+
 
 \subsection{Functional Requirements}
 
@@ -642,5 +659,9 @@ additional information.
 The definition of the requirements will likely call for SYMBOLIC\_CONSTANTS.
 Their values are defined in this section for easy maintenance.
 
+\subsection{Gantt Chart}
+
+The schedule of the project is shown by the following
+ \href{run:../DevelopmentPlan/GanttChart.gan} {\underline{Gantt Chart}}.
 
 \end{document}
