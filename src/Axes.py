@@ -1,36 +1,90 @@
 from Tkinter import *
+from math import *
 
-master = Tk() #creates the window 
-master.resizable(0,0) # turn off resizing
-master.title("xPycharts") #rename the title 
+x_coordinates = { }
+y_coordinates = { }
+
+def get_axes( window, markings ):
+	canvas = Canvas(window, width=500, height=500)#, background='lightgrey',) # create a canvas to draw on (inside the window)
+
+	canvas.pack() # no idea what this does
+
+	canvas_height = int( canvas.cget("height") )
+	canvas_width = int( canvas.cget("width") )
+
+	# create line takes (x0, y0, x1, y1) and creates a line that joins the two points
+
+	# create line from middle x top, to middle x bottom (the y axis)
+	canvas.create_line(	canvas_width/2, 0,
+					canvas_width/2, canvas_height,
+					arrow= BOTH
+				)
+	# create line from middle y & left side of the screen, to middle y right side of the screen (the x axis)
+	canvas.create_line(	0, canvas_height/2,
+					canvas_width, canvas_height/2,
+					arrow = BOTH
+				)
+
+	_get_labels(canvas, markings)
+
+	return canvas
+
+# adds the labels to the axes
+def _get_labels( canvas, markings ):#, scale, grid_points):
+
+	canvas_height = int( canvas.cget("height") )
+	canvas_width = int( canvas.cget("width") )
+
+	xlabel_coordinates, ylabel_coordinates = [ ], [ ]
+
+	x_offset = ( canvas_width/2 ) / markings
+	y_offset = ( canvas_height/2 ) / markings
 
 
-w = Canvas(master, width=500, height=500)#, background='lightgrey',) # create a canvas to draw on (inside the window)
+	for i in range(1,markings):
+		xlabel_coordinates.extend([
+			_get_translated_point({'x': i, 'y': 0}, x_offset, y_offset, canvas),
+			_get_translated_point({'x': -i, 'y': 0}, x_offset, y_offset, canvas),
+		])
+
+		ylabel_coordinates.extend([
+			_get_translated_point({'x': 0, 'y': i}, x_offset, y_offset, canvas),
+			_get_translated_point({'x': 0, 'y': -i}, x_offset, y_offset, canvas),
+		])
+
+	for coord in xlabel_coordinates:
+		canvas.create_horizontal_label(coord['x'], coord['y'], 5)
+
+	for coord in ylabel_coordinates:
+		canvas.create_vertical_label(coord['x'], coord['y'], 5)
+
+# converts (x,y) to a point on the canvas' coordinate system
+def _get_translated_point( coord, x_offset, y_offset, canvas ):
+
+	canvas_height = int( canvas.cget("height") )
+	canvas_width = int( canvas.cget("width") )
+
+	x = canvas_width/2 + coord['x']*x_offset
+	y = canvas_height/2 - coord['y']*y_offset
+
+	x_coordinates[x] = coord['x']
+	y_coordinates[y] = coord['y']
+
+	return {'x': x,
+			'y': y
+		}
+
+# create helper methods to add to Canvas object
+def _create_horizontal_label(self, x, y, h, **kwargs):
+	return self.create_line(x, y-h, x, y+h, **kwargs ) and self.create_text(x,y+15, text=x_coordinates[x])
+Canvas.create_horizontal_label = _create_horizontal_label
 
 
-w.pack() # no idea what this does
+def _create_vertical_label(self, x, y, w, **kwargs):
+	return self.create_line(x-w, y, x+w, y, **kwargs ) and self.create_text(x+15,y, text=y_coordinates[y])
+Canvas.create_vertical_label = _create_vertical_label
 
 
-canvas_height = int( w.cget("height") ) 
-canvas_width = int( w.cget("width") )
-
-# create line takes (x0, y0, x1, y1) and creates a line that joins the two points
-
-# create line from middle x top, to middle x bottom (the y axis)
-w.create_line(	canvas_width/2, 0, 
-				canvas_width/2, canvas_height, 
-				arrow= BOTH
-			)
-# create line from middle y & left side of the screen, to middle y right side of the screen (the x axis)
-w.create_line(	0, canvas_height/2, 
-				canvas_width, canvas_height/2, 
-				arrow = BOTH
-			)
-
-
-#master.configure(background='lightgrey')
-mainloop() # runs window indefinitely
-
-#	Sarthak: 	Reading data + validating it
-#	Louis:		Best scale from data
-#	Hatim:		Markings
+def _create_circle(self, x, y, r, **kwargs):
+    return self.create_oval(x-r, y-r, x+r, y+r, **kwargs)
+Canvas.create_circle = _create_circle
