@@ -1,0 +1,55 @@
+How stable is your current? What will you be changing?
+Really stable.
+Might add titles, make the window dynamically resizable etc. 
+
+What is the next step?
+Will be adding additional graphs such as pie graphs and bar charts for the next few builds. 
+
+What risks remain going forward?
+Performance. Automated testing.  
+
+What programming language and programming environment are you using?
+Python 2.7. 
+
+What test cases do you plan for the future?
+Unittesting is data sets.
+Manual testing with matlab.
+Image comparison using bitmaps.
+
+How has the work been divided so far? What is the plan going forward?
+Divided equally so far (explain parts…)
+Plan going forward: Louis pie chart, Sarthak bar graph, Hatim __ graph
+
+How is the team managed? How frequent are the meetings? How is work divided?
+
+Meeting are twice a week.
+
+How is technology used to assist in project management?
+Git is used for version control. Communicate w/ sykpe, facebook chat. 
+
+What is going well so far? What area needs to be worked on?
+Project organization is going well. 
+Area that needs to be worked on: testing. 
+
+What is the best characteristic of your team-mate? What area needs improvement?
+
+
+What evidence do you have that you are on-track with the project and that it will be successful?
+Proof of concept 
+
+What are your goals for SE 3XA3? What are your goals for the future?
+
+
+How do you intend to balance 3XA3 with your other courses going forward?
+
+
+Is your team functioning well?
+Yes
+
+What uncertainties still exist in your project?
+Testing, and performance with large data sets.
+
+Show us your GanttChart. What will you do if one of the tasks takes twice as long as anticipated?
+Get coffee
+
+How will you estimate how well your software will perform under heavy loads?
