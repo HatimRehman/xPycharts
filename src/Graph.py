@@ -42,9 +42,7 @@ class Graph:
 		
 		dx_sorted = [d['x'] for d in data]; dx_sorted.sort()
 		x_interval = [x / 100.0 for x in range(dx_sorted[0], dx_sorted[-1]*100,1)]
-		print str(dx_sorted[0]) + "\n"
-		print str(dx_sorted[-1]) + "\n"
-		print x_interval
+
 		self.plot_function(self._Lagrange, x_interval = [x / 100.0 for x in range(dx_sorted[0]*100, dx_sorted[-1]*100, 1)])
 		
 		for coord in data:
@@ -115,6 +113,6 @@ if __name__ == '__main__':
 
 	#Graph.plot_function( sin )
 
-	Graph.plot_points_with_line( [ coord(-2,1), coord(-1,1) , coord(1,1), coord(2,2), coord(4,5), coord(5,3) ], fill="green"), 
-	
+	Graph.plot_points_with_line( [ coord(-4,4), coord(-2,1), coord(-1,1) , coord(1,1), coord(2,2), coord(4,5), coord(5,3) ], fill="green"), 
+
 	mainloop() # runs window indefinitely
