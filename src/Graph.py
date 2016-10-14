@@ -39,23 +39,28 @@ class Graph:
 		self.dx = [d['x'] for d in data]
 		self.dy = [d['y'] for d in data]
 		self.data = data
-				
-		self.plot_function(self._Lagrange)
+		
+		dx_sorted = [d['x'] for d in data]; dx_sorted.sort()
+		x_interval = [x / 100.0 for x in range(dx_sorted[0], dx_sorted[-1]*100,1)]
+		print str(dx_sorted[0]) + "\n"
+		print str(dx_sorted[-1]) + "\n"
+		print x_interval
+		self.plot_function(self._Lagrange, x_interval = [x / 100.0 for x in range(dx_sorted[0]*100, dx_sorted[-1]*100, 1)])
 		
 		for coord in data:
 			self.plot_point( coord, **kwargs )
 	
 	
-	def plot_function(self, func, **kwargs): # plots a function, with styling kwargs if they exist
-
+	def plot_function(self, func, x_interval = None, **kwargs): # plots a function, with styling kwargs if they exist
+		
+		x_interval = [x / 100.0 for x in range(-Graph.markings*100, Graph.markings*100, 1)] if x_interval is None else x_interval
+		
 		coords = [ ]
 
-		for x in [x / 100.0 for x in range(1, Graph.markings*100, 1)]: #computes the y value for each x in the x axis at 100th of the precision (i.e x=0.01, x= 0.02, ... x=markings)
+		for x in x_interval: #computes the y value for each x in the x axis at 100th of the precision (i.e x=0.01, x= 0.02, ... x=markings)
 
 			# add (x, f(x)) and (-x, f(-x)) to the list of coordinates
-			coords.extend([	coord(x, func(x)),
-							coord(-x, func(-x))
-						])
+			coords.append(	coord(x, func(x)) )
 
 		for xy in coords:
 			# convert coordinate to canvas' coordinate system
@@ -110,6 +115,6 @@ if __name__ == '__main__':
 
 	#Graph.plot_function( sin )
 
-	Graph.plot_points_with_line( [	coord(1,1), coord(2,2), coord(4,5), coord(5,7) ], fill="green"), 
+	Graph.plot_points_with_line( [ coord(-2,1), coord(-1,1) , coord(1,1), coord(2,2), coord(4,5), coord(5,3) ], fill="green"), 
 	
 	mainloop() # runs window indefinitely
