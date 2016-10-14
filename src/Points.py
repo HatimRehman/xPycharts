@@ -8,10 +8,10 @@ class Points():
         self.checklen()
         self.checkT=False
         self.checktype()
-        
+
         if (self.checkL==False):
             print ("There must be an equal number of x and y values")
-            
+
         if (self.checkT==False):
             print ("All values for the co-ordinate pairs must be integers or floats")
         else:
@@ -30,12 +30,8 @@ class Points():
                 return
         self.checkT=True
         return
-                
+
 
 m= [1,2,3,4]
 n= [6,7,8,9]
 a = Points(m,n)
-
-
-
-
