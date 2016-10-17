@@ -1,22 +1,29 @@
 from Axes import *
+from get_scale import *
 
 class Graph:
 
-	def __init__(self, n):
+	def __init__(self, n , data = None):
 
 		self.markings = n+1 # markings makes [0, n+1) markings
-		self.scale = 1
+		self.scale = [1,1] if data is None else get_scale(data, round_to = self.markings-1)
+		self.scale_x = float(n)/self.scale[0] 
+		self.scale_y = float(n)/self.scale[1]
+
 		self.master = Tk() 	#creates the window
 		self.master.resizable(0,0) # turn off resizing
 		self.master.title("xPycharts")
 
-		self.graph = get_axes( self.master, self.markings ) #get an axis with this many markings
+		self.graph = get_axes( self.master, self.markings, self.scale_x,self.scale_y  ) #get an axis with this many markings
 
 		self.graph_height = int( self.graph.cget("height") )
 		self.graph_width = int( self.graph.cget("width") )
 
-		self.x_offset = ( self.graph_width/2 ) / self.markings
-		self.y_offset = ( self.graph_height/2 ) / self.markings
+		self.x_offset = (( self.graph_width/2 ) / self.markings) / self.scale_x
+		self.y_offset = (( self.graph_height/2 ) / self.markings) / self.scale_y
+		
+		if data is not None:
+			self.plot_points(data, fill="blue")
 
 	def plot_point(self, coord, **kwargs): #plots a coordinate, with stylings kwargs if they exist
 
@@ -109,10 +116,13 @@ def coord(x,y):
 
 if __name__ == '__main__':
 
-	Graph = Graph(6)
+	Graph = Graph(6, [	{'x':1 ,'y':1 }, 
+						{'x':2 ,'y':2 },
+					 	{'x':3 ,'y':3 }, 
+					 	{'x':4 ,'y':9 },	])
 
 	#Graph.plot_function( sin )
 
-	Graph.plot_points_with_line( [ coord(-4,4), coord(-2,1), coord(-1,1) , coord(1,1), coord(2,2), coord(4,5), coord(5,3) ], fill="green"), 
+	#Graph.plot_points_with_line( [ coord(-4,4), coord(-2,1), coord(-1,1) , coord(1,1), coord(2,2), coord(4,5), coord(5,3) ], fill="green"), 
 
 	mainloop() # runs window indefinitely
