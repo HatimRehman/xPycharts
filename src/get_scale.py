@@ -8,9 +8,9 @@ def get_scale(data_set, round_to=0) :
 
     #get the maximum x, -x, y, -y that need to be mapped
     for i in data_set:
-        if i['x'] > x : x = i['x']
+        if abs(i['x']) > x : x = abs(i['x'])
         
-        if i['y'] > y : y = i['y']
+        if abs(i['y']) > y : y = abs(i['y'])
         
     #add to scale to keep it a multiple of round_to
     if (round_to > 0): 
