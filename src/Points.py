@@ -1,9 +1,10 @@
 class Points():
 
 
-    def __init__(self,xval,yval):
-        self.x=xval
-        self.y=yval
+    def __init__(self,data):
+        self.x=[ x[0] for x in data  ]
+        self.y=[ y[1] for y in data  ]
+        self.mylist=[]
         self.checkL=False
         self.checklen()
         self.checkT=False
@@ -15,8 +16,10 @@ class Points():
         if (self.checkT==False):
             print ("All values for the co-ordinate pairs must be integers or floats")
         else:
-            self.ndict= dict([(self.x[i],self.y[i])for i in range(len (self.x))])
-
+           for i in range (len(self.x)):
+               d = {"x": self.x[i], "y": self.y[i]}
+               self.mylist.append(d)
+            
     def checklen(self):
         if len(self.x)==len(self.y):
             self.checkL=True
@@ -34,4 +37,7 @@ class Points():
 
 m= [1,2,3,4]
 n= [6,7,8,9]
-a = Points(m,n)
+
+l = [(2,3), (3,4), (5,6) ]   
+a = Points(l)
+print(a.mylist)
