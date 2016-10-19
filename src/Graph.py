@@ -11,16 +11,16 @@ class Graph:
 		self.markings = n+1 # markings makes [0, n+1) markings
 		
 		if data is not None:
-			self.scale = [1,1] if self.data is None else get_scale(self.data, round_to = self.markings-1)
+			self.scale = get_scale(self.data, round_to = self.markings-1)
 
 			self.scale_x = self.scale[0] / float(n)
 			self.scale_y = self.scale[1] / float(n)
 
+		else:
+			self.scale = [1,1] if self.data is None else get_scale(self.data, round_to = self.markings-1)
 
-		self.scale = [1,1] if self.data is None else get_scale(self.data, round_to = self.markings-1)
-
-		self.scale_x = 1
-		self.scale_y = 1
+			self.scale_x = 1
+			self.scale_y = 1
 
 		self.master = Tk() 	#creates the window
 		self.master.resizable(0,0) # turn off resizing
@@ -129,10 +129,10 @@ def coord(x,y):
 
 if __name__ == '__main__':
 
-	Graph = Graph(6)
+	#Graph = Graph(6, [ (1,1 ), (2,4 ), ( -3, -6), (7, -12 )  ])
 
-	Graph.plot_function( sin )
+	#Graph = Graph(6); Graph.plot_function( sin )
 
-	#Graph.plot_points_with_line( [ coord(-4,4), coord(-2,1), coord(-1,1) , coord(1,1), coord(2,2), coord(4,5), coord(5,3) ], fill="green"), 
+	Graph = Graph(6); Graph.plot_points_with_line( [ coord(-4,4), coord(-2,1), coord(-1,1) , coord(1,1), coord(2,2), coord(4,5), coord(5,3) ], fill="green"), 
 
 	mainloop() # runs window indefinitely
