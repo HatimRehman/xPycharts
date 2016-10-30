@@ -6,7 +6,7 @@ def clean_data(data):
 	except:
 		raise Exception("Inconsistent data")
 		return
-		
+
 	mylist=[]
 
 	checktype(x, y)
@@ -14,6 +14,7 @@ def clean_data(data):
 	for i in range (len(x)):
 		d = {"x": x[i], "y": y[i]}
 		mylist.append(d)
+	print mylist
 	return mylist
 
 		

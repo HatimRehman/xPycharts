@@ -2,6 +2,7 @@
 \usepackage{booktabs}
 \usepackage{tabularx}
 \usepackage{hyperref}
+\usepackage{enumitem}
 \hypersetup{
     colorlinks,
     citecolor=black,
@@ -75,38 +76,229 @@ Term2 & Definition2\\
 		
 See Gantt Chart at the following url ...
 \section{System Test Description}
-	
+
+It is important to note that because of the lack of resources (mainly time), the testing will not be able to cover a wide array of test cases. At times, single positive and negative test cases will be enough to ensure a program works as expected. 	
 \subsection{Tests for Functional Requirements}
-\subsubsection{Area of Testing1}
+
+\subsubsection{Area of Testing 1}		
+	\paragraph{Requirement \#1: The software shall read data given to it. \\ Requirements \#3: The software will plot all the data points.}
+		\begin{enumerate}
+			\item{\textbf{Test ID \#1.1\\}}
+			\textbf{Type:} Functional, Dynamic, Manual\\
+			\textbf{Initial State:} Instantiate Graph(6) object with 6 markings on each quadrant.\\
+			\textbf{Input:} The list object: [ (1, 1),  (2, 2), (3, 3), (4, 4) ]\\
+			\textbf{Output:} A window depicting a graph with plotted points at (1, 1), (2, 2), (3, 3), and (4, 4). \\
+			\textbf{How test will be performed:}
+				\begin{itemize}[label={--}]
+					\item The user will instantiate the graph object.
+					\item The list object will be passed into the plotting method in the API.
+					\item The program will run to completion.
+					\item The user will manually verify the points plotted correspond to the ones entered.
+				\end{itemize}
+					
+			\item{\textbf{Test ID \#1.2\\}}
+			\textbf{Type:} Functional, Dynamic, Manual\\
+			\textbf{Initial State:} None Object.\\
+			\textbf{Input:} Instantiate Graph(6, data = [ (1, 1),  (2, 2), (3, 3), (4, 4) ] )\\
+			\textbf{Output:} A window depicting a graph with plotted points at (1, 1), (2, 2), (3, 3), and (4, 4). \\
+			\textbf{How test will be performed:}
+				\begin{itemize}[label={--}]
+					\item The user will instantiate the graph object with data immediately.
+					\item The program will run to completion.
+					\item The user will manually verify the points plotted correspond to the ones entered.
+				\end{itemize}
+				
+			\item{\textbf{Test ID \#1.3\\}}
+			\textbf{Type:} Functional, Dynamic, Manual\\
+			\textbf{Initial State:} Instantiate Graph(6) object with 6 markings on each quadrant.\\
+			\textbf{Input:} The list object: [	].\\
+			\textbf{Output:} A window depicting a graph with no plotted points.\\
+			\textbf{How test will be performed:}
+				\begin{itemize}[label={--}]
+					\item The user will instantiate the graph object.
+					\item The list object will be passed into the plotting method in the API.
+					\item The program will run to completion.
+					\item The user will manually verify that no points were plotted.
+				\end{itemize}				
+
+			\item{\textbf{Test ID \#1.4\\}}
+			\textbf{Type:} Functional, Dynamic, Manual\\
+			\textbf{Initial State:} None Object.\\
+			\textbf{Input:} Instantiate Graph(6, data = [  ] )\\
+			\textbf{Output:} A window depicting a graph with no plotted points.\\
+			\textbf{How test will be performed:}
+				\begin{itemize}[label={--}]
+					\item The user will instantiate the graph object with data immediately.
+					\item The program will run to completion.
+					\item The user will manually verify that no points were plotted.
+				\end{itemize}	
+	\end{enumerate}
+After this point, it should be also verified that instantiating a Graph object with data versus instantiating a Graph object and then setting the data should have no difference in the output. Therefore, after this point all test cases will (decided arbitrarily) initialize a Graph object and then set the data if the situation arises. This will be done purely to save time, which is a limitation. 
+
+\subsubsection{Area of Testing 2}		
+	\paragraph{Requirement \#2: The software will raise an exception if the data format cannot be plotted, and stop the program.}
+		\begin{enumerate}
+			\item{\textbf{Test ID \#2.1\\}}
+			\textbf{Type:} Functional, Dynamic, Manual\\
+			\textbf{Initial State:} A testing script that imports the method that validates data. \\
+			\textbf{Input:} The list object: [ (1, 1),  (2, 2), (3, 3), (4, 4) ]\\
+			\textbf{Output:}  A safe end to the execution (i.e, no exception raised). \\
+			\textbf{How test will be performed:}
+				\begin{itemize}[label={--}]
+					\item The user will call the method with the list object.
+					\item The user will verify the method completed execution without raising an exception.
+				\end{itemize}
+					
+			\item{\textbf{Test ID \#2.2\\}}
+			\textbf{Type:} Functional, Dynamic, Manual\\
+			\textbf{Initial State:} A testing script that imports the method that validates data.\\
+			\textbf{Input:} The list object: [ (1, 1),  (2, 2), (3, 3), ( 4 ) ]\\
+			\textbf{Output:} The program raised an exception.\\
+			\textbf{How test will be performed:}
+				\begin{itemize}[label={--}]
+					\item The user will call the method with the list object.
+					\item The user will verify the method raised an exception.
+				\end{itemize}
+									
+			\item{\textbf{Test ID \#2.3\\}}
+			\textbf{Type:} Functional, Dynamic, Manual\\
+			\textbf{Initial State:} Instantiate Graph(6) object with 6 markings on each quadrant..\\
+			\textbf{Input:} Instantiate Graph(6, data = [ (1, 1),  (2, 2), (3, 3), ( 4 ) ] )\\
+			\textbf{Output:} The list object: [ (1, 1),  (2, 2), (3, 3), ( 4 ) ] \\
+			\textbf{How test will be performed:}
+				\begin{itemize}[label={--}]
+					\item The user will instantiate the graph object.
+					\item The list object will be passed into the plotting method in the API.
+					\item The user will manually verify an exception was raised.
+				\end{itemize}				
+
+	\end{enumerate}
+2.1 and 2.2 directly test the method that is in charge of raising the exception. 2.3 tests whether it is used correctly in the library. We do not need to again test the positive scenario of 2.3 as this will have been tested with Area of Testing 1. 
+
+\subsubsection{Area of Testing 3}		
+	\paragraph{Requirement \#3: The software will construct a coordinate system that will fit all the data points.}
+		\begin{enumerate}
+			\item{\textbf{Test ID \#3.1\\}}
+			\textbf{Type:} Functional, Dynamic, Manual\\
+			\textbf{Initial State:} Instantiate Graph(6) object with 6 markings on each quadrant. \\
+			\textbf{Input:} The list object: [ (1, 1),  (2, 2), (3, 3), ( 17, 77) ]\\
+			\textbf{Output:}  A window depicting a graph with max x axis value to be 17 and -17, and y axis to be 77 and -77. \\
+			\textbf{How test will be performed:}
+				\begin{itemize}[label={--}]
+					\item The user will instantiate the graph object.
+					\item The list object will be passed into the plotting method in the API.
+					\item The program will run to completion.
+					\item The user will manually verify the axes are appropriate.								
+				\end{itemize}
+					
+			\item{\textbf{Test ID \#3.2\\}}
+			\textbf{Type:} Functional, Dynamic, Manual\\
+			\textbf{Initial State:}  Instantiate Graph(6) object with 6 markings on each quadrant.\\
+			\textbf{Input:} The list object: [ (1, 1),  (2, 2), (3, 3), ( -17, -77) ]\\
+			\textbf{Output:} A window depicting a graph with max x axis value to be 17 and -17, and y axis to be 77 and -77. \\
+			\textbf{How test will be performed:}
+				\begin{itemize}[label={--}]
+					\item The user will instantiate the graph object.
+					\item The list object will be passed into the plotting method in the API.
+					\item The program will run to completion.
+					\item The user will manually verify the axes are appropriate.
+				\end{itemize}							
+	\end{enumerate}
+
+\subsubsection{Area of Testing 4}		
+	\paragraph{Requirement \#4: The software will connect a line that passes through all the data points if the data points are a function of x.\\\\}
+	
+	This functionality is composed of three stages that were required to complete it: 
+	\begin{itemize}[label={ }]
+		\item I. The ability to plot points. 
+		\item	II. The ability to graph functions. 
+	\end{itemize}	 
+With the completion of the above 2, and through a method that determines a polynomial (which is a function) that passes through all the data points, we come to the third stage, which is the essence of this functionality: 
+	\begin{itemize}[label={ }]
+		\item III. A function that passes through all the data points.
+		\end{itemize}
+		The first stage is assumed to have been tested in Area of Testing 1, and will not be repeated here. Furthermore, because Stage II is an intermediary stage and not an official requirement (at least, not yet), it will be given one test case here, to save time.  
+		\begin{enumerate}
+			\item{\textbf{Test ID \#4.1\\}}
+			\textbf{Type:} Functional, Dynamic, Manual\\
+			\textbf{Initial State:} An instantiated Graph object. \\
+			\textbf{Input:} The default math.sin() function in python.\\
+			\textbf{Output:}  A window depicting the sin() graph.\\
+			\textbf{How test will be performed:}
+				\begin{itemize}[label={--}]
+					\item The user will instantiate the graph object.
+					\item The user will call the plot function method in the API with [Math.]sin() as the parameter.
+					\item The program will run to completion.
+					\item The user will manually verify that the program plotted the function correctly.							
+				\end{itemize}
+					
+			\item{\textbf{Test ID \#4.2\\}}
+			\textbf{Type:} Functional, Dynamic, Manual\\
+			\textbf{Initial State:} An instantiated Graph object.\\
+			\textbf{Input:} The list object: [ (1, 1),  (2, 2), (3, 3), (4, 4) ]\\
+			\textbf{Output:} A window depicting a graph with the points plotted, and a line is connecting all points. \\
+			\textbf{How test will be performed:}
+				\begin{itemize}[label={--}]
+					\item The user will instantiate the graph object.
+					\item The user will call the appropriate method in the API with the data set.
+					\item The program will run to completion.
+					\item The user will manually verify that the program plotted the points, and a line is connecting all points.
+				\end{itemize}							
+				
+			\item{\textbf{Test ID \#4.3\\}}
+			\textbf{Type:} Functional, Dynamic, Manual\\
+			\textbf{Initial State:}  An instantiated Graph object.\\
+			\textbf{Input:} The list object: [ (1, 1),  (2, 2), (3, 3), (3, 4) ]\\
+			\textbf{Output:} An exception will be raised. \\
+			\textbf{How test will be performed:}
+				\begin{itemize}[label={--}]
+					\item The user will instantiate the graph object.
+					\item The user will call the appropriate method in the API with the data set.
+					\item The program will run to completion.
+					\item The user will manually verify that an exception was raised.
+				\end{itemize}
+	\end{enumerate}
+	
+\subsubsection{Area of Testing 5}		
+	\paragraph{Testing of source code.}
+		\begin{enumerate}
+			\item{\textbf{Test ID \#5.1\\}}
+			\textbf{Type:} Functional, Static, Automated\
+			\textbf{Initial State:} Completed source code. \\
+			\textbf{Input:} Source code.\\
+			\textbf{Output:} Review of source code.\\
+			\textbf{How test will be performed:}
+				\begin{itemize}[label={--}]
+					\item Pylint ( a python static testing framework) will be used to analyze the source code and determine if there are syntax errors, faulty naming conventions, unused variables, poor quality etc. This testing will be automated.							
+				\end{itemize}
+		\end{enumerate}
 		
-\paragraph{Title for Test}
-\begin{enumerate}
-\item{test-id1\\}
-Type: Functional, Dynamic, Manual, Static etc.
-					
-Initial State: 
-					
-Input: 
-					
-Output: 
-					
-How test will be performed: 
-					
-\item{test-id2\\}
-Type: Functional, Dynamic, Manual, Static etc.
-					
-Initial State: 
-					
-Input: 
-					
-Output: 
-					
-How test will be performed: 
-\end{enumerate}
-\subsubsection{Area of Testing2}
-...
+\subsubsection{Area of Testing 6}		
+	\paragraph{Verifying correctness of output using automated testing.\\\\}
+	The challenges in this form of automated testing lie because of the following tasks:
+	\begin{itemize}[label={--}]
+		\item There needs to be a comparison image that is also generated in an automated fashion. 
+		\item	A comparison tool needs to exist that can compare 2 images and determine the difference on some scale.
+		\item	The difference scale needs to be normalized to account for static differences that are always present, such as in the way the axes are draw (line thickness for example), the size of the points, the spacing between one point to the next, etc. 
+	\end{itemize}	
+		\begin{enumerate}
+			\item{\textbf{Test ID \#6.1\\}}
+			\textbf{Type:} Functional, Dynamic, Automated\
+			\textbf{Initial State:} Completed source code. \\
+			\textbf{Input:} An image from xPycharts, and a comparison image generated using the same dataset.?Input: The 2 images.\\
+			\textbf{Output:}  A numerical value denoting the difference between these two images, and a pass/fail indicator.\\
+			\textbf{How test will be performed:}
+				\begin{itemize}[label={--}]
+					\item Using a python library such as PIL, an image of a graph generated by xPycharts will be saved.
+					\item Using an external graphing library (matplotlib), a comparison image will be created.
+					\item The script will then proceed to use these 2 images in the comparison tool denoted \href{http://www.pyimagesearch.com/2014/09/15/python-compare-two-images/}{here}.
+					\item The program will output a value that will then be normalized by a ratio determined prior.
+					\item The program will display the value, and indicate whether it met the threshold for a pass, or failed.							
+				\end{itemize}
+		\end{enumerate}		
+	
+	
 \subsection{Tests for Nonfunctional Requirements}
-\subsubsection{Area of Testing1}
 		
 \paragraph{Title for Test}
 \begin{enumerate}

@@ -7,8 +7,7 @@ class Graph:
 	def __init__(self, n , data = None):
 		self.data = clean_data(data) if data is not None else None
 		
-	
-		self.markings = n+1 # markings makes [0, n+1) markings
+		self.markings = (n+1) 
 		
 		if data is not None:
 			self.scale = get_scale(self.data, round_to = self.markings-1)
@@ -48,7 +47,8 @@ class Graph:
 									**kwargs)
 	
 		# plots a list of points 
-	def plot_points(self, data, **kwargs):		
+	def plot_points(self, data, **kwargs):
+		data = clean_data(data)
 		for coord in data:
 			self.plot_point( coord, **kwargs )
 	
@@ -58,7 +58,8 @@ class Graph:
 	
 		self.dx = [d['x'] for d in data]
 		self.dy = [d['y'] for d in data]
-		self.data = data
+
+		self.data = clean_data( data )
 		
 		dx_sorted = [d['x'] for d in data]; dx_sorted.sort()
 		x_interval = [x / 100.0 for x in range(dx_sorted[0], dx_sorted[-1]*100,1)]
@@ -133,6 +134,7 @@ if __name__ == '__main__':
 
 	#Graph = Graph(6); Graph.plot_function( sin )
 
-	Graph = Graph(6); Graph.plot_points_with_line( [ coord(-4,4), coord(-2,1), coord(-1,1) , coord(1,1), coord(2,2), coord(4,5), coord(5,3) ], fill="green"), 
+	Graph = Graph( 6 , [ (-4,4), (-2,1), (-1,1) , (1,1), (2,2), (4,5), (5,3) ]) 
+	#Graph.plot_points( [ (-4,4), (-2,1), (-1,1) , (1,1), (2,2), (4,5), (5,3) ] );
 
 	mainloop() # runs window indefinitely
