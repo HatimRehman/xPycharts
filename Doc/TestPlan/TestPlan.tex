@@ -357,6 +357,74 @@ How test will be performed:
 ...
 	
 \section{Comparison to Existing Implementation}	
+Edge cases will be tested in this section to ensure the program responds appropriately (determined by existing implementation) in non typical conditions. \\ \\
+Once again, it is important to note that because of limited resources, not every case will be tested and at times, a single test case would be sufficient in determining behaviour.	
+
+\subsubsection{Area of Testing 1}		
+	\paragraph{Negative and Positive infinities as (x, y).}
+		\begin{enumerate}
+			\item{\textbf{Test ID \#1.1\\}}
+			\textbf{Type:} Functional, Dynamic, Manual\\
+			\textbf{Initial State:} Instantiate Graph(6) object with 6 markings on each quadrant. Instantiate axisChart object (jCharts).\\	
+			\textbf{Input:} The list [( NEGATIVE\_INFINITY, NEGATIVE\_INFINITY),  (POSITIVE\_INFINITY, POSITIVE\_INFINITY) ]\\
+			\textbf{Output:}  Uncaught exception in xPycharts, caught exception in jCharts.\\
+			\textbf{How test will be performed:}
+				\begin{itemize}[label={--}]
+					\item The user will instantiate the graph objects from both libraries. 
+					\item The list object will be passed into the plotting method of the APIs.
+					\item The user will manually verify the behaviours of the 2 libraries.
+				\end{itemize}					
+	\end{enumerate}
+
+\subsubsection{Area of Testing 2}		
+	\paragraph{None object as input.}
+		\begin{enumerate}
+			\item{\textbf{Test ID \#2.1\\}}
+			\textbf{Type:} Functional, Dynamic, Manual\\
+			\textbf{Initial State:} Instantiate Graph(6) object with 6 markings on each quadrant. Instantiate axisChart object (jCharts).\\	
+			\textbf{Input:} The list [ ]\\
+			\textbf{Output:}  Empty graphs in both xPycharts and jCharts.\\
+			\textbf{How test will be performed:}
+				\begin{itemize}[label={--}]
+					\item The user will instantiate the graph objects from both libraries. 
+					\item The list object will be passed into the plotting method of the APIs.
+					\item The user will manually verify the behaviours of the 2 libraries.
+				\end{itemize}					
+	\end{enumerate}
+	
+\subsubsection{Area of Testing 3}
+Some (x, y) repeated n times where n is a very large number. 
+This area of testing covers the program's speed and efficiency (i.e a non functional requirement).
+An efficient library would remove duplicates from the input and would complete this task in ~O(k) time, where k is the time it takes to remove or ignore the duplicates from the input. In contrast, a non efficient system would take ~O(n) time.		
+		\begin{enumerate}
+			\item{\textbf{Test ID \#3.1\\}}
+			\textbf{Type:} Functional, Dynamic, Manual\\
+			\textbf{Initial State:} Instantiate Graph(6) object with 6 markings on each quadrant. Instantiate axisChart object (jCharts).\\	
+			\textbf{Input:} The list [ (1, 1), ? , (1, 1) ] with n spaces in between. \\
+			\textbf{Output:}   xPycharts would take a considerably long time. jCharts returns caught exception. \\
+			\textbf{How test will be performed:}
+				\begin{itemize}[label={--}]
+					\item The user will instantiate the graph objects from both libraries. 
+					\item The list object will be passed into the plotting method of the APIs.
+					\item The user will manually verify the behaviours of the 2 libraries.
+				\end{itemize}					
+	\end{enumerate}
+\subsubsection{Area of Testing 4}
+	\paragraph{Some (x, y, z) coordinates in input.}
+		\begin{enumerate}
+			\item{\textbf{Test ID \#4.1\\}}
+			\textbf{Type:} Functional, Dynamic, Manual\\
+			\textbf{Initial State:} Instantiate Graph(6) object with 6 markings on each quadrant. Instantiate axisChart object (jCharts).\\	
+			\textbf{Input:} The list [ (1, 1, 1), (2, 2), (3, 3) ] \\
+			\textbf{Output:}    xPycharts would plot (1, 1), (2, 2), and (3, 3). jCharts returns caught exception.  \\
+			\textbf{How test will be performed:}
+				\begin{itemize}[label={--}]
+					\item The user will instantiate the graph objects from both libraries. 
+					\item The list object will be passed into the plotting method of the APIs.
+					\item The user will manually verify the behaviours of the 2 libraries.
+				\end{itemize}					
+	\end{enumerate}
+
 				
 \section{Unit Testing Plan}
 		
