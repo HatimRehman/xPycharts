@@ -301,6 +301,8 @@ With the completion of the above 2, and through a method that determines a polyn
 	
 	
 \subsection{Tests for Nonfunctional Requirements}
+
+Note: see \hyperref[sec:3.1.1]{3.1.1}.
 		
 \subsubsection{Look and feel}
 \begin{enumerate}
@@ -474,10 +476,13 @@ An efficient library would remove duplicates from the input and would complete t
 
 				
 \section{Unit Testing Plan}
-		
+Unit testing will be done with unittest, the Python version of JUnit. Unit tests should be written as units are written.
 \subsection{Unit testing of internal functions}
+Unit testing for internal functions can be done on methods that return values. We will unit test with inputs that have clear expected outputs and with inputs that generate errors. We will aim for a high degree of code coverage with these unit tests, although the importance of graphics in this project means that there will be some functions that cannot be easily unit tested automatically. We will aim for 70\% coverage, although as the project progresses we will revise this goal if it becomes apparent that it is not realistic. Stubs and drivers should not be needed for this project.
 		
-\subsection{Unit testing of output files}		
+\subsection{Unit testing of output files}	
+The method described in functional test \#6.1 can be employed to unit test output files. Using python scripts and image comparison, we can unit test output files from specific units. 
+
 \bibliographystyle{plainnat}
 \bibliography{SRS}
 \newpage
