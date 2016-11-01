@@ -330,7 +330,7 @@ Output/Result: 80\% of users are able to produce each graph without assistance. 
 					
 How test will be performed: The test group will be given a computer with IDLE open, and a directory on their desktop containing the documentation for this project and sample datasets. They will be asked to produce one of each graph available in this library and will not be given any assistance by the testers. They will be timed. When error messages are created, the user when surveyed will report 80\% of the time that they could understand what the error was.
 		
-\item{\textbf{Test ID 5.1\\}}
+\item{\textbf{Test ID \#5.1\\}}
 Type: Structural, Dynamic, Manual
 					
 Initial State:    Library is available on computer, IDLE is open, a dataset and a series of programs that incorrectly implement the library are downloaded on computer. User group has been acquainted with the library.
@@ -342,6 +342,23 @@ Output/Result: Each error message is understood by users 80\% of the time
 How test will be performed: Users will be asked to run programs that incorrectly implement the library. They will be asked to identify the error in implementation based on the error message. The correctness of their answers will be recorded.
 
  \end{enumerate} 
+ 
+ \subsubsection{Performance}
+\begin{enumerate}
+\item{\textbf{Test ID \#6,9,10 \\}}
+Type: Structural, Dynamic, Automatic
+					
+Initial State:    Library is available on computer, minimal other programs are open
+					
+Input/Condition: Script is executed with random datasets, averaging 500 points in a set
+					
+Output/Result: Results written to text file. Graphs never take more than 20 seconds to produce, and never stall out the program
+					
+How test will be performed: A script will repeatedly make a random data set, and time how long it takes to make each graph based on that data set. It will time the generation of the graphs and record this in a text file. After executing many times it will confirm that no graph took more than 20 seconds to produce.
+
+ \end{enumerate} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
 		
 Same as described in \hyperref[sec:3.1.1]{3.1.1}.
 
@@ -361,7 +378,7 @@ Once again, it is important to note that because of limited resources, not every
 				\begin{itemize}[label={--}]
 					\item The user will instantiate the graph objects from both libraries. 
 					\item The list object will be passed into the plotting method of the APIs.
-					\item The user will manually verify the behaviours of the 2 libraries.
+					\item The user will manually verify the behaviors of the 2 libraries.
 				\end{itemize}					
 	\end{enumerate}
 
