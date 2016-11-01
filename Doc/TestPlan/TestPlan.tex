@@ -42,26 +42,31 @@ The document will serve as a description of the test cases and methods that will
 \subsection{Scope}
 The scope of the test plan includes the data filtering mechanism (checks to see if the data entered is valid to be plotted, if not exceptions are raised) of the XPYCharts library, the axis scaling algorithm (produces a scale that is fitting for all data points entered), the output generated as graphs (this includes the scatter plots and the lines graphs that connect all points of a function). The scope will not cover tkinter that is being used by the library as it is assumed that the package in already tested and verified. 
 \subsection{Acronyms, Abbreviations, and Symbols}
-	
+Please refer to Table 2.
 \begin{table}[hbp]
-\caption{\textbf{Table of Abbreviations}} \label{Table}
-\begin{tabularx}{\textwidth}{p{3cm}X}
+\caption{\textbf{Important Terms}} \label{Table}
+\begin{tabularx}{\textwidth}{p{5cm}X}
 \toprule
-\textbf{Abbreviation} & \textbf{Definition} \\
+\textbf{Term} & \textbf{Description} \\
 \midrule
-Abbreviation1 & Definition1\\
-Abbreviation2 & Definition2\\
-\bottomrule
-\end{tabularx}
-\end{table}
-\begin{table}[!htbp]
-\caption{\textbf{Table of Definitions}} \label{Table}
-\begin{tabularx}{\textwidth}{p{3cm}X}
-\toprule
-\textbf{Term} & \textbf{Definition}\\
-\midrule
-Term1 & Definition1\\
-Term2 & Definition2\\
+XPYCharts & This is the name of the graphing library (project) that is being developed \\
+\\
+Functional Testing & Black box testing that is done based on the description of the program’s function\\
+\\
+Structural Testing & White box testing that is done based on the actual code and structure of the program\\
+\\
+Dynamic Testing & Testing that will require the program to be executed and then its results will be compared with the expected output\\
+\\
+Tkinter  & The GUI package that is being used by XPYCharts in order to produce the windowed graphical representation of the data\\
+\\
+matplotlib & Is a 2d plotting library that is available for python. This will serve as the external resource for generating graphs against which the graphs of the project will be compared during automated testing\\
+\\
+unittest & The library available in python for unit testing\\
+\\
+Image comparison & The project requires for the automated testing to compare two images side by side and check to see if both images have the same graph in them\\
+\\
+Pylint & Is a python tool for checking a program’s source code, looking for errors and for checking the overall form of the source code.\\
+
 \bottomrule
 \end{tabularx}
 \end{table}	
