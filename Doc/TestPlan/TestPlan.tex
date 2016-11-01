@@ -354,7 +354,48 @@ Input/Condition: Script is executed with random datasets, averaging 500 points i
 					
 Output/Result: Results written to text file. Graphs never take more than 20 seconds to produce, and never stall out the program
 					
-How test will be performed: A script will repeatedly make a random data set, and time how long it takes to make each graph based on that data set. It will time the generation of the graphs and record this in a text file. After executing many times it will confirm that no graph took more than 20 seconds to produce.
+How test will be performed: A script will repeatedly make a random data set, and time how long it takes to make each graph based on that data set. It will time the generation of the graphs and record this in a text file. After executing many times it will confirm that no graph took more than 20 seconds to produce, and that it did not stall out during execution.
+
+ \end{enumerate} 
+ 
+  \subsubsection{Performance}
+\begin{enumerate}
+\item{\textbf{Test ID \#6,9,10 \\}}
+Type: Structural, Dynamic, Automatic
+					
+Initial State:    Library is available on computer, minimal other programs are open. Automatic testing script is on computer.
+					
+Input/Condition: Script is executed with random datasets, averaging 500 points in a set
+					
+Output/Result: Results written to text file. Graphs never take more than 20 seconds to produce, and never stall out the program
+					
+How test will be performed: A script will repeatedly make a random data set, and time how long it takes to make each graph based on that data set. It will time the generation of the graphs and record this in a text file. After executing many times it will confirm that no graph took more than 20 seconds to produce, and that it did not stall out during execution.
+
+ \end{enumerate} 
+ 
+  \subsubsection{Operational and Environment}
+\begin{enumerate}
+\item{\textbf{Test ID \#11,12,13,15 \\}}
+Type: Structural, Dynamic, Manual
+					
+Initial State:    Test uses Mac, Windows, Linux computers. Python is installed on computer, program that generates each graph with random dataset is on USB stick with the library (stored as zip file)
+					
+Input/Condition: Program is executed on computers.
+					
+Output/Result: All graphs are produced without error.
+					
+How test will be performed: A USB key with a test program will be inserted into computers running Windows 10, Mac OS 10.9+, and the latest Ubuntu LTS. The program will run successfully.
+
+\item{\textbf{Test ID \#11 \\}}
+Type: Structural, Dynamic, Manual
+					
+Initial State:    Library is available on Mac, Windows, Linux computer. Python is installed on computer, program that generates each graph with random dataset is on USB stick
+					
+Input/Condition: Program is executed on computers.
+					
+Output/Result: All graphs are produced without error.
+					
+How test will be performed: A USB key with a test program will be inserted into computers running Windows 10, Mac OS 10.9+, and the latest Ubuntu LTS. The program will run successfully.
 
  \end{enumerate} 
 
