@@ -302,34 +302,46 @@ With the completion of the above 2, and through a method that determines a polyn
 	
 \subsection{Tests for Nonfunctional Requirements}
 		
-\paragraph{Title for Test}
+\subsubsection{Look and feel}
 \begin{enumerate}
-\item{test-id1\\}
-Type: 
+\item{\textbf{Test ID \#1\\}}
+Type: Structural, Dynamic, Manual
 					
-Initial State: 
+Initial State:  Program is ready to produce one of each graph with random data.
 					
-Input/Condition: 
+Input/Condition: Program generates one of each type of graph, with random data inputted
 					
-Output/Result: 
+Output/Result:  70\% of users say that the graph is ``Visually appealing'' rather than ``Visually unappealing.''
 					
-How test will be performed: 
+How test will be performed: Each user in the test group will be presented with a graph produced from random data. They will rate it as ``visually appealing'' or ``visually unappealing.'' At least 70\% of users must rate it as visually appealing for the test to be passed.
 					
-\item{test-id2\\}
-Type: Functional, Dynamic, Manual, Static etc.
-					
-Initial State: 
-					
-Input: 
-					
-Output: 
-					
-How test will be performed: 
 \end{enumerate}
-\subsubsection{Area of Testing2}
-...
-\section{Tests for Proof of Concept}
-\subsection{Area of Testing1}
+
+\subsubsection{Usability}
+\begin{enumerate}
+\item{\textbf{Test ID \#2,3,4,5\\}}
+Type: Structural, Dynamic, Manual
+					
+Initial State:  Library is available on computer, IDLE is open, a dataset is downloaded on computer. User group has some knowledge of Python.
+					
+Input/Condition: Users asked to create one of each graph without assistance
+					
+Output/Result: 80\% of users are able to produce each graph without assistance. They do not have issue with the linguistic content of the documentation. They produce these graphs in under twenty minutes.
+					
+How test will be performed: The test group will be given a computer with IDLE open, and a directory on their desktop containing the documentation for this project and sample datasets. They will be asked to produce one of each graph available in this library and will not be given any assistance by the testers. They will be timed. When error messages are created, the user when surveyed will report 80\% of the time that they could understand what the error was.
+		
+\item{\textbf{Test ID 5.1\\}}
+Type: Structural, Dynamic, Manual
+					
+Initial State:    Library is available on computer, IDLE is open, a dataset and a series of programs that incorrectly implement the library are downloaded on computer. User group has been acquainted with the library.
+					
+Input/Condition: Users asked to use library in ways that throw each error message.
+					
+Output/Result: Each error message is understood by users 80\% of the time
+					
+How test will be performed: Users will be asked to run programs that incorrectly implement the library. They will be asked to identify the error in implementation based on the error message. The correctness of their answers will be recorded.
+
+ \end{enumerate} 
 		
 Same as described in \hyperref[sec:3.1.1]{3.1.1}.
 
