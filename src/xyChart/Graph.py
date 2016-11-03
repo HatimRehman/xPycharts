@@ -47,19 +47,24 @@ class Graph:
 									**kwargs)
 	
 		# plots a list of points 
-	def plot_points(self, data, **kwargs):
-		data = clean_data(data)
-		for coord in data:
+	def plot_points(self, data = None, **kwargs):
+		try:
+			self.data = clean_data(data)
+		except:
+			pass
+			
+		for coord in self.data:
 			self.plot_point( coord, **kwargs )
 	
 	
 	# plots a list of points and a polynomial that passes through all these points
 	def plot_points_with_line(self, data, **kwargs):
-	
+
+		self.data = data = clean_data( data )
+
 		self.dx = [d['x'] for d in data]
 		self.dy = [d['y'] for d in data]
 
-		self.data = clean_data( data )
 		
 		dx_sorted = [d['x'] for d in data]; dx_sorted.sort()
 		x_interval = [x / 100.0 for x in range(dx_sorted[0], dx_sorted[-1]*100,1)]
@@ -135,6 +140,6 @@ if __name__ == '__main__':
 	#Graph = Graph(6); Graph.plot_function( sin )
 
 	Graph = Graph( 6 , [ (-4,4), (-2,1), (-1,1) , (1,1), (2,2), (4,5), (5,3) ]) 
-	#Graph.plot_points( [ (-4,4), (-2,1), (-1,1) , (1,1), (2,2), (4,5), (5,3) ] );
+	#Graph = Graph(6); Graph.plot_points_with_line( [ (-4,4), (-2,1), (-1,1) , (1,1), (2,2), (4,5), (5,3) ], fill = "blue" );
 
 	mainloop() # runs window indefinitely
