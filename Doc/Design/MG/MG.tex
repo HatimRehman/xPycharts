@@ -72,6 +72,17 @@ XPYCharts is a python based graphing library that is a recreation of the Jcharts
 This document will serve as the Module Guide (MG) for the SRS document of XPYCharts. The MG shows a decomposition of the modules of the software system and how these modules accomplish the functional/non-functional requirements previously stated within the SRS. The MG will also show how the software adheres to the principals of information hiding and data independence in order to create a modular structure. The MG document is followed by the Module Interface Specification (MIS) that describes from an external viewpoint the intended behavior of the module’s functions. 
 \subsection{Design Principals}
 The software system of XPYCharts is built with consideration to several design principals including Modular decomposition, data independence, encapsulation and information hiding. In addition the decomposed modules of the system interact with each other through a structure that ensures low coupling and high cohesion so that modules stay as independent of each other as possible. This type of design will allow for easier software maintenance and modification in the future releases of the product. Similarly information hiding allows secrecy to exist over the module implementation making it easier to use the modules at a higher level without having to worry about the way they were implemented. This is especially important to XPYCharts as it is a library and therefore developers using the library should not have to know how the library modules are implemented to be able to use them.
+\subsection{Document Structure}
+The document is divided into 7 major sections including the Introduction above. Listed below is each of the major sections (excluding Introduction) with a brief description of the information that they contain:
+\begin{itemize}
+\item Anticipated and Unlikely Changes (Section 2): This section outlines the changes that are likely and unlikely to happen. This section is split into 2 subsections covering all likely and unlikely changes.
+\item Module Hierarchy (Section 3): This section provides an outline of the module design by detailing the module hierarchy and providing a table describing the secrets of the modules.
+\item Connection between Requirements and Design (Section 4): This section maps out the modules that implement each of the requirements as presented in the SRS document.
+\item Module Decomposition (Section 5): This section decomposes the modules by their secrets and states the design decisions that are satisfied by these secrets. The section focuses on the purpose of the module’s existence rather than how it is implemented.
+\item Traceability Matrix (Section 6): This section provides two tractability matrices that allow tracking of which requirements were satisfied by which modules and which modules will take care of which anticipated changes.
+\item Uses Hierarchy Between Modules (Section 7): This section shows the uses relationships between the modules of the system.
+\end{itemize}
+
 
 \section{Anticipated and Unlikely Changes} \label{SecChange}
 
