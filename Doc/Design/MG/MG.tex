@@ -70,8 +70,8 @@ Date 2 & 1.1 & Notes\\
 XPYCharts is a python based graphing library that is a recreation of the Jcharts graphing library available for Java developers. XPYCharts supports the production of scatter plots, line graphs and pie charts that can be used for statistical analysis and in a learning environment for data visualization.
 \subsection{Context}
 This document will serve as the Module Guide (MG) for the SRS document of XPYCharts. The MG shows a decomposition of the modules of the software system and how these modules accomplish the functional/non-functional requirements previously stated within the SRS. The MG will also show how the software adheres to the principals of information hiding and data independence in order to create a modular structure. The MG document is followed by the Module Interface Specification (MIS) that describes from an external viewpoint the intended behavior of the module’s functions. 
-
-
+\subsection{Design Principals}
+The software system of XPYCharts is built with consideration to several design principals including Modular decomposition, data independence, encapsulation and information hiding. In addition the decomposed modules of the system interact with each other through a structure that ensures low coupling and high cohesion so that modules stay as independent of each other as possible. This type of design will allow for easier software maintenance and modification in the future releases of the product. Similarly information hiding allows secrecy to exist over the module implementation making it easier to use the modules at a higher level without having to worry about the way they were implemented. This is especially important to XPYCharts as it is a library and therefore developers using the library should not have to know how the library modules are implemented to be able to use them.
 
 \section{Anticipated and Unlikely Changes} \label{SecChange}
 
