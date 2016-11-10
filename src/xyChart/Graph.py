@@ -2,8 +2,19 @@ from Axes import *
 from Scale import *
 from InputParser import *
 
+##
+# xyGraph constructing class\n
+# Author: Hatim Rehman\n
+# This class represents a graph object that can plot points with data contained
+# within a list of tuples\n[ (x1, y1), (x2, y2), \...\ , (xn, yn) ]
+#
 class Graph:
-
+    ## The constructor method
+    # Takes in 3 parameters. 
+    # Outputs a graph with plotted data that is entered as a parameter.
+    #  @param self The object pointer.
+    #  @param n The number of markings to appear on the x and y axes
+    #  @param data The data to plot 
 	def __init__(self, n , data = None):
 		self.data = clean_data(data) if data is not None else None
 		
@@ -36,7 +47,12 @@ class Graph:
 		if self.data is not None:
 			self.plot_points(self.data, fill="blue")
 			
-
+    ## Plot points method 
+    # Takes in a coordinate to plot, with keyword args that may be used to style the coordinate.
+    # Outputs a graph with the coord parameter plotted. 
+    #  @param self The object pointer.
+    #  @param coord A dictionary with the format { 'x': <EM>value</EM>, 'y': <EM>value</EM> } 
+    #  @param kwargs Keyword arguments for Tkinter's create_circle() method 
 	def plot_point(self, coord, **kwargs): #plots a coordinate, with stylings kwargs if they exist
 
 		translated_coord = self._get_translated_point(coord) #converts (x,y) to a point on the canvas' coordinate system
@@ -46,7 +62,12 @@ class Graph:
 									4,
 									**kwargs)
 	
-		# plots a list of points 
+    ## Plot points method 
+    # takes in multiple coordinates and calls the plot_point() method from its own API on each method.
+    # Outputs a graph with the data parameter plotted. 
+    #  @param self The object pointer.
+    #  @param data A list of tuples [ (x1, y1), (x2, y2), \...\ , (xn, yn) ]
+    #  @param kwargs Keyword arguments for Tkinter's create_circle() method  
 	def plot_points(self, data = None, **kwargs):
 		try:
 			self.data = clean_data(data)
@@ -57,7 +78,14 @@ class Graph:
 			self.plot_point( coord, **kwargs )
 	
 	
-	# plots a list of points and a polynomial that passes through all these points
+    ## Plot points with line method 
+    # takes in multiple coordinates and calls the plot_point() method from its own API on each method. Then
+    # calls its private function generating method that creates a polynomial that passes through each point using
+    # the Lagrange polynomial interpolation theorem.
+    #  Outputs a graph with the data parameter plotted. 
+    #  @param self The object pointer.
+    #  @param data A list of tuples [ (x1, y1), (x2, y2), \...\ , (xn, yn) ]
+    #  @param kwargs Keyword arguments for Tkinter's create_circle() method  
 	def plot_points_with_line(self, data, **kwargs):
 
 		self.data = data = clean_data( data )
@@ -74,7 +102,12 @@ class Graph:
 		for coord in data:
 			self.plot_point( coord, **kwargs )
 	
-	
+	## Plots a python function onto the graph
+    #  Outputs a graph with the func parameter plotted
+    #  @param self The object pointer.
+    #  @param func A python function that takes in a double value and returns a double value
+    #  @param x_interval A  list of double values that the function should pass through [ x1, \...\, xn ]
+    #  @param kwargs Keyword arguments for Tkinter's create_circle() method  
 	def plot_function(self, func, x_interval = None, **kwargs): # plots a function, with styling kwargs if they exist
 		
 		x_interval = [x / 1000.0 for x in range(-Graph.markings*1000, Graph.markings*1000, 1)] if x_interval is None else x_interval
@@ -96,7 +129,7 @@ class Graph:
 										0.5,
 										**kwargs)
 
-
+	# _method() are private methods as described in the Python style guide followed (PEP 8)
 	# converts (x,y) to a point on the canvas' coordinate system
 	def _get_translated_point(self, coord):
 

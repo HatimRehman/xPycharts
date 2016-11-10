@@ -1,0 +1,179 @@
+\hypertarget{class_graph_1_1_graph}{}\section{Graph.\+Graph Class Reference}
+\label{class_graph_1_1_graph}\index{Graph.\+Graph@{Graph.\+Graph}}
+
+
+xy\+Graph constructing class~\newline
+ Author\+: Hatim Rehman~\newline
+ This class represents a graph object that can plot points with data contained within a list of tuples~\newline
+\mbox{[} (x1, y1), (x2, y2), ... , (xn, yn) \mbox{]}  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{class_graph_1_1_graph_af0cdc046d29cdf27c5f94445132d7cd8}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self, n, data=None)
+\begin{DoxyCompactList}\small\item\em The constructor method Takes in 3 parameters. \end{DoxyCompactList}\item 
+def \hyperlink{class_graph_1_1_graph_ad52308b6029d41678a23df1f40baa81e}{plot\+\_\+point} (self, coord, kwargs)
+\begin{DoxyCompactList}\small\item\em Plot points method Takes in a coordinate to plot, with keyword args that may be used to style the coordinate. \end{DoxyCompactList}\item 
+def \hyperlink{class_graph_1_1_graph_ad01b52cd4d978eb49b257b2af5caffc0}{plot\+\_\+points} (self, data=None, kwargs)
+\begin{DoxyCompactList}\small\item\em Plot points method takes in multiple coordinates and calls the \hyperlink{class_graph_1_1_graph_ad52308b6029d41678a23df1f40baa81e}{plot\+\_\+point()} method from its own A\+PI on each method. \end{DoxyCompactList}\item 
+def \hyperlink{class_graph_1_1_graph_ae10db019dca4a470d6c03b86984fc667}{plot\+\_\+points\+\_\+with\+\_\+line} (self, data, kwargs)
+\begin{DoxyCompactList}\small\item\em Plot points with line method takes in multiple coordinates and calls the \hyperlink{class_graph_1_1_graph_ad52308b6029d41678a23df1f40baa81e}{plot\+\_\+point()} method from its own A\+PI on each method. \end{DoxyCompactList}\item 
+def \hyperlink{class_graph_1_1_graph_a2a9994035c4419c6ff72d675ef85823c}{plot\+\_\+function} (self, func, x\+\_\+interval=None, kwargs)
+\begin{DoxyCompactList}\small\item\em Plots a python function onto the graph Outputs a graph with the func parameter plotted. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_graph_1_1_graph_a94a0ef0f03a0dd24dea82e3ef2b7d6e1}\label{class_graph_1_1_graph_a94a0ef0f03a0dd24dea82e3ef2b7d6e1}} 
+{\bfseries data}
+\item 
+\mbox{\Hypertarget{class_graph_1_1_graph_a2b6f5b97b6e3bbc3f4892f61f2e4c13e}\label{class_graph_1_1_graph_a2b6f5b97b6e3bbc3f4892f61f2e4c13e}} 
+{\bfseries markings}
+\item 
+\mbox{\Hypertarget{class_graph_1_1_graph_a8f6efbd0a24558179bc5de2f1c5c8915}\label{class_graph_1_1_graph_a8f6efbd0a24558179bc5de2f1c5c8915}} 
+{\bfseries scale}
+\item 
+\mbox{\Hypertarget{class_graph_1_1_graph_a39b2fad1286b410b3a79cf3a46cd4025}\label{class_graph_1_1_graph_a39b2fad1286b410b3a79cf3a46cd4025}} 
+{\bfseries scale\+\_\+x}
+\item 
+\mbox{\Hypertarget{class_graph_1_1_graph_ab146d2a4d40f06f6f6a3898d9f86698e}\label{class_graph_1_1_graph_ab146d2a4d40f06f6f6a3898d9f86698e}} 
+{\bfseries scale\+\_\+y}
+\item 
+\mbox{\Hypertarget{class_graph_1_1_graph_a40721968f5bd764c0bf522441d4d190b}\label{class_graph_1_1_graph_a40721968f5bd764c0bf522441d4d190b}} 
+{\bfseries master}
+\item 
+\mbox{\Hypertarget{class_graph_1_1_graph_a8864e0afea9463d5f7c19d0db528a398}\label{class_graph_1_1_graph_a8864e0afea9463d5f7c19d0db528a398}} 
+{\bfseries graph}
+\item 
+\mbox{\Hypertarget{class_graph_1_1_graph_a5b96246e91f3e2ccf0f19119848b9f61}\label{class_graph_1_1_graph_a5b96246e91f3e2ccf0f19119848b9f61}} 
+{\bfseries graph\+\_\+height}
+\item 
+\mbox{\Hypertarget{class_graph_1_1_graph_a9d1f6105ebc5552ee56febfd95e8ff30}\label{class_graph_1_1_graph_a9d1f6105ebc5552ee56febfd95e8ff30}} 
+{\bfseries graph\+\_\+width}
+\item 
+\mbox{\Hypertarget{class_graph_1_1_graph_a037f73f95af8e580f546257afff16321}\label{class_graph_1_1_graph_a037f73f95af8e580f546257afff16321}} 
+{\bfseries x\+\_\+offset}
+\item 
+\mbox{\Hypertarget{class_graph_1_1_graph_a72faf5fc9b08ce6745dac6969624a8a6}\label{class_graph_1_1_graph_a72faf5fc9b08ce6745dac6969624a8a6}} 
+{\bfseries y\+\_\+offset}
+\item 
+\mbox{\Hypertarget{class_graph_1_1_graph_ae8bb0a1d151b76635aa701867fa2e838}\label{class_graph_1_1_graph_ae8bb0a1d151b76635aa701867fa2e838}} 
+{\bfseries dx}
+\item 
+\mbox{\Hypertarget{class_graph_1_1_graph_aa67b439573e876a230b291eed8314b22}\label{class_graph_1_1_graph_aa67b439573e876a230b291eed8314b22}} 
+{\bfseries dy}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+xy\+Graph constructing class~\newline
+ Author\+: Hatim Rehman~\newline
+ This class represents a graph object that can plot points with data contained within a list of tuples~\newline
+\mbox{[} (x1, y1), (x2, y2), ... , (xn, yn) \mbox{]} 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_graph_1_1_graph_af0cdc046d29cdf27c5f94445132d7cd8}\label{class_graph_1_1_graph_af0cdc046d29cdf27c5f94445132d7cd8}} 
+\index{Graph\+::\+Graph@{Graph\+::\+Graph}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!Graph\+::\+Graph@{Graph\+::\+Graph}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def Graph.\+Graph.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{n,  }\item[{}]{data = {\ttfamily None} }\end{DoxyParamCaption})}
+
+
+
+The constructor method Takes in 3 parameters. 
+
+Outputs a graph with plotted data that is entered as a parameter. 
+\begin{DoxyParams}{Parameters}
+{\em self} & The object pointer. \\
+\hline
+{\em n} & The number of markings to appear on the x and y axes \\
+\hline
+{\em data} & The data to plot \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_graph_1_1_graph_a2a9994035c4419c6ff72d675ef85823c}\label{class_graph_1_1_graph_a2a9994035c4419c6ff72d675ef85823c}} 
+\index{Graph\+::\+Graph@{Graph\+::\+Graph}!plot\+\_\+function@{plot\+\_\+function}}
+\index{plot\+\_\+function@{plot\+\_\+function}!Graph\+::\+Graph@{Graph\+::\+Graph}}
+\subsubsection{\texorpdfstring{plot\+\_\+function()}{plot\_function()}}
+{\footnotesize\ttfamily def Graph.\+Graph.\+plot\+\_\+function (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{func,  }\item[{}]{x\+\_\+interval = {\ttfamily None},  }\item[{}]{kwargs }\end{DoxyParamCaption})}
+
+
+
+Plots a python function onto the graph Outputs a graph with the func parameter plotted. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The object pointer. \\
+\hline
+{\em func} & A python function that takes in a double value and returns a double value \\
+\hline
+{\em x\+\_\+interval} & A list of double values that the function should pass through \mbox{[} x1, ...\textbackslash{}, xn \mbox{]} \\
+\hline
+{\em kwargs} & Keyword arguments for Tkinter\textquotesingle{}s create\+\_\+circle() method \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_graph_1_1_graph_ad52308b6029d41678a23df1f40baa81e}\label{class_graph_1_1_graph_ad52308b6029d41678a23df1f40baa81e}} 
+\index{Graph\+::\+Graph@{Graph\+::\+Graph}!plot\+\_\+point@{plot\+\_\+point}}
+\index{plot\+\_\+point@{plot\+\_\+point}!Graph\+::\+Graph@{Graph\+::\+Graph}}
+\subsubsection{\texorpdfstring{plot\+\_\+point()}{plot\_point()}}
+{\footnotesize\ttfamily def Graph.\+Graph.\+plot\+\_\+point (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{coord,  }\item[{}]{kwargs }\end{DoxyParamCaption})}
+
+
+
+Plot points method Takes in a coordinate to plot, with keyword args that may be used to style the coordinate. 
+
+Outputs a graph with the coord parameter plotted. 
+\begin{DoxyParams}{Parameters}
+{\em self} & The object pointer. \\
+\hline
+{\em coord} & A dictionary with the format \{ \textquotesingle{}x\textquotesingle{}\+: {\itshape value}, \textquotesingle{}y\textquotesingle{}\+: {\itshape value} \} \\
+\hline
+{\em kwargs} & Keyword arguments for Tkinter\textquotesingle{}s create\+\_\+circle() method \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_graph_1_1_graph_ad01b52cd4d978eb49b257b2af5caffc0}\label{class_graph_1_1_graph_ad01b52cd4d978eb49b257b2af5caffc0}} 
+\index{Graph\+::\+Graph@{Graph\+::\+Graph}!plot\+\_\+points@{plot\+\_\+points}}
+\index{plot\+\_\+points@{plot\+\_\+points}!Graph\+::\+Graph@{Graph\+::\+Graph}}
+\subsubsection{\texorpdfstring{plot\+\_\+points()}{plot\_points()}}
+{\footnotesize\ttfamily def Graph.\+Graph.\+plot\+\_\+points (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{data = {\ttfamily None},  }\item[{}]{kwargs }\end{DoxyParamCaption})}
+
+
+
+Plot points method takes in multiple coordinates and calls the \hyperlink{class_graph_1_1_graph_ad52308b6029d41678a23df1f40baa81e}{plot\+\_\+point()} method from its own A\+PI on each method. 
+
+Outputs a graph with the data parameter plotted. 
+\begin{DoxyParams}{Parameters}
+{\em self} & The object pointer. \\
+\hline
+{\em data} & A list of tuples \mbox{[} (x1, y1), (x2, y2), ... , (xn, yn) \mbox{]} \\
+\hline
+{\em kwargs} & Keyword arguments for Tkinter\textquotesingle{}s create\+\_\+circle() method \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_graph_1_1_graph_ae10db019dca4a470d6c03b86984fc667}\label{class_graph_1_1_graph_ae10db019dca4a470d6c03b86984fc667}} 
+\index{Graph\+::\+Graph@{Graph\+::\+Graph}!plot\+\_\+points\+\_\+with\+\_\+line@{plot\+\_\+points\+\_\+with\+\_\+line}}
+\index{plot\+\_\+points\+\_\+with\+\_\+line@{plot\+\_\+points\+\_\+with\+\_\+line}!Graph\+::\+Graph@{Graph\+::\+Graph}}
+\subsubsection{\texorpdfstring{plot\+\_\+points\+\_\+with\+\_\+line()}{plot\_points\_with\_line()}}
+{\footnotesize\ttfamily def Graph.\+Graph.\+plot\+\_\+points\+\_\+with\+\_\+line (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{data,  }\item[{}]{kwargs }\end{DoxyParamCaption})}
+
+
+
+Plot points with line method takes in multiple coordinates and calls the \hyperlink{class_graph_1_1_graph_ad52308b6029d41678a23df1f40baa81e}{plot\+\_\+point()} method from its own A\+PI on each method. 
+
+Then calls its private function generating method that creates a polynomial that passes through each point using the Lagrange polynomial interpolation theorem. Outputs a graph with the data parameter plotted. 
+\begin{DoxyParams}{Parameters}
+{\em self} & The object pointer. \\
+\hline
+{\em data} & A list of tuples \mbox{[} (x1, y1), (x2, y2), ... , (xn, yn) \mbox{]} \\
+\hline
+{\em kwargs} & Keyword arguments for Tkinter\textquotesingle{}s create\+\_\+circle() method \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Graph.\+py\end{DoxyCompactItemize}
