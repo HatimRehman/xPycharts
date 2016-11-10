@@ -138,7 +138,6 @@ actually be implemented.
 \midrule
 
 \multirow{4}{0.3\textwidth}{Behaviour-Hiding Module} 
-& Input Format Module\\
 & Exception Raising Module\\
 & Output Format Module\\
 & Polynomial Equations Module\\
@@ -191,6 +190,14 @@ selected.
 \item[Implemented By:] OS
 \end{description}
 
+\subsubsection{Output Window Module (\mref{mInput})}
+
+\begin{description}
+\item[Secrets:]The structure on which the output data is displayed on.
+\item[Services:]Creates a window in the OS that is used by the library to paint on. 
+\item[Implemented By:] Python Canvas
+\end{description}
+
 \subsection{Behaviour-Hiding Module}
 
 \begin{description}
@@ -203,16 +210,31 @@ selected.
 \item[Implemented By:] --
 \end{description}
 
-\subsubsection{Input Format Module (\mref{mInput})}
+\subsubsection{Exception Raising Module (\mref{mInput})}
 
 \begin{description}
-\item[Secrets:]The format and structure of the input data.
-\item[Services:]Converts the input data into the data structure used by the
-  input parameters module.
-\item[Implemented By:] [Your Program Name Here]
+\item[Secrets:] The format and structure of the input data.
+\item[Services:] Checks against the input format and the known secret format and raises an exception if they do not match.
+\item[Implemented By:] InputParser.py
 \end{description}
 
-\subsubsection{Etc.}
+\subsubsection{Output Format Module (\mref{mInput})}
+
+\begin{description}
+\item[Secrets:]What the resulting scale of the graph should be. 
+\item[Services:]Determines the scale of the graph from the data.
+  input parameters module.
+\item[Implemented By:] Scale.py
+\end{description}
+
+\subsubsection{Polynomial Equations Module (\mref{mInput})}
+
+\begin{description}
+\item[Secrets:]A polynomial that can press through n points.  
+\item[Services:]Finds the function that passes through all points in the dataset. 
+  input parameters module.
+\item[Implemented By:] Graph.py
+\end{description}
 
 
 \subsection{Software Decision Module}
@@ -228,7 +250,28 @@ selected.
 \item[Implemented By:] --
 \end{description}
 
-\subsubsection{Etc.}
+\subsubsection{Data Structure Module (\mref{mInput})}
+\begin{description}
+\item[Secrets:]The format and structure of the input data.
+\item[Services:]Converts the input data into the data structure used by the
+  input parameters module.
+\item[Implemented By:] InputParser.py
+\end{description}InputParser.py.py
+
+\subsubsection{Polynomial Solver Module (\mref{mInput})}
+\begin{description}
+\item[Secrets:]A mathematical equation that determines a smooth curve passing through all points.
+\item[Services:]Finds the function that passes through all points in the dataset. 
+  input parameters module.
+\item[Implemented By:] Graph.py
+\end{description}
+
+\subsubsection{Plotting Module(\mref{mInput})}
+\begin{description}
+\item[Secrets:] X and Y direction offsets between the graphical window and the cartesian coordinate system drawn on it.
+\item[Services:]Plots any (x,y) point on the cartesian coordinate system that is painted on the window. 
+\item[Implemented By:] Graph.py
+\end{description}
 
 \section{Traceability Matrix} \label{SecTM}
 

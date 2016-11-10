@@ -1,6 +1,6 @@
 from Axes import *
-from get_scale import *
-from Points import *
+from Scale import *
+from InputParser import *
 
 class Graph:
 
