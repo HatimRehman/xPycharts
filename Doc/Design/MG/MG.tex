@@ -109,19 +109,13 @@ change.
 
 \subsection{Unlikely Changes} \label{SecUchange}
 
-The module design should be as general as possible. However, a general system is
-more complex. Sometimes this complexity is not necessary. Fixing some design
-decisions at the system architecture stage can simplify the software design. If
-these decision should later need to be changed, then many parts of the design
-will potentially need to be modified. Hence, it is not intended that these
-decisions will be changed.
+The following are the changes in the system that are unlikely to happen by the software release and in the future updates:
 
 \begin{description}
-\item[\refstepcounter{ucnum} \uctheucnum \label{ucIO}:] Input/Output devices
-  (Input: File and/or Keyboard, Output: File, Memory, and/or Screen).
-\item[\refstepcounter{ucnum} \uctheucnum \label{ucInput}:] There will always be
-  a source of input data external to the software.
-\item ...
+\item[\refstepcounter{ucnum} \uctheucnum \label{ucIO}:] The purpose (to create a graphing library accessible to python developers) and scope (i.e. reduction of scope. Project scope is open to expansion) of the project.
+\item[\refstepcounter{ucnum} \uctheucnum \label{ucInput}:] The parsing mechanism for the data that is inputted by the user and the data structure developed from it (the library converts the input data into a dictionary of x-y co-ordinate pairs).
+\item[\refstepcounter{ucnum} \uctheucnum \label{ucInput}:]The data input methods in terms how the library expects user input (i.e. the current implementation allows developers to enter all data points as co-ordinate pairs inside of a list).
+\item[\refstepcounter{ucnum} \uctheucnum \label{ucInput}:]The platform for the library (i.e. the library will run on Python 2).
 \end{description}
 
 \section{Module Hierarchy} \label{SecMH}
