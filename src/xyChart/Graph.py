@@ -129,8 +129,11 @@ class Graph:
 										0.5,
 										**kwargs)
 
-	# _method() are private methods as described in the Python style guide followed (PEP 8)
-	# converts (x,y) to a point on the canvas' coordinate system
+	## Finds the coordinates of any (x,y) to (x2,y2) where x2, y2 are the new coordinates on the Canvas object with respect to the cartesian coordinate system.
+	#  Multiplies the x coordinate by the scale ratio on the cartesian system, then moves it half the screen length to the right.
+	#  Multiplies the y coordinate by the scale ratio on the cartesian system, then subtracts it from the height of the screen.
+    #  @param self The object pointer.
+    #  @param coord A dictionary with the format { 'x': <EM>value</EM>, 'y': <EM>value</EM> }
 	def _get_translated_point(self, coord):
 
 		x = self.graph_width/2  + coord['x']*self.x_offset
@@ -142,7 +145,9 @@ class Graph:
 		return {'x': x,	'y': y }
 	
 	
-	#Lagrange method for polynomial interpolation ( a polynomial of degree <= n that passes through n+1 points )			
+	## Finds the lagrange polynomial on a value x, constructing the polynomial with the current dataset. Returns the new value y.
+    #  @param self The object pointer.
+    #  @param x A double value representing an x coordate
 	def _Lagrange(self, x):
 		
 		dx = self.dx		
