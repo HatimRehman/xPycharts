@@ -299,13 +299,13 @@ requirements and between the modules and the anticipated changes.
 \toprule
 \textbf{Req.} & \textbf{Modules}\\
 \midrule
-R1 & \mref{mHH}, \mref{mDS} \\
-R2 & \mref{mER} \\
-R3 & \mref{mP}\\
-R4 & \mref{mP}, \mref{mOF}, \mref{mOW}\\
-R5 & \mref{mPS}, \mref{mOW} \\
-RNF1 & \mref{mOW} \\
-RNF5 & \mref{mER} \\
+R1 & \mref{mHH}, \mref{mDS}(3.1) \\
+R2 & \mref{mBH}(2.1 \\
+R3 & \mref{mP}(3.3\\
+R4 & \mref{mP}(3.3), \mref{mBH}(2.2), \mref{mHH}(1.1)\\
+R5 & \mref{mPS}(3.2), \mref{mHH}(1.1) \\
+RNF1 & \mref{mHH}(1.1) \\
+RNF5 & \mref{mBH}(2.2) \\
 RNF11 & \mref{mHH}\\
 RNF12 & \mref{mHH}\\
 RNF15 & \mref{mHH}\\
@@ -323,7 +323,7 @@ RNF15 & \mref{mHH}\\
 \midrule
 \acref{acHardware} & \mref{mHH}\\
 \acref{acInput} & \mref{mDS}\\
-\acref{acGraphType} & \mref{mP} \mref{mOF} \mref{mOW}\\
+\acref{acGraphType} & \mref{mDS}(3.3) \mref{mBH}(2.2) \mref{mHH}(1.1)\\
 \bottomrule
 \end{tabular}
 \caption{Trace Between Anticipated Changes and Modules}
