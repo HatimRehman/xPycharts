@@ -1,3 +1,8 @@
+## This function breaks apart the user input and assigns the coordinate pairs to a dictionary (data structure).
+##If there are inconsistencies in the user input (for example a missing y value)the function prints an exception message.\n
+# Author: Sarthak Desai\n
+#@param data is the list of co-ordinate pairs inputted by the user.
+#
 def clean_data(data):
 	
 	try:
@@ -18,7 +23,12 @@ def clean_data(data):
 	return mylist
 
 		
-
+## This function checks if the data input type is correct(i.e. integers or floats).
+#If data type is not correct function outputs an exception message.\n
+# Author: Sarthak Desai\n
+#@param x is a list of x values from all the co-ordinate pairs.
+#@param y is a list of y values from all the co-ordinate pairs.
+#
 def checktype(x, y):
 	for value in x:
 		if type (value) != int and type (value) != float:
