@@ -70,7 +70,7 @@ Date 2 & 1.1 & Notes\\
 XPYCharts is a python based graphing library that is a recreation of the Jcharts graphing library available for Java developers. XPYCharts supports the production of scatter plots, line graphs and pie charts that can be used for statistical analysis and in a learning environment for data visualization.
 \subsection{Context}
 This document will serve as the Module Guide (MG) for the SRS document of XPYCharts. The MG shows a decomposition of the modules of the software system and how these modules accomplish the functional/non-functional requirements previously stated within the SRS. The MG will also show how the software adheres to the principals of information hiding and data independence in order to create a modular structure. The MG document is followed by the Module Interface Specification (MIS) that describes from an external viewpoint the intended behavior of the module’s functions. 
-\subsection{Design Principals}
+\subsection{Design Principles}
 The software system of XPYCharts is built with consideration to several design principals including Modular decomposition, data independence, encapsulation and information hiding. In addition the decomposed modules of the system interact with each other through a structure that ensures low coupling and high cohesion so that modules stay as independent of each other as possible. This type of design will allow for easier software maintenance and modification in the future releases of the product. Similarly information hiding allows secrecy to exist over the module implementation making it easier to use the modules at a higher level without having to worry about the way they were implemented. This is especially important to XPYCharts as it is a library and therefore developers using the library should not have to know how the library modules are implemented to be able to use them.
 \subsection{Document Structure}
 The document is divided into 7 major sections including the Introduction above. Listed below is each of the major sections (excluding Introduction) with a brief description of the information that they contain:
@@ -299,17 +299,16 @@ requirements and between the modules and the anticipated changes.
 \toprule
 \textbf{Req.} & \textbf{Modules}\\
 \midrule
-R1 & \mref{mHH}, \mref{mInput}, \mref{mParams}, \mref{mControl}\\
-R2 & \mref{mInput}, \mref{mParams}\\
-R3 & \mref{mVerify}\\
-R4 & \mref{mOutput}, \mref{mControl}\\
-R5 & \mref{mOutput}, \mref{mODEs}, \mref{mControl}, \mref{mSeqDS}, \mref{mSolver}, \mref{mPlot}\\
-R6 & \mref{mOutput}, \mref{mODEs}, \mref{mControl}, \mref{mSeqDS}, \mref{mSolver}, \mref{mPlot}\\
-R7 & \mref{mOutput}, \mref{mEnergy}, \mref{mControl}, \mref{mSeqDS}, \mref{mPlot}\\
-R8 & \mref{mOutput}, \mref{mEnergy}, \mref{mControl}, \mref{mSeqDS}, \mref{mPlot}\\
-R9 & \mref{mVerifyOut}\\
-R10 & \mref{mOutput}, \mref{mODEs}, \mref{mControl}\\
-R11 & \mref{mOutput}, \mref{mODEs}, \mref{mEnergy}, \mref{mControl}\\
+R1 & \mref{mHH}, \mref{mDS} \\
+R2 & \mref{mER} \\
+R3 & \mref{mP}\\
+R4 & \mref{mP}, \mref{mOF}, \mref{mOW}\\
+R5 & \mref{mPS}, \mref{mOW} \\
+RNF1 & \mref{mOW} \\
+RNF5 & \mref{mER} \\
+RNF11 & \mref{mHH}\\
+RNF12 & \mref{mHH}\\
+RNF15 & \mref{mHH}\\
 \bottomrule
 \end{tabular}
 \caption{Trace Between Requirements and Modules}
