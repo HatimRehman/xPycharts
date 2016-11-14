@@ -127,15 +127,15 @@ actually be implemented.
 
 \begin{description}
 \item [\refstepcounter{mnum} \mthemnum \label{mHH}:] Hardware-Hiding Module \\ 
-\setlength\parindent{24pt} M1.1: Output Window Module
-\item [\refstepcounter{mnum} \mthemnum \label{mHH}:] Behaviour-Hiding Module \\
-\setlength\parindent{24pt} M2.1: Exception Raising Module \\
-\setlength\parindent{24pt} M2.2: Output Format Module \\
-\setlength\parindent{24pt} M2.3: Polynomial Equations Module
-\item [\refstepcounter{mnum} \mthemnum \label{mHH}:] Software Decision Module \\
-\setlength\parindent{24pt} M3.1: Data Structure Module \\
-\setlength\parindent{24pt} M3.2: Polynomial Solver Module \\
-\setlength\parindent{24pt} M3.3: Plotting Module
+\setlength\parindent{24pt} M1.1 \label{mOW}: Output Window Module 
+\item [\refstepcounter{mnum} \mthemnum \label{mBH}:] Behaviour-Hiding Module \\
+\setlength\parindent{24pt} M2.1 \label{mER}: Exception Raising Module \\
+\setlength\parindent{24pt} M2.2 \label{mOF}: Output Format Module \\
+\setlength\parindent{24pt} M2.3 \label{mPE}: Polynomial Equations Module
+\item [\refstepcounter{mnum} \mthemnum \label{mSD}:] Software Decision Module \\
+\setlength\parindent{24pt} M3.1 \label{mDS}: Data Structure Module \\
+\setlength\parindent{24pt} M3.2 \label{mPS}: Polynomial Solver Module \\
+\setlength\parindent{24pt} M3.3 \label{mP}: Plotting Module
 \end{description}
 
 
@@ -203,7 +203,7 @@ selected.
 \item[Implemented By:] OS
 \end{description}
 
-\subsubsection{Output Window Module (\mref{mInput})}
+\subsubsection{Output Window Module (\mref{mOW})}
 
 \begin{description}
 \item[Secrets:]The structure on which the output data is displayed on.
@@ -211,7 +211,7 @@ selected.
 \item[Implemented By:] Python Canvas
 \end{description}
 
-\subsection{Behaviour-Hiding Module}
+\subsection{Behaviour-Hiding Module(\mref{mBH})}
 
 \begin{description}
 \item[Secrets:]The contents of the required behaviours.
@@ -223,7 +223,7 @@ selected.
 \item[Implemented By:] --
 \end{description}
 
-\subsubsection{Exception Raising Module (\mref{mInput})}
+\subsubsection{Exception Raising Module (\mref{mER})}
 
 \begin{description}
 \item[Secrets:] The format and structure of the input data.
@@ -231,7 +231,7 @@ selected.
 \item[Implemented By:] InputParser.py
 \end{description}
 
-\subsubsection{Output Format Module (\mref{mInput})}
+\subsubsection{Output Format Module (\mref{mOF})}
 
 \begin{description}
 \item[Secrets:]What the resulting scale of the graph should be. 
@@ -240,7 +240,7 @@ selected.
 \item[Implemented By:] Scale.py
 \end{description}
 
-\subsubsection{Polynomial Equations Module (\mref{mInput})}
+\subsubsection{Polynomial Equations Module (\mref{mPE})}
 
 \begin{description}
 \item[Secrets:]A polynomial that can press through n points.  
@@ -250,7 +250,7 @@ selected.
 \end{description}
 
 
-\subsection{Software Decision Module}
+\subsection{Software Decision Module  (\mref{mSD})}
 
 \begin{description}
 \item[Secrets:] The design decision based on mathematical theorems, physical
@@ -263,7 +263,7 @@ selected.
 \item[Implemented By:] --
 \end{description}
 
-\subsubsection{Data Structure Module (\mref{mInput})}
+\subsubsection{Data Structure Module (\mref{mDS})}
 \begin{description}
 \item[Secrets:]The format and structure of the input data.
 \item[Services:]Converts the input data into the data structure used by the
@@ -271,7 +271,7 @@ selected.
 \item[Implemented By:] InputParser.py
 \end{description}
 
-\subsubsection{Polynomial Solver Module (\mref{mInput})}
+\subsubsection{Polynomial Solver Module (\mref{mPS})}
 \begin{description}
 \item[Secrets:]A mathematical equation that determines a smooth curve passing through all points.
 \item[Services:]Finds the function that passes through all points in the dataset. 
@@ -279,7 +279,7 @@ selected.
 \item[Implemented By:] Graph.py
 \end{description}
 
-\subsubsection{Plotting Module(\mref{mInput})}
+\subsubsection{Plotting Module (\mref{mP})}
 \begin{description}
 \item[Secrets:] X and Y direction offsets between the graphical window and the cartesian coordinate system drawn on it.
 \item[Services:]Plots any (x,y) point on the cartesian coordinate system that is painted on the window. 
