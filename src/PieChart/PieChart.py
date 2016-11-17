@@ -17,12 +17,11 @@ class PieChart:
                 self.current_percent = 0      #will go around the pie, making slices
 
 
-        def getSlice(self, percent, last=False):
+        def getSlice(self, percent, color=None):
                 #get a random three bit hexadecimal number.
                 #n/4096 chance of printing same number, shouldn't be a problem.
-                color = "#%03x" % random.randint(0, 0xFFF)
-                if last == True:
-                        percent = 100 - self.current_percent
+                if color == None:
+                        color = self.genColor()
                 
                 self.pie.create_arc(self.canvas_size/4, self.canvas_size/4,
                                     self.canvas_size*3/4, self.canvas_size*3/4,
@@ -33,14 +32,14 @@ class PieChart:
                                     fill=color)
                 self.current_percent += percent
 
-
-
-
+        def genColor(self):
+                color = "#%03x" % random.randint(0, 0xFFF)
+                return color
 
 
 if __name__ == '__main__':
         PieChart = PieChart()
         PieChart.getSlice(0.10)
         PieChart.getSlice(0.60)
-        PieChart.getSlice(0.305, last=True)
+        PieChart.getSlice(0.30)
         mainloop()
