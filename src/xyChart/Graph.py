@@ -87,19 +87,20 @@ class Graph:
     #  @param data A list of tuples [ (x1, y1), (x2, y2), \...\ , (xn, yn) ]
     #  @param kwargs Keyword arguments for Tkinter's create_circle() method  
 	def plot_points_with_line(self, data, **kwargs):
+		
+		self.data =  clean_data( data )
 
-		self.data = data = clean_data( data )
-
-		self.dx = [d['x'] for d in data]
-		self.dy = [d['y'] for d in data]
+		self.dx = [d['x'] for d in self.data]
+		self.dy = [d['y'] for d in self.data]
 
 		
-		dx_sorted = [d['x'] for d in data]; dx_sorted.sort()
+		dx_sorted = [d['x'] for d in self.data]; dx_sorted.sort()
 		x_interval = [x / 100.0 for x in range(dx_sorted[0], dx_sorted[-1]*100,1)]
 
-		self.plot_function(self._Lagrange, x_interval = [x / 100.0 for x in range(dx_sorted[0]*100, dx_sorted[-1]*100, 1)])
+		if is_function(data):
+			self.plot_function(self._Lagrange, x_interval = [x / 100.0 for x in range(dx_sorted[0]*100, dx_sorted[-1]*100, 1)])
 		
-		for coord in data:
+		for coord in self.data:
 			self.plot_point( coord, **kwargs )
 	
 	## Plots a python function onto the graph
@@ -177,7 +178,7 @@ if __name__ == '__main__':
 
 	#Graph = Graph(6); Graph.plot_function( sin )
 
-	Graph = Graph( 6 , [ (-4,4), (-2,1), (-1,1) , (1,1), (2,2), (4,5), (5,3) ]) 
-	#Graph = Graph(6); Graph.plot_points_with_line( [ (-4,4), (-2,1), (-1,1) , (1,1), (2,2), (4,5), (5,3) ], fill = "blue" );
+	#Graph = Graph( 6 , [ (-4,4), (-2,1), (-1,1) , (1,1), (2,2), (4,5), (5,3) ]) 
+	Graph = Graph(6); Graph.plot_points_with_line( [ (-4,4), (-4,1), (-1,1) , (1,1), (2,2), (4,5), (5,3) ], fill = "blue" );
 
 	mainloop() # runs window indefinitely

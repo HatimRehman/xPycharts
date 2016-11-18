@@ -39,6 +39,9 @@ def checktype(x, y):
 	checkT=True
 	return
 
+def is_function(data):
+	x=[ x[0] for x in data  ]
+	return len(x) == len(set(x))
 
 
 
