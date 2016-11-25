@@ -15,7 +15,7 @@ class Graph:
     #  @param self The object pointer.
     #  @param n The number of markings to appear on the x and y axes
     #  @param data The data to plot 
-	def __init__(self, n , data = None):
+	def __init__(self, n , data = None, title= None):
 		self.data = clean_data(data) if data is not None else None
 		
 		self.markings = (n+1) 
@@ -34,8 +34,12 @@ class Graph:
 
 		self.master = Tk() 	#creates the window
 		self.master.resizable(0,0) # turn off resizing
-		self.master.title("xPycharts")
-
+		if title is None:
+			self.master.title("xPycharts")
+		
+		else: 
+			self.master.title(title)
+			
 		self.graph = get_axes( self.master, self.markings, self.scale_x,self.scale_y  ) #get an axis with this many markings
 
 		self.graph_height = int( self.graph.cget("height") )
@@ -175,10 +179,10 @@ def coord(x,y):
 if __name__ == '__main__':
 
 	#Graph = Graph(6, [ (1,1 ), (2,4 ), ( -3, -6), (7, -12 )  ])
+#	Graph = Graph(1); Graph.plot_function( sin )
 
-	#Graph = Graph(6); Graph.plot_function( sin )
-
-	#Graph = Graph( 6 , [ (-4,4), (-2,1), (-1,1) , (1,1), (2,2), (4,5), (5,3) ]) 
-	Graph = Graph(6); Graph.plot_points_with_line( [ (-4,4), (-4,1), (-1,1) , (1,1), (2,2), (4,5), (5,3) ], fill = "blue" );
-
+	Graph = Graph( 6 , [ (-4,4), (-2,1), (-1,1) , (1,1), (2,2), (4,5), (5,33) ], "Relation between x and y") 
+	Graph.plot_points_with_line( [ (-4,6), (-3,-6), (-1,11) , (1,14), (2,22), (4,25), (5,13) ], fill = "red" );
+	Graph.plot_points_with_line( [ (-4,4), (-2,1), (-1,1) , (1,1), (2,2), (4,5), (5,33) ], fill = "blue" );
+	
 	mainloop() # runs window indefinitely
