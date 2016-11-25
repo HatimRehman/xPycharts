@@ -1,0 +1,36 @@
+FINAL PRESENTATION 
+
+STRUCTURE:
+	-Introduction
+		* Purpose: Background, usefulness/user base of python, value of a graphing library
+		* Scope of the project
+	-Discussion
+	NON-FUNCTIONALS
+		* Important NF requirements, why they're important
+		* Learnability, discoverability
+			Good error messages
+				-users needed more
+			Simple api's
+			Use our own graphing to display data
+		* Portability 
+			
+		*etc
+	FUNCTIONALS
+		List off functions, then demo them. Find some interesting data sets to use 
+	
+	CONCLUSION
+		* breifly summarize project, w/ best features highlighted
+		* describe next steps for the project
+		
+	AUDIENCE QUESTIONS
+	
+	
+	NOTES:
+	-Compile everything/make a python script. Don't show code
+	-Talk breifly about ways we've improved functionality when applicable
+	-Get interesting data set to show how project is useful/"non-trivial"
+	
+	DONE FOR FRIDAY:
+	- Test surveys (for data to graph)
+	- Slides
+	- Export to png
