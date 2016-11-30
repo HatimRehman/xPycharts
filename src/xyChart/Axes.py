@@ -18,7 +18,7 @@ y_coordinates = { }
 #  @param scale_x The scale value to use on the x axis.
 #  @param scale_y The scale value to use on the y axis.
 def get_axes( window, markings, scale_x, scale_y ):
-	canvas = Canvas(window, width=500, height=500)#, background='lightgrey',) # create a canvas to draw on (inside the window)
+	canvas = Canvas(window, width=600, height=600)#, background='lightgrey',) # create a canvas to draw on (inside the window)
 
 	canvas.pack() # no idea what this does
 

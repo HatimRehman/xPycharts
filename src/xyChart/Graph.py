@@ -92,6 +92,10 @@ class Graph:
     #  @param kwargs Keyword arguments for Tkinter's create_circle() method  
 	def plot_points_with_line(self, data, **kwargs):
 		
+#		if self.data is None:
+#			self.master.destroy()			
+#			self.__init__(self.markings-1, data)
+			
 		self.data =  clean_data( data )
 
 		self.dx = [d['x'] for d in self.data]
@@ -99,7 +103,7 @@ class Graph:
 
 		
 		dx_sorted = [d['x'] for d in self.data]; dx_sorted.sort()
-		x_interval = [x / 100.0 for x in range(dx_sorted[0], dx_sorted[-1]*100,1)]
+		x_interval = [x / 1000.0 for x in range(dx_sorted[0], dx_sorted[-1]*1000,1)]
 
 		if is_function(data):
 			self.plot_function(self._Lagrange, x_interval = [x / 100.0 for x in range(dx_sorted[0]*100, dx_sorted[-1]*100, 1)])
@@ -115,7 +119,7 @@ class Graph:
     #  @param kwargs Keyword arguments for Tkinter's create_circle() method  
 	def plot_function(self, func, x_interval = None, **kwargs): # plots a function, with styling kwargs if they exist
 		
-		x_interval = [x / 1000.0 for x in range(-Graph.markings*1000, Graph.markings*1000, 1)] if x_interval is None else x_interval
+		x_interval = [x / 1000.0 for x in range(-self.markings*1000, self.markings*1000, 1)] if x_interval is None else x_interval
 		
 		coords = [ ]
 
