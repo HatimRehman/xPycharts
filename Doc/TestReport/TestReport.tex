@@ -37,7 +37,144 @@ Date 2 & 1.1 & Notes\\
 \newpage
 \pagenumbering{arabic}
 This document ...
+
 \section{Functional Requirements Evaluation}
+
+\subsubsection{Area of Testing 1}		
+	\label{sec:3.1.1}
+	\paragraph{Requirement \#1: The software shall read data given to it. \\ Requirements \#3: The software will plot all the data points.}
+		\begin{enumerate}
+			\item{\textbf{Test ID \#1.1\\}}
+			\textbf{Type:} Functional, Dynamic, Manual\\
+			\textbf{Initial State:} Instantiate Graph(6) object with 6 markings on each quadrant.\\
+			\textbf{Input:} The list object: [ (1, 1),  (2, 2), (3, 3), (4, 4) ]\\
+			\textbf{Expected Output:} A window depicting a graph with plotted points at (1, 1), (2, 2), (3, 3), and (4, 4). \\
+			\textbf{Output:}	A graph with the points (1,1), (2,2), (3,3) and (4,4) was created.\\	
+			\textbf{Result:} PASS
+
+					
+			\item{\textbf{Test ID \#1.2\\}}
+			\textbf{Type:} Functional, Dynamic, Manual\\
+			\textbf{Initial State:} None Object.\\
+			\textbf{Input:} Instantiate Graph(6, data = [ (1, 1),  (2, 2), (3, 3), (4, 4) ] )\\
+			\textbf{Expected Output:} A window depicting a graph with plotted points at (1, 1), (2, 2), (3, 3), and (4, 4). \\
+			\textbf{Output:}	A graph with the points (1,1), (2,2), (3,3) and (4,4) was created.\\	
+			\textbf{Result:} PASS
+				
+			\item{\textbf{Test ID \#1.3\\}}
+			\textbf{Type:} Functional, Dynamic, Manual\\
+			\textbf{Initial State:} Instantiate Graph(6) object with 6 markings on each quadrant.\\
+			\textbf{Input:} The list object: [	].\\
+			\textbf{Expected Output:} A window depicting a graph with no plotted points.\\
+			\textbf{Output:}	An empty graph was outputted.\\
+			\textbf{Result:} PASS
+
+			\item{\textbf{Test ID \#1.4\\}}
+			\textbf{Type:} Functional, Dynamic, Manual\\
+			\textbf{Initial State:} None Object.\\
+			\textbf{Input:} Instantiate Graph(6, data = [  ] )\\
+			\textbf{Expected Output:} A window depicting a graph with no plotted points.\\
+			\textbf{Output:}	An empty graph was outputted.\\
+			\textbf{Result:} PASS
+	\end{enumerate}
+
+\subsubsection{Area of Testing 2}		
+	\paragraph{Requirement \#2: The software will raise an exception if the data format cannot be plotted, and stop the program.}
+		\begin{enumerate}
+			\item{\textbf{Test ID \#2.1\\}}
+			\textbf{Type:} Functional, Dynamic, Manual\\
+			\textbf{Initial State:} A testing script that imports the method that validates data. \\
+			\textbf{Input:} The list object: [ (1, 1),  (2, 2), (3, 3), (4, 4) ]\\
+			\textbf{Expected Output:}  A safe end to the execution (i.e, no exception raised). \\
+			\textbf{Output:}	The program completed execution.\\
+			\textbf{Result:} PASS
+					
+			\item{\textbf{Test ID \#2.2\\}}
+			\textbf{Type:} Functional, Dynamic, Manual\\
+			\textbf{Initial State:} A testing script that imports the method that validates data.\\
+			\textbf{Input:} The list object: [ (1, 1),  (2, 2), (3, 3), ( 4 ) ]\\
+			\textbf{Expected Output:} The program raised an exception.\\
+			\textbf{Output:}	An exception was raised with output in terminal as "Exception: Inconsistent data"\\
+			\textbf{Result:} PASS
+									
+			\item{\textbf{Test ID \#2.3\\}}
+			\textbf{Type:} Functional, Dynamic, Manual\\
+			\textbf{Initial State:} Instantiate Graph(6) object with 6 markings on each quadrant..\\
+			\textbf{Input:} Instantiate Graph(6, data = [ (1, 1),  (2, 2), (3, 3), ( 4 ) ] )\\
+			\textbf{Expected Output:} The program raised an exception.\\
+			\textbf{Output:}	An exception was raised with output in terminal as "Exception: Inconsistent data"\\
+			\textbf{Result:} PASS
+
+	\end{enumerate}
+
+\subsubsection{Area of Testing 3}		
+	\paragraph{Requirement \#3: The software will construct a coordinate system that will fit all the data points.}
+		\begin{enumerate}
+		\label{sec:3.1}
+			\item{\textbf{Test ID \#3.1\\}}
+			\textbf{Type:} Functional, Dynamic, Manual\\
+			\textbf{Initial State:} Instantiate Graph(6) object with 6 markings on each quadrant. \\
+			\textbf{Input:} The list object: [ (1, 1),  (2, 2), (3, 3), ( 17, 77) ]\\
+			\textbf{Expected Output:}  A window depicting a graph with max x axis value to be 17 and -17, and y axis to include 77 and -77. \\
+			\textbf{Output:}	Max y axis was still 6 and -6\\
+			\textbf{Result:} FAIL
+		\label{sec:3.2}					
+			\item{\textbf{Test ID \#3.2\\}}
+			\textbf{Type:} Functional, Dynamic, Manual\\
+			\textbf{Initial State:}  Instantiate Graph(6) object with 6 markings on each quadrant.\\
+			\textbf{Input:} The list object: [ (1, 1),  (2, 2), (3, 3), ( -17, -77) ]\\
+			\textbf{Expected Output:} A window depicting a graph with max x axis value to include 17 and -17, and y axis to include 77 and -77. \\
+			\textbf{Output:}	Max y axis was still 6 and -6\\
+			\textbf{Result:} FAIL
+
+			\textbf{Two more test cases were added to validate the functionality the above test cases were trying to test.}
+					
+			\item{\textbf{Test ID \#3.3\\}}
+			\textbf{Type:} Functional, Dynamic, Manual\\
+			\textbf{Initial State:} Instantiate Graph(6) object with 6 markings on each quadrant. \\
+			\textbf{Input:} The list object: [ (1, 1),  (2, 2), (3, 3), ( 17, 77) ]\\
+			\textbf{Expected Output:} A window depicting a graph with max x axis value include 17 and -17, and y axis to include 77 and -77. \\
+			\textbf{Output:}	A graph with all the points plotted, and an x axis from -18 to 18, and y axis from -78 to 87\\
+			\textbf{Result:} PASS
+								
+			\item{\textbf{Test ID \#3.4\\}}
+			\textbf{Type:} Functional, Dynamic, Manual\\
+			\textbf{Initial State:}  None object\\
+			\textbf{Input:} Instantiated Graph(6, [ (1, 1),  (2, 2), (3, 3), ( -17, -77) ]\\
+			\textbf{Expected Output:} A window depicting a graph with max x axis value include 17 and -17, and y axis to include 77 and -77. \\
+			\textbf{Output:}	A graph with all the points plotted, and an x axis from -18 to 18, and y axis from -78 to 87\\
+			\textbf{Result:} PASS
+	\end{enumerate}
+
+\subsubsection{Area of Testing 4}
+	\paragraph{Requirement \#4: The software will connect a line that passes through all the data points if the data points are a function of x.}
+		\begin{enumerate}
+			\item{\textbf{Test ID \#4.1\\}}
+			\textbf{Type:} Functional, Dynamic, Manual\\
+			\textbf{Initial State:} An instantiated Graph object. \\
+			\textbf{Input:} The default math.sin() function in python.\\
+			\textbf{Expected Output:}  A window depicting the sin() graph.\\
+			\textbf{Output:}	A graph with the sin wave plotted\\
+			\textbf{Result:} PASS
+					
+			\item{\textbf{Test ID \#4.2\\}}
+			\textbf{Type:} Functional, Dynamic, Manual\\
+			\textbf{Initial State:} An instantiated Graph object.\\
+			\textbf{Input:} The list object: [ (1, 1),  (2, 2), (3, 3), (4, 4) ] on the method plot\_points\_with\_line()\\
+			\textbf{Expected Output:} A window depicting a graph with the points plotted, and a line is connecting all points. \\
+			\textbf{Output:}	A line passing through the points in the input\\
+			\textbf{Result:} PASS
+				
+			\item{\textbf{Test ID \#4.3\\}}
+			\textbf{Type:} Functional, Dynamic, Manual\\
+			\textbf{Initial State:}  An instantiated Graph object.\\
+			\textbf{Input:} The list object: [ (1, 1),  (2, 2), (3, 3), (3, 4) ] on the method plot\_points\_with\_line().\\
+			\textbf{Expected Output:} The software will plot the points but not connect a line through them.\\
+			\textbf{Output:}	The points were plotted, but the line was not drawn.\\
+			\textbf{Result:} PASS
+	\end{enumerate}
+	
+
 \section{Nonfunctional Requirements Evaluation}
 \subsection{Usability}
 		
@@ -46,9 +183,31 @@ This document ...
 	
 \section{Comparison to Existing Implementation}	
 This section will not be appropriate for every project.
-\section{Unit Testing}
+\section{Unit Testing}\label{sec:unittest}
 \section{Changes Due to Testing}
+
+As seen in the Area of Testing \hyperref[sec:3.1]{3.1} and \hyperref[sec:3.2]{3.2} for Functional Requirements Evaluation, the test cases had failed to produce the expected output. 
+
+After manual code evaluation, it was realized by the developers that this was because an instantiated graph defaults to drawing the axes under the assumption of the data given to it. Because the test case was instantiating the Graph object with NoneType data, the graph would default to drawing the axes with a scale of 1 (therefore, the max values of magnitude 6, for the 6 markings). When calling the plot\_...() methods, it would draw on a canvas already painted in the initializer. 
+
+To fix this, a few extra lines were added to the plot\_...() methods where they would call the init() method to reinitialize the graph canvas and paint it with the appropriate axes. 
+\textbf{The two test cases passed once these changes were complete.}  
 \section{Automated Testing}
+Because of the timeframe of the project, the extent of the automated testing was \hyperref[sec:unittest]{unit testing}, and testing of source code (seen in the test case below) using the online tool \href{https://www.pylint.org}{Pylint}.
+
+\subsubsection{Area of Testing 5}		
+	\paragraph{Testing of source code.}
+		\begin{enumerate}
+			\item{\textbf{Test ID \#5.1\\}}
+			\textbf{Type:} Functional, Static, Automated\\
+			\textbf{Initial State:} Completed source code. \\
+			\textbf{Input:} Source code.\\
+			\textbf{Expected Output:} Review of source code.\\
+			\textbf{Output:}	 \href{run:code_eval.txt} {\underline{log-file}}.\\
+			\textbf{Result:} N/A
+		\end{enumerate}
+
+It would not have been feasible to do bitmap comparison automated testing for this project because to do so correctly and accurately would have been out of the scope of the project. The developers verified the outputs of the graphs manually to realize that the behavior was up to expectations, and the challenge in the nature of this sort of automated testing would not have been worth the value compared to the time dedicated to it, especially to realize an outcome that was already manually verified.
 		
 \section{Trace to Requirements} %Louis
 		

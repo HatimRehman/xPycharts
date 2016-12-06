@@ -23,8 +23,8 @@ class Graph:
 		if data is not None:
 			self.scale = get_scale(self.data, round_to = self.markings-1)
 
-			self.scale_x = self.scale[0] / float(n)
-			self.scale_y = self.scale[1] / float(n)
+			self.scale_x = int( self.scale[0] / float(n) )
+			self.scale_y = int( self.scale[1] / float(n) )
 
 		else:
 			self.scale = [1,1] if self.data is None else get_scale(self.data, round_to = self.markings-1)
@@ -119,7 +119,7 @@ class Graph:
     #  @param kwargs Keyword arguments for Tkinter's create_circle() method  
 	def plot_function(self, func, x_interval = None, **kwargs): # plots a function, with styling kwargs if they exist
 		
-		x_interval = [x / 1000.0 for x in range(-self.markings*1000, self.markings*1000, 1)] if x_interval is None else x_interval
+		x_interval = [x / 1000.0 for x in range(-self.markings*1000*self.scale_x, self.markings*1000*self.scale_x, 1)] if x_interval is None else x_interval
 		
 		coords = [ ]
 

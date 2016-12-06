@@ -1,0 +1,1041 @@
+************* Module xyChart
+C: 11, 0: Final newline missing (missing-final-newline)
+W: 11, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:  1, 0: Invalid module name "xyChart" (invalid-name)
+C:  1, 0: Missing module docstring (missing-docstring)
+************* Module xyChart.Axes
+C:  9, 0: No space allowed after bracket
+x_coordinates = { }
+                ^ (bad-whitespace)
+C:  9, 0: No space allowed before bracket
+x_coordinates = { }
+                  ^ (bad-whitespace)
+C: 10, 0: No space allowed after bracket
+y_coordinates = { }
+                ^ (bad-whitespace)
+C: 10, 0: No space allowed before bracket
+y_coordinates = { }
+                  ^ (bad-whitespace)
+C: 12, 0: Line too long (105/100) (line-too-long)
+C: 13, 0: Line too long (107/100) (line-too-long)
+C: 14, 0: Line too long (109/100) (line-too-long)
+C: 20, 0: No space allowed after bracket
+def get_axes( window, markings, scale_x, scale_y ):
+            ^ (bad-whitespace)
+C: 20, 0: No space allowed before bracket
+def get_axes( window, markings, scale_x, scale_y ):
+                                                 ^ (bad-whitespace)
+C: 21, 0: Line too long (123/100) (line-too-long)
+W: 21, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 23, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 25, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 25, 0: No space allowed after bracket
+	canvas_height = int( canvas.cget("height") )
+                    ^ (bad-whitespace)
+C: 25, 0: No space allowed before bracket
+	canvas_height = int( canvas.cget("height") )
+                                            ^ (bad-whitespace)
+W: 26, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 26, 0: No space allowed after bracket
+	canvas_width = int( canvas.cget("width") )
+                   ^ (bad-whitespace)
+C: 26, 0: No space allowed before bracket
+	canvas_width = int( canvas.cget("width") )
+                                          ^ (bad-whitespace)
+W: 31, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 31, 0: No space allowed after bracket
+	canvas.create_line(	canvas_width/2, 0,
+                   ^ (bad-whitespace)
+C: 32, 0: Wrong continued indentation (add 16 spaces).
+					canvas_width/2, canvas_height,
+     ^               | (bad-continuation)
+C: 33, 0: Wrong continued indentation (add 16 spaces).
+					arrow= BOTH
+     ^               | (bad-continuation)
+C: 33, 0: No space allowed after keyword argument assignment
+					arrow= BOTH
+          ^ (bad-whitespace)
+C: 34, 0: Wrong continued indentation (add 15 spaces).
+				)
+    ^              | (bad-continuation)
+C: 35, 0: Line too long (105/100) (line-too-long)
+W: 36, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 36, 0: No space allowed after bracket
+	canvas.create_line(	0, canvas_height/2,
+                   ^ (bad-whitespace)
+C: 37, 0: Wrong continued indentation (add 16 spaces).
+					canvas_width, canvas_height/2,
+     ^               | (bad-continuation)
+C: 38, 0: Wrong continued indentation (add 16 spaces).
+					arrow = BOTH
+     ^               | (bad-continuation)
+C: 38, 0: No space allowed around keyword argument assignment
+					arrow = BOTH
+           ^ (bad-whitespace)
+C: 39, 0: Wrong continued indentation (add 15 spaces).
+				)
+    ^              | (bad-continuation)
+W: 41, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 43, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 47, 0: Line too long (102/100) (line-too-long)
+C: 52, 0: No space allowed after bracket
+def _get_labels( canvas, markings, scale_x, scale_y ):#, scale, grid_points):
+               ^ (bad-whitespace)
+C: 52, 0: No space allowed before bracket
+def _get_labels( canvas, markings, scale_x, scale_y ):#, scale, grid_points):
+                                                    ^ (bad-whitespace)
+W: 54, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 54, 0: No space allowed after bracket
+	canvas_height = int( canvas.cget("height") )
+                    ^ (bad-whitespace)
+C: 54, 0: No space allowed before bracket
+	canvas_height = int( canvas.cget("height") )
+                                            ^ (bad-whitespace)
+W: 55, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 55, 0: No space allowed after bracket
+	canvas_width = int( canvas.cget("width") )
+                   ^ (bad-whitespace)
+C: 55, 0: No space allowed before bracket
+	canvas_width = int( canvas.cget("width") )
+                                          ^ (bad-whitespace)
+W: 57, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 57, 0: No space allowed after bracket
+	xlabel_coordinates, ylabel_coordinates = [ ], [ ]
+                                          ^ (bad-whitespace)
+C: 57, 0: No space allowed before bracket
+	xlabel_coordinates, ylabel_coordinates = [ ], [ ]
+                                            ^ (bad-whitespace)
+C: 57, 0: No space allowed after bracket
+	xlabel_coordinates, ylabel_coordinates = [ ], [ ]
+                                               ^ (bad-whitespace)
+C: 57, 0: No space allowed before bracket
+	xlabel_coordinates, ylabel_coordinates = [ ], [ ]
+                                                 ^ (bad-whitespace)
+W: 59, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 59, 0: No space allowed after bracket
+	x_offset = ( canvas_width/2 ) / markings
+            ^ (bad-whitespace)
+C: 59, 0: No space allowed before bracket
+	x_offset = ( canvas_width/2 ) / markings
+                             ^ (bad-whitespace)
+W: 60, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 60, 0: No space allowed after bracket
+	y_offset = ( canvas_height/2 ) / markings
+            ^ (bad-whitespace)
+C: 60, 0: No space allowed before bracket
+	y_offset = ( canvas_height/2 ) / markings
+                              ^ (bad-whitespace)
+W: 63, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 63, 0: Exactly one space required after comma
+	for i in range(1,markings):
+                 ^ (bad-whitespace)
+W: 64, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 65, 0: Wrong hanging indentation (add 17 spaces).
+			_get_translated_point({'x': i, 'y': 0}, x_offset, y_offset, canvas, scale_x, scale_y),
+   ^                | (bad-continuation)
+C: 66, 0: Wrong hanging indentation (add 17 spaces).
+			_get_translated_point({'x': -i, 'y': 0}, x_offset, y_offset, canvas, scale_x, scale_y),
+   ^                | (bad-continuation)
+C: 67, 0: Wrong hanging indentation.
+		])
+  ^             |   | (bad-continuation)
+W: 69, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 70, 0: Wrong hanging indentation (add 17 spaces).
+			_get_translated_point({'x': 0, 'y': i}, x_offset, y_offset, canvas, scale_x, scale_y),
+   ^                | (bad-continuation)
+C: 71, 0: Wrong hanging indentation (add 17 spaces).
+			_get_translated_point({'x': 0, 'y': -i}, x_offset, y_offset, canvas, scale_x, scale_y),
+   ^                | (bad-continuation)
+C: 72, 0: Wrong hanging indentation.
+		])
+  ^             |   | (bad-continuation)
+W: 74, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 75, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 77, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 78, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 80, 0: Line too long (155/100) (line-too-long)
+C: 81, 0: Line too long (125/100) (line-too-long)
+C: 82, 0: Line too long (123/100) (line-too-long)
+C: 88, 0: No space allowed after bracket
+def _get_translated_point( coord, x_offset, y_offset, canvas, scale_x, scale_y ):
+                         ^ (bad-whitespace)
+C: 88, 0: No space allowed before bracket
+def _get_translated_point( coord, x_offset, y_offset, canvas, scale_x, scale_y ):
+                                                                               ^ (bad-whitespace)
+W: 90, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 90, 0: No space allowed after bracket
+	canvas_height = int( canvas.cget("height") )
+                    ^ (bad-whitespace)
+C: 90, 0: No space allowed before bracket
+	canvas_height = int( canvas.cget("height") )
+                                            ^ (bad-whitespace)
+W: 91, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 91, 0: No space allowed after bracket
+	canvas_width = int( canvas.cget("width") )
+                   ^ (bad-whitespace)
+C: 91, 0: No space allowed before bracket
+	canvas_width = int( canvas.cget("width") )
+                                          ^ (bad-whitespace)
+W: 93, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 94, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 96, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 97, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 99, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:100, 0: Wrong continued indentation (add 6 spaces).
+			'y': y
+   ^     | (bad-continuation)
+C:101, 0: Wrong continued indentation (add 6 spaces).
+		}
+  ^     | (bad-continuation)
+C:110, 0: Line too long (103/100) (line-too-long)
+W:110, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:110, 0: No space allowed before bracket
+	return self.create_line(x, y-h, x, y+h, **kwargs ) and self.create_text(x,y+15, text=x_coordinates[x])
+                                                  ^ (bad-whitespace)
+C:110, 0: Exactly one space required after comma
+	return self.create_line(x, y-h, x, y+h, **kwargs ) and self.create_text(x,y+15, text=x_coordinates[x])
+                                                                          ^ (bad-whitespace)
+C:121, 0: Line too long (103/100) (line-too-long)
+W:121, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:121, 0: No space allowed before bracket
+	return self.create_line(x-w, y, x+w, y, **kwargs ) and self.create_text(x+15,y, text=y_coordinates[y])
+                                                  ^ (bad-whitespace)
+C:121, 0: Exactly one space required after comma
+	return self.create_line(x-w, y, x+w, y, **kwargs ) and self.create_text(x+15,y, text=y_coordinates[y])
+                                                                             ^ (bad-whitespace)
+C:  1, 0: Missing module docstring (missing-docstring)
+W:  7, 0: Redefining built-in 'pow' (redefined-builtin)
+W:  6, 0: Wildcard import Tkinter (wildcard-import)
+W:  7, 0: Wildcard import math (wildcard-import)
+C:  9, 0: Invalid constant name "x_coordinates" (invalid-name)
+C: 10, 0: Invalid constant name "y_coordinates" (invalid-name)
+C: 20, 0: Missing function docstring (missing-docstring)
+R: 88, 0: Too many arguments (6/5) (too-many-arguments)
+C: 93, 1: Invalid variable name "x" (invalid-name)
+C: 94, 1: Invalid variable name "y" (invalid-name)
+C:109, 0: Invalid argument name "x" (invalid-name)
+C:109, 0: Invalid argument name "y" (invalid-name)
+C:109, 0: Invalid argument name "h" (invalid-name)
+C:120, 0: Invalid argument name "x" (invalid-name)
+C:120, 0: Invalid argument name "y" (invalid-name)
+C:120, 0: Invalid argument name "w" (invalid-name)
+C:129, 0: Invalid argument name "x" (invalid-name)
+C:129, 0: Invalid argument name "y" (invalid-name)
+C:129, 0: Invalid argument name "r" (invalid-name)
+W:  6, 0: Unused import Listbox from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import HORIZONTAL from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import ANCHOR from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import PAGES from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import BitmapImage from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import BooleanVar from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import EXTENDED from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import getint from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import Tk from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import Frame from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import X from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import MOVETO from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import S from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import StringVar from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import image_types from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import RIGHT from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import NORMAL from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import Text from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import E from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import BUTT from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import TclError from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import RIDGE from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import Misc from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import READABLE from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import Place from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import Spinbox from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import BaseWidget from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import IntVar from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import YES from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import MITER from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import HIDDEN from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import CENTER from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import CHAR from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import SEL_LAST from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import SCROLL from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import Widget from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import EW from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import Message from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import CASCADE from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import CURRENT from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import NoDefaultRoot from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import Toplevel from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import DOTBOX from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import CHECKBUTTON from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import SEL from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import Menubutton from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import TclVersion from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import Wm from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import BASELINE from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import getboolean from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import PhotoImage from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import Tcl from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import INSIDE from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import LEFT from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import W from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import PanedWindow from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import NONE from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import NUMERIC from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import Variable from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import SE from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import INSERT from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import Scale from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import COMMAND from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import FLAT from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import sys from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import NS from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import N from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import PIESLICE from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import TOP from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import mainloop from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import Menu from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import BEVEL from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import ALL from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import SUNKEN from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import SEPARATOR from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import NSEW from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import SINGLE from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import UNDERLINE from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import NE from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import SEL_FIRST from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import wantobjects from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import END from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import OFF from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import FALSE from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import DISABLED from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import NW from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import BOTTOM from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import Radiobutton from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import Scrollbar from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import TRUE from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import EXCEPTION from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import re from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import WRITABLE from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import Label from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import Event from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import getdouble from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import Y from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import PROJECTING from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import UNITS from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import RAISED from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import FIRST from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import CHORD from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import Entry from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import Grid from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import ARC from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import Pack from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import ROUND from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import BROWSE from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import DoubleVar from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import TkVersion from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import ACTIVE from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import RADIOBUTTON from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import OUTSIDE from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import LAST from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import image_names from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import NO from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import LabelFrame from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import ON from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import YView from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import Button from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import VERTICAL from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import SOLID from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import WORD from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import Image from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import SW from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import Checkbutton from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import GROOVE from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import XView from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import CallWrapper from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import MULTIPLE from wildcard import (unused-wildcard-import)
+W:  6, 0: Unused import OptionMenu from wildcard import (unused-wildcard-import)
+W:  7, 0: Unused import trunc from wildcard import (unused-wildcard-import)
+W:  7, 0: Unused import isnan from wildcard import (unused-wildcard-import)
+W:  7, 0: Unused import e from wildcard import (unused-wildcard-import)
+W:  7, 0: Unused import pi from wildcard import (unused-wildcard-import)
+W:  7, 0: Unused import acos from wildcard import (unused-wildcard-import)
+W:  7, 0: Unused import cos from wildcard import (unused-wildcard-import)
+W:  7, 0: Unused import hypot from wildcard import (unused-wildcard-import)
+W:  7, 0: Unused import log1p from wildcard import (unused-wildcard-import)
+W:  7, 0: Unused import fmod from wildcard import (unused-wildcard-import)
+W:  7, 0: Unused import expm1 from wildcard import (unused-wildcard-import)
+W:  7, 0: Unused import tanh from wildcard import (unused-wildcard-import)
+W:  7, 0: Unused import atan2 from wildcard import (unused-wildcard-import)
+W:  7, 0: Unused import log from wildcard import (unused-wildcard-import)
+W:  7, 0: Unused import nan from wildcard import (unused-wildcard-import)
+W:  7, 0: Unused import erf from wildcard import (unused-wildcard-import)
+W:  7, 0: Unused import atanh from wildcard import (unused-wildcard-import)
+W:  7, 0: Unused import degrees from wildcard import (unused-wildcard-import)
+W:  7, 0: Unused import frexp from wildcard import (unused-wildcard-import)
+W:  7, 0: Unused import ldexp from wildcard import (unused-wildcard-import)
+W:  7, 0: Unused import modf from wildcard import (unused-wildcard-import)
+W:  7, 0: Unused import erfc from wildcard import (unused-wildcard-import)
+W:  7, 0: Unused import asinh from wildcard import (unused-wildcard-import)
+W:  7, 0: Unused import cosh from wildcard import (unused-wildcard-import)
+W:  7, 0: Unused import factorial from wildcard import (unused-wildcard-import)
+W:  7, 0: Unused import gamma from wildcard import (unused-wildcard-import)
+W:  7, 0: Unused import acosh from wildcard import (unused-wildcard-import)
+W:  7, 0: Unused import isfinite from wildcard import (unused-wildcard-import)
+W:  7, 0: Unused import tan from wildcard import (unused-wildcard-import)
+W:  7, 0: Unused import log2 from wildcard import (unused-wildcard-import)
+W:  7, 0: Unused import sqrt from wildcard import (unused-wildcard-import)
+W:  7, 0: Unused import ceil from wildcard import (unused-wildcard-import)
+W:  7, 0: Unused import log10 from wildcard import (unused-wildcard-import)
+W:  7, 0: Unused import sin from wildcard import (unused-wildcard-import)
+W:  7, 0: Unused import pow from wildcard import (unused-wildcard-import)
+W:  7, 0: Unused import isinf from wildcard import (unused-wildcard-import)
+W:  7, 0: Unused import asin from wildcard import (unused-wildcard-import)
+W:  7, 0: Unused import fabs from wildcard import (unused-wildcard-import)
+W:  7, 0: Unused import lgamma from wildcard import (unused-wildcard-import)
+W:  7, 0: Unused import inf from wildcard import (unused-wildcard-import)
+W:  7, 0: Unused import radians from wildcard import (unused-wildcard-import)
+W:  7, 0: Unused import floor from wildcard import (unused-wildcard-import)
+W:  7, 0: Unused import atan from wildcard import (unused-wildcard-import)
+W:  7, 0: Unused import sinh from wildcard import (unused-wildcard-import)
+W:  7, 0: Unused import copysign from wildcard import (unused-wildcard-import)
+W:  7, 0: Unused import isclose from wildcard import (unused-wildcard-import)
+W:  7, 0: Unused import gcd from wildcard import (unused-wildcard-import)
+W:  7, 0: Unused import fsum from wildcard import (unused-wildcard-import)
+W:  7, 0: Unused import exp from wildcard import (unused-wildcard-import)
+************* Module xyChart.Graph
+C: 13, 0: Trailing whitespace (trailing-whitespace)
+C: 17, 0: Trailing whitespace (trailing-whitespace)
+W: 18, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 18, 0: No space allowed before comma
+	def __init__(self, n , data = None, title= None):
+                      ^ (bad-whitespace)
+C: 18, 0: No space allowed around keyword argument assignment
+	def __init__(self, n , data = None, title= None):
+                             ^ (bad-whitespace)
+C: 18, 0: No space allowed after keyword argument assignment
+	def __init__(self, n , data = None, title= None):
+                                          ^ (bad-whitespace)
+W: 19, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 20, 0: Trailing whitespace (trailing-whitespace)
+C: 21, 0: Trailing whitespace (trailing-whitespace)
+W: 21, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 22, 0: Trailing whitespace (trailing-whitespace)
+W: 23, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 24, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 24, 0: No space allowed around keyword argument assignment
+			self.scale = get_scale(self.data, round_to = self.markings-1)
+                                              ^ (bad-whitespace)
+W: 26, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 26, 0: No space allowed after bracket
+			self.scale_x = int( self.scale[0] / float(n) )
+                     ^ (bad-whitespace)
+C: 26, 0: No space allowed before bracket
+			self.scale_x = int( self.scale[0] / float(n) )
+                                                ^ (bad-whitespace)
+W: 27, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 27, 0: No space allowed after bracket
+			self.scale_y = int( self.scale[1] / float(n) )
+                     ^ (bad-whitespace)
+C: 27, 0: No space allowed before bracket
+			self.scale_y = int( self.scale[1] / float(n) )
+                                                ^ (bad-whitespace)
+W: 29, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 30, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 30, 0: Exactly one space required after comma
+			self.scale = [1,1] if self.data is None else get_scale(self.data, round_to = self.markings-1)
+                  ^ (bad-whitespace)
+C: 30, 0: No space allowed around keyword argument assignment
+			self.scale = [1,1] if self.data is None else get_scale(self.data, round_to = self.markings-1)
+                                                                              ^ (bad-whitespace)
+W: 32, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 33, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 35, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 36, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 36, 0: Exactly one space required after comma
+		self.master.resizable(0,0) # turn off resizing
+                         ^ (bad-whitespace)
+W: 37, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 38, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 39, 0: Trailing whitespace (trailing-whitespace)
+C: 40, 0: Trailing whitespace (trailing-whitespace)
+W: 40, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 41, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 42, 0: Trailing whitespace (trailing-whitespace)
+C: 43, 0: Line too long (118/100) (line-too-long)
+W: 43, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 43, 0: No space allowed after bracket
+		self.graph = get_axes( self.master, self.markings, self.scale_x,self.scale_y  ) #get an axis with this many markings
+                       ^ (bad-whitespace)
+C: 43, 0: Exactly one space required after comma
+		self.graph = get_axes( self.master, self.markings, self.scale_x,self.scale_y  ) #get an axis with this many markings
+                                                                 ^ (bad-whitespace)
+C: 43, 0: No space allowed before bracket
+		self.graph = get_axes( self.master, self.markings, self.scale_x,self.scale_y  ) #get an axis with this many markings
+                                                                                ^ (bad-whitespace)
+W: 45, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 45, 0: No space allowed after bracket
+		self.graph_height = int( self.graph.cget("height") )
+                         ^ (bad-whitespace)
+C: 45, 0: No space allowed before bracket
+		self.graph_height = int( self.graph.cget("height") )
+                                                     ^ (bad-whitespace)
+W: 46, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 46, 0: No space allowed after bracket
+		self.graph_width = int( self.graph.cget("width") )
+                        ^ (bad-whitespace)
+C: 46, 0: No space allowed before bracket
+		self.graph_width = int( self.graph.cget("width") )
+                                                   ^ (bad-whitespace)
+W: 48, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 48, 0: No space allowed after bracket
+		self.x_offset = (( self.graph_width/2 ) / self.markings) / self.scale_x
+                   ^ (bad-whitespace)
+C: 48, 0: No space allowed before bracket
+		self.x_offset = (( self.graph_width/2 ) / self.markings) / self.scale_x
+                                        ^ (bad-whitespace)
+W: 49, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 49, 0: No space allowed after bracket
+		self.y_offset = (( self.graph_height/2 ) / self.markings) / self.scale_y
+                   ^ (bad-whitespace)
+C: 49, 0: No space allowed before bracket
+		self.y_offset = (( self.graph_height/2 ) / self.markings) / self.scale_y
+                                         ^ (bad-whitespace)
+C: 50, 0: Trailing whitespace (trailing-whitespace)
+W: 51, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 52, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 53, 0: Trailing whitespace (trailing-whitespace)
+C: 54, 0: Trailing whitespace (trailing-whitespace)
+C: 56, 0: Trailing whitespace (trailing-whitespace)
+C: 58, 0: Trailing whitespace (trailing-whitespace)
+C: 59, 0: Trailing whitespace (trailing-whitespace)
+W: 60, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 62, 0: Line too long (114/100) (line-too-long)
+W: 62, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 64, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 64, 0: No space allowed after bracket
+		self.graph.create_circle(	translated_coord['x'],
+                          ^ (bad-whitespace)
+C: 65, 0: Wrong continued indentation (add 19 spaces).
+									translated_coord['y'],
+         ^                  | (bad-continuation)
+C: 66, 0: Wrong continued indentation (add 19 spaces).
+									4,
+         ^                  | (bad-continuation)
+C: 67, 0: Wrong continued indentation (add 19 spaces).
+									**kwargs)
+         ^                  | (bad-continuation)
+C: 68, 0: Trailing whitespace (trailing-whitespace)
+C: 69, 0: Trailing whitespace (trailing-whitespace)
+C: 70, 0: Line too long (102/100) (line-too-long)
+C: 71, 0: Trailing whitespace (trailing-whitespace)
+C: 74, 0: Trailing whitespace (trailing-whitespace)
+W: 75, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 75, 0: No space allowed around keyword argument assignment
+	def plot_points(self, data = None, **kwargs):
+                            ^ (bad-whitespace)
+W: 76, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 77, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 78, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 79, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 80, 0: Trailing whitespace (trailing-whitespace)
+W: 81, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W: 82, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 82, 0: No space allowed after bracket
+			self.plot_point( coord, **kwargs )
+                  ^ (bad-whitespace)
+C: 82, 0: No space allowed before bracket
+			self.plot_point( coord, **kwargs )
+                                    ^ (bad-whitespace)
+C: 83, 0: Trailing whitespace (trailing-whitespace)
+C: 84, 0: Trailing whitespace (trailing-whitespace)
+C: 85, 0: Trailing whitespace (trailing-whitespace)
+C: 86, 0: Line too long (107/100) (line-too-long)
+C: 87, 0: Line too long (113/100) (line-too-long)
+C: 89, 0: Trailing whitespace (trailing-whitespace)
+C: 92, 0: Trailing whitespace (trailing-whitespace)
+W: 93, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 94, 0: Trailing whitespace (trailing-whitespace)
+C: 96, 0: Trailing whitespace (trailing-whitespace)
+C: 98, 0: Trailing whitespace (trailing-whitespace)
+W: 99, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C: 99, 0: Exactly one space required after assignment
+		self.data =  clean_data( data )
+            ^ (bad-whitespace)
+C: 99, 0: No space allowed after bracket
+		self.data =  clean_data( data )
+                         ^ (bad-whitespace)
+C: 99, 0: No space allowed before bracket
+		self.data =  clean_data( data )
+                                ^ (bad-whitespace)
+W:101, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:102, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:104, 0: Trailing whitespace (trailing-whitespace)
+W:105, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:106, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:106, 0: Exactly one space required after comma
+		x_interval = [x / 1000.0 for x in range(dx_sorted[0], dx_sorted[-1]*1000,1)]
+                                                                          ^ (bad-whitespace)
+W:108, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:109, 0: Line too long (118/100) (line-too-long)
+W:109, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:109, 0: No space allowed around keyword argument assignment
+			self.plot_function(self._Lagrange, x_interval = [x / 100.0 for x in range(dx_sorted[0]*100, dx_sorted[-1]*100, 1)])
+                                                 ^ (bad-whitespace)
+C:110, 0: Trailing whitespace (trailing-whitespace)
+W:111, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:112, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:112, 0: No space allowed after bracket
+			self.plot_point( coord, **kwargs )
+                  ^ (bad-whitespace)
+C:112, 0: No space allowed before bracket
+			self.plot_point( coord, **kwargs )
+                                    ^ (bad-whitespace)
+C:113, 0: Trailing whitespace (trailing-whitespace)
+C:118, 0: Line too long (105/100) (line-too-long)
+C:119, 0: Trailing whitespace (trailing-whitespace)
+C:120, 0: Line too long (114/100) (line-too-long)
+W:120, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:120, 0: No space allowed around keyword argument assignment
+	def plot_function(self, func, x_interval = None, **kwargs): # plots a function, with styling kwargs if they exist
+                                          ^ (bad-whitespace)
+C:121, 0: Trailing whitespace (trailing-whitespace)
+C:122, 0: Line too long (150/100) (line-too-long)
+W:122, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:123, 0: Trailing whitespace (trailing-whitespace)
+W:124, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:124, 0: No space allowed after bracket
+		coords = [ ]
+           ^ (bad-whitespace)
+C:124, 0: No space allowed before bracket
+		coords = [ ]
+             ^ (bad-whitespace)
+C:126, 0: Line too long (133/100) (line-too-long)
+W:126, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:129, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:129, 0: No space allowed after bracket
+			coords.append(	coord(x, func(x)) )
+                ^ (bad-whitespace)
+C:129, 0: No space allowed before bracket
+			coords.append(	coord(x, func(x)) )
+                                    ^ (bad-whitespace)
+W:131, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:133, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:136, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:136, 0: No space allowed after bracket
+			self.graph.create_circle(	translated_coord['x'],
+                           ^ (bad-whitespace)
+C:137, 0: Wrong continued indentation (add 19 spaces).
+										translated_coord['y'],
+          ^                  | (bad-continuation)
+C:138, 0: Wrong continued indentation (add 19 spaces).
+										0.5,
+          ^                  | (bad-continuation)
+C:139, 0: Wrong continued indentation (add 19 spaces).
+										**kwargs)
+          ^                  | (bad-continuation)
+C:141, 0: Line too long (156/100) (line-too-long)
+C:142, 0: Line too long (126/100) (line-too-long)
+C:143, 0: Line too long (124/100) (line-too-long)
+W:146, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:148, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:149, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:151, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:152, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:154, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:154, 0: No space allowed before bracket
+		return {'x': x,	'y': y }
+                         ^ (bad-whitespace)
+C:155, 0: Trailing whitespace (trailing-whitespace)
+C:156, 0: Trailing whitespace (trailing-whitespace)
+C:157, 0: Line too long (126/100) (line-too-long)
+W:160, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:161, 0: Trailing whitespace (trailing-whitespace)
+C:162, 0: Trailing whitespace (trailing-whitespace)
+W:162, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:163, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:164, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:165, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:165, 0: Exactly one space required after comma
+			for k in range(0,len(dx)+1):
+                   ^ (bad-whitespace)
+W:166, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:167, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:168, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:169, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:170, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:172, 0: Trailing whitespace (trailing-whitespace)
+W:172, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:173, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:174, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+W:175, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:176, 0: Trailing whitespace (trailing-whitespace)
+W:177, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:178, 0: Trailing whitespace (trailing-whitespace)
+C:180, 0: Exactly one space required after comma
+def coord(x,y):
+           ^ (bad-whitespace)
+W:181, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:188, 0: Trailing whitespace (trailing-whitespace)
+C:188, 0: Line too long (105/100) (line-too-long)
+W:188, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:188, 0: No space allowed after bracket
+	Graph = Graph( 6 , [ (-4,4), (-2,1), (-1,1) , (1,1), (2,2), (4,5), (5,33) ], "Relation between x and y") 
+              ^ (bad-whitespace)
+C:188, 0: No space allowed before comma
+	Graph = Graph( 6 , [ (-4,4), (-2,1), (-1,1) , (1,1), (2,2), (4,5), (5,33) ], "Relation between x and y") 
+                  ^ (bad-whitespace)
+C:188, 0: No space allowed after bracket
+	Graph = Graph( 6 , [ (-4,4), (-2,1), (-1,1) , (1,1), (2,2), (4,5), (5,33) ], "Relation between x and y") 
+                    ^ (bad-whitespace)
+C:188, 0: Exactly one space required after comma
+	Graph = Graph( 6 , [ (-4,4), (-2,1), (-1,1) , (1,1), (2,2), (4,5), (5,33) ], "Relation between x and y") 
+                         ^ (bad-whitespace)
+C:188, 0: Exactly one space required after comma
+	Graph = Graph( 6 , [ (-4,4), (-2,1), (-1,1) , (1,1), (2,2), (4,5), (5,33) ], "Relation between x and y") 
+                                 ^ (bad-whitespace)
+C:188, 0: Exactly one space required after comma
+	Graph = Graph( 6 , [ (-4,4), (-2,1), (-1,1) , (1,1), (2,2), (4,5), (5,33) ], "Relation between x and y") 
+                                         ^ (bad-whitespace)
+C:188, 0: No space allowed before comma
+	Graph = Graph( 6 , [ (-4,4), (-2,1), (-1,1) , (1,1), (2,2), (4,5), (5,33) ], "Relation between x and y") 
+                                             ^ (bad-whitespace)
+C:188, 0: Exactly one space required after comma
+	Graph = Graph( 6 , [ (-4,4), (-2,1), (-1,1) , (1,1), (2,2), (4,5), (5,33) ], "Relation between x and y") 
+                                                 ^ (bad-whitespace)
+C:188, 0: Exactly one space required after comma
+	Graph = Graph( 6 , [ (-4,4), (-2,1), (-1,1) , (1,1), (2,2), (4,5), (5,33) ], "Relation between x and y") 
+                                                        ^ (bad-whitespace)
+C:188, 0: Exactly one space required after comma
+	Graph = Graph( 6 , [ (-4,4), (-2,1), (-1,1) , (1,1), (2,2), (4,5), (5,33) ], "Relation between x and y") 
+                                                               ^ (bad-whitespace)
+C:188, 0: Exactly one space required after comma
+	Graph = Graph( 6 , [ (-4,4), (-2,1), (-1,1) , (1,1), (2,2), (4,5), (5,33) ], "Relation between x and y") 
+                                                                      ^ (bad-whitespace)
+C:188, 0: No space allowed before bracket
+	Graph = Graph( 6 , [ (-4,4), (-2,1), (-1,1) , (1,1), (2,2), (4,5), (5,33) ], "Relation between x and y") 
+                                                                           ^ (bad-whitespace)
+C:189, 0: Line too long (108/100) (line-too-long)
+W:189, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:189, 0: No space allowed after bracket
+	Graph.plot_points_with_line( [ (-4,6), (-3,-6), (-1,11) , (1,14), (2,22), (4,25), (5,13) ], fill = "red" );
+                            ^ (bad-whitespace)
+C:189, 0: No space allowed after bracket
+	Graph.plot_points_with_line( [ (-4,6), (-3,-6), (-1,11) , (1,14), (2,22), (4,25), (5,13) ], fill = "red" );
+                              ^ (bad-whitespace)
+C:189, 0: Exactly one space required after comma
+	Graph.plot_points_with_line( [ (-4,6), (-3,-6), (-1,11) , (1,14), (2,22), (4,25), (5,13) ], fill = "red" );
+                                   ^ (bad-whitespace)
+C:189, 0: Exactly one space required after comma
+	Graph.plot_points_with_line( [ (-4,6), (-3,-6), (-1,11) , (1,14), (2,22), (4,25), (5,13) ], fill = "red" );
+                                           ^ (bad-whitespace)
+C:189, 0: Exactly one space required after comma
+	Graph.plot_points_with_line( [ (-4,6), (-3,-6), (-1,11) , (1,14), (2,22), (4,25), (5,13) ], fill = "red" );
+                                                    ^ (bad-whitespace)
+C:189, 0: No space allowed before comma
+	Graph.plot_points_with_line( [ (-4,6), (-3,-6), (-1,11) , (1,14), (2,22), (4,25), (5,13) ], fill = "red" );
+                                                         ^ (bad-whitespace)
+C:189, 0: Exactly one space required after comma
+	Graph.plot_points_with_line( [ (-4,6), (-3,-6), (-1,11) , (1,14), (2,22), (4,25), (5,13) ], fill = "red" );
+                                                             ^ (bad-whitespace)
+C:189, 0: Exactly one space required after comma
+	Graph.plot_points_with_line( [ (-4,6), (-3,-6), (-1,11) , (1,14), (2,22), (4,25), (5,13) ], fill = "red" );
+                                                                     ^ (bad-whitespace)
+C:189, 0: Exactly one space required after comma
+	Graph.plot_points_with_line( [ (-4,6), (-3,-6), (-1,11) , (1,14), (2,22), (4,25), (5,13) ], fill = "red" );
+                                                                             ^ (bad-whitespace)
+C:189, 0: Exactly one space required after comma
+	Graph.plot_points_with_line( [ (-4,6), (-3,-6), (-1,11) , (1,14), (2,22), (4,25), (5,13) ], fill = "red" );
+                                                                                     ^ (bad-whitespace)
+C:189, 0: No space allowed before bracket
+	Graph.plot_points_with_line( [ (-4,6), (-3,-6), (-1,11) , (1,14), (2,22), (4,25), (5,13) ], fill = "red" );
+                                                                                          ^ (bad-whitespace)
+C:189, 0: No space allowed around keyword argument assignment
+	Graph.plot_points_with_line( [ (-4,6), (-3,-6), (-1,11) , (1,14), (2,22), (4,25), (5,13) ], fill = "red" );
+                                                                                                  ^ (bad-whitespace)
+C:189, 0: No space allowed before bracket
+	Graph.plot_points_with_line( [ (-4,6), (-3,-6), (-1,11) , (1,14), (2,22), (4,25), (5,13) ], fill = "red" );
+                                                                                                          ^ (bad-whitespace)
+W:189, 0: Unnecessary semicolon (unnecessary-semicolon)
+C:190, 0: Line too long (104/100) (line-too-long)
+W:190, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:190, 0: No space allowed after bracket
+	Graph.plot_points_with_line( [ (-4,4), (-2,1), (-1,1) , (1,1), (2,2), (4,5), (5,33) ], fill = "blue" );
+                            ^ (bad-whitespace)
+C:190, 0: No space allowed after bracket
+	Graph.plot_points_with_line( [ (-4,4), (-2,1), (-1,1) , (1,1), (2,2), (4,5), (5,33) ], fill = "blue" );
+                              ^ (bad-whitespace)
+C:190, 0: Exactly one space required after comma
+	Graph.plot_points_with_line( [ (-4,4), (-2,1), (-1,1) , (1,1), (2,2), (4,5), (5,33) ], fill = "blue" );
+                                   ^ (bad-whitespace)
+C:190, 0: Exactly one space required after comma
+	Graph.plot_points_with_line( [ (-4,4), (-2,1), (-1,1) , (1,1), (2,2), (4,5), (5,33) ], fill = "blue" );
+                                           ^ (bad-whitespace)
+C:190, 0: Exactly one space required after comma
+	Graph.plot_points_with_line( [ (-4,4), (-2,1), (-1,1) , (1,1), (2,2), (4,5), (5,33) ], fill = "blue" );
+                                                   ^ (bad-whitespace)
+C:190, 0: No space allowed before comma
+	Graph.plot_points_with_line( [ (-4,4), (-2,1), (-1,1) , (1,1), (2,2), (4,5), (5,33) ], fill = "blue" );
+                                                       ^ (bad-whitespace)
+C:190, 0: Exactly one space required after comma
+	Graph.plot_points_with_line( [ (-4,4), (-2,1), (-1,1) , (1,1), (2,2), (4,5), (5,33) ], fill = "blue" );
+                                                           ^ (bad-whitespace)
+C:190, 0: Exactly one space required after comma
+	Graph.plot_points_with_line( [ (-4,4), (-2,1), (-1,1) , (1,1), (2,2), (4,5), (5,33) ], fill = "blue" );
+                                                                  ^ (bad-whitespace)
+C:190, 0: Exactly one space required after comma
+	Graph.plot_points_with_line( [ (-4,4), (-2,1), (-1,1) , (1,1), (2,2), (4,5), (5,33) ], fill = "blue" );
+                                                                         ^ (bad-whitespace)
+C:190, 0: Exactly one space required after comma
+	Graph.plot_points_with_line( [ (-4,4), (-2,1), (-1,1) , (1,1), (2,2), (4,5), (5,33) ], fill = "blue" );
+                                                                                ^ (bad-whitespace)
+C:190, 0: No space allowed before bracket
+	Graph.plot_points_with_line( [ (-4,4), (-2,1), (-1,1) , (1,1), (2,2), (4,5), (5,33) ], fill = "blue" );
+                                                                                     ^ (bad-whitespace)
+C:190, 0: No space allowed around keyword argument assignment
+	Graph.plot_points_with_line( [ (-4,4), (-2,1), (-1,1) , (1,1), (2,2), (4,5), (5,33) ], fill = "blue" );
+                                                                                             ^ (bad-whitespace)
+C:190, 0: No space allowed before bracket
+	Graph.plot_points_with_line( [ (-4,4), (-2,1), (-1,1) , (1,1), (2,2), (4,5), (5,33) ], fill = "blue" );
+                                                                                                      ^ (bad-whitespace)
+W:190, 0: Unnecessary semicolon (unnecessary-semicolon)
+C:191, 0: Trailing whitespace (trailing-whitespace)
+W:192, 0: Found indentation with tabs instead of spaces (mixed-indentation)
+C:  1, 0: Missing module docstring (missing-docstring)
+W:  1, 0: Wildcard import Axes (wildcard-import)
+E:  1, 0: Unable to import 'Axes' (import-error)
+W:  2, 0: Wildcard import Scale (wildcard-import)
+E:  2, 0: Unable to import 'Scale' (import-error)
+W:  3, 0: Wildcard import InputParser (wildcard-import)
+E:  3, 0: Unable to import 'InputParser' (import-error)
+C:102, 2: Invalid attribute name "dy" (invalid-name)
+C:101, 2: Invalid attribute name "dx" (invalid-name)
+C: 11, 0: Missing class docstring (missing-docstring)
+R: 11, 0: Too many instance attributes (13/7) (too-many-instance-attributes)
+E: 19,14: Undefined variable 'clean_data' (undefined-variable)
+E: 24,16: Undefined variable 'get_scale' (undefined-variable)
+E: 30,48: Undefined variable 'get_scale' (undefined-variable)
+E: 35,16: Undefined variable 'Tk' (undefined-variable)
+E: 43,15: Undefined variable 'get_axes' (undefined-variable)
+C: 60, 1: Missing method docstring (missing-docstring)
+W: 60,22: Redefining name 'coord' from outer scope (line 180) (redefined-outer-name)
+C: 75, 1: Missing method docstring (missing-docstring)
+W: 81, 6: Redefining name 'coord' from outer scope (line 180) (redefined-outer-name)
+W: 78, 2: No exception type(s) specified (bare-except)
+E: 77,15: Undefined variable 'clean_data' (undefined-variable)
+C: 93, 1: Missing method docstring (missing-docstring)
+W:111, 6: Redefining name 'coord' from outer scope (line 180) (redefined-outer-name)
+E: 99,15: Undefined variable 'clean_data' (undefined-variable)
+C:105,43: More than one statement on a single line (multiple-statements)
+E:108, 5: Undefined variable 'is_function' (undefined-variable)
+W:106, 2: Unused variable 'x_interval' (unused-variable)
+C:120, 1: Missing method docstring (missing-docstring)
+C:126, 6: Invalid variable name "x" (invalid-name)
+C:131, 6: Invalid variable name "xy" (invalid-name)
+W:146,33: Redefining name 'coord' from outer scope (line 180) (redefined-outer-name)
+C:148, 2: Invalid variable name "x" (invalid-name)
+C:149, 2: Invalid variable name "y" (invalid-name)
+E:151, 2: Undefined variable 'x_coordinates' (undefined-variable)
+E:152, 2: Undefined variable 'y_coordinates' (undefined-variable)
+C:160, 1: Invalid method name "_Lagrange" (invalid-name)
+C:160, 1: Invalid argument name "x" (invalid-name)
+W:173, 6: Redefining name 'coord' from outer scope (line 180) (redefined-outer-name)
+C:162, 2: Invalid variable name "dx" (invalid-name)
+C:163, 2: Invalid function name "b" (invalid-name)
+C:163, 2: Invalid argument name "xi" (invalid-name)
+C:163, 2: Missing function docstring (missing-docstring)
+C:164, 3: Invalid variable name "z" (invalid-name)
+W:168, 5: No exception type(s) specified (bare-except)
+C:167, 6: Invalid variable name "z" (invalid-name)
+C:172, 2: Invalid variable name "y" (invalid-name)
+C:174, 4: Invalid variable name "xi" (invalid-name)
+C:174, 8: Invalid variable name "yi" (invalid-name)
+C:175, 4: Invalid variable name "y" (invalid-name)
+W:102, 2: Attribute 'dy' defined outside __init__ (attribute-defined-outside-init)
+W:101, 2: Attribute 'dx' defined outside __init__ (attribute-defined-outside-init)
+C:180, 0: Invalid argument name "x" (invalid-name)
+C:180, 0: Invalid argument name "y" (invalid-name)
+C:180, 0: Missing function docstring (missing-docstring)
+C:188, 1: Invalid constant name "Graph" (invalid-name)
+E:192, 1: Undefined variable 'mainloop' (undefined-variable)
+************* Module xyChart.InputParser
+E: 22, 0: Missing parentheses in call to 'print' (syntax-error)
+************* Module xyChart.Scale
+C: 10, 0: No space allowed before :
+def get_scale(data_set, round_to=0) :
+                                    ^ (bad-whitespace)
+C: 15, 0: Trailing whitespace (trailing-whitespace)
+C: 17, 0: No space allowed before :
+        if abs(i['x']) > x : x = abs(i['x'])
+                           ^ (bad-whitespace)
+C: 18, 0: Trailing whitespace (trailing-whitespace)
+C: 19, 0: No space allowed before :
+        if abs(i['y']) > y : y = abs(i['y'])
+                           ^ (bad-whitespace)
+C: 20, 0: Trailing whitespace (trailing-whitespace)
+C: 21, 0: Trailing whitespace (trailing-whitespace)
+C: 22, 0: Unnecessary parens after 'if' keyword (superfluous-parens)
+C: 24, 0: Trailing whitespace (trailing-whitespace)
+C: 26, 0: Trailing whitespace (trailing-whitespace)
+C: 27, 0: Trailing whitespace (trailing-whitespace)
+C: 28, 0: Exactly one space required after comma
+    return [x,y]
+             ^ (bad-whitespace)
+C: 29, 0: Trailing newlines (trailing-newlines)
+C:  1, 0: Missing module docstring (missing-docstring)
+C: 10, 0: Missing function docstring (missing-docstring)
+C: 11, 4: Invalid variable name "x" (invalid-name)
+C: 13, 4: Invalid variable name "y" (invalid-name)
+C: 17,29: More than one statement on a single line (multiple-statements)
+C: 17,29: Invalid variable name "x" (invalid-name)
+C: 19,29: More than one statement on a single line (multiple-statements)
+C: 19,29: Invalid variable name "y" (invalid-name)
+C: 23, 8: Invalid variable name "x" (invalid-name)
+C: 25, 8: Invalid variable name "y" (invalid-name)
+
+
+Report
+======
+140 statements analysed.
+
+Statistics by type
+------------------
+
++---------+-------+-----------+-----------+------------+---------+
+|type     |number |old number |difference |%documented |%badname |
++=========+=======+===========+===========+============+=========+
+|module   |4      |NC         |NC         |0.00        |25.00    |
++---------+-------+-----------+-----------+------------+---------+
+|class    |1      |NC         |NC         |0.00        |0.00     |
++---------+-------+-----------+-----------+------------+---------+
+|method   |7      |NC         |NC         |42.86       |14.29    |
++---------+-------+-----------+-----------+------------+---------+
+|function |10     |NC         |NC         |60.00       |10.00    |
++---------+-------+-----------+-----------+------------+---------+
+
+
+
+Raw metrics
+-----------
+
++----------+-------+------+---------+-----------+
+|type      |number |%     |previous |difference |
++==========+=======+======+=========+===========+
+|code      |165    |44.47 |NC       |NC         |
++----------+-------+------+---------+-----------+
+|docstring |1      |0.27  |NC       |NC         |
++----------+-------+------+---------+-----------+
+|comment   |120    |32.35 |NC       |NC         |
++----------+-------+------+---------+-----------+
+|empty     |85     |22.91 |NC       |NC         |
++----------+-------+------+---------+-----------+
+
+
+
+Duplication
+-----------
+
++-------------------------+------+---------+-----------+
+|                         |now   |previous |difference |
++=========================+======+=========+===========+
+|nb duplicated lines      |0     |NC       |NC         |
++-------------------------+------+---------+-----------+
+|percent duplicated lines |0.000 |NC       |NC         |
++-------------------------+------+---------+-----------+
+
+
+
+Messages by category
+--------------------
+
++-----------+-------+---------+-----------+
+|type       |number |previous |difference |
++===========+=======+=========+===========+
+|convention |279    |NC       |NC         |
++-----------+-------+---------+-----------+
+|refactor   |2      |NC       |NC         |
++-----------+-------+---------+-----------+
+|warning    |305    |NC       |NC         |
++-----------+-------+---------+-----------+
+|error      |15     |NC       |NC         |
++-----------+-------+---------+-----------+
+
+
+
+% errors / warnings by module
+-----------------------------
+
++--------------------+------+--------+---------+-----------+
+|module              |error |warning |refactor |convention |
++====================+======+========+=========+===========+
+|xyChart.Graph       |93.33 |30.49   |50.00    |62.37      |
++--------------------+------+--------+---------+-----------+
+|xyChart.InputParser |6.67  |0.00    |0.00     |0.00       |
++--------------------+------+--------+---------+-----------+
+|xyChart.Axes        |0.00  |69.18   |50.00    |28.32      |
++--------------------+------+--------+---------+-----------+
+|xyChart             |0.00  |0.33    |0.00     |1.08       |
++--------------------+------+--------+---------+-----------+
+|xyChart.Scale       |0.00  |0.00    |0.00     |8.24       |
++--------------------+------+--------+---------+-----------+
+
+
+
+Messages
+--------
+
++-------------------------------+------------+
+|message id                     |occurrences |
++===============================+============+
+|unused-wildcard-import         |179         |
++-------------------------------+------------+
+|bad-whitespace                 |123         |
++-------------------------------+------------+
+|mixed-indentation              |108         |
++-------------------------------+------------+
+|trailing-whitespace            |49          |
++-------------------------------+------------+
+|invalid-name                   |40          |
++-------------------------------+------------+
+|line-too-long                  |28          |
++-------------------------------+------------+
+|bad-continuation               |20          |
++-------------------------------+------------+
+|missing-docstring              |13          |
++-------------------------------+------------+
+|undefined-variable             |11          |
++-------------------------------+------------+
+|wildcard-import                |5           |
++-------------------------------+------------+
+|redefined-outer-name           |5           |
++-------------------------------+------------+
+|multiple-statements            |3           |
++-------------------------------+------------+
+|import-error                   |3           |
++-------------------------------+------------+
+|unnecessary-semicolon          |2           |
++-------------------------------+------------+
+|bare-except                    |2           |
++-------------------------------+------------+
+|attribute-defined-outside-init |2           |
++-------------------------------+------------+
+|unused-variable                |1           |
++-------------------------------+------------+
+|trailing-newlines              |1           |
++-------------------------------+------------+
+|too-many-instance-attributes   |1           |
++-------------------------------+------------+
+|too-many-arguments             |1           |
++-------------------------------+------------+
+|syntax-error                   |1           |
++-------------------------------+------------+
+|superfluous-parens             |1           |
++-------------------------------+------------+
+|redefined-builtin              |1           |
++-------------------------------+------------+
+|missing-final-newline          |1           |
++-------------------------------+------------+
+
+
+
+Global evaluation
+-----------------
+Your code has been rated at -37.21/10
