@@ -217,14 +217,22 @@ It would not have been feasible to do bitmap comparison automated testing for th
 \toprule
 \textbf{Test} & \textbf{Requirement}\\
 \midrule
-R1 & 1.1, 1.2, 1.3, 1.4 \\
-R2 &  2.1, 2.2, 2.3\\
-R3 &  3.1, 3.2, 3.3, 3.4, \\
-R4 & 1.1, 1.2, 1.3, 1.4\\
-R5 &  4.1, 4.2, 4.3\\
+\multicolumn{2}{c}{Functional Requirements Testing} \\
+\midrule
+1 & R1, R4 \\
+2 & R2 \\
+3 & R3 \\
+4 & R5 \\
+\midrule
+\multicolumn{2}{c}{Non-functional Requirements Testing} \\
+\midrule
+
+\midrule
+\multicolumn{2}{c}{Automated Testing} \\
+\midrule
 \bottomrule
 \end{tabular}
-\caption{Trace Between Requirements and Tests}
+\caption{Trace Between Tests and Requirements}
 \label{TblRT}
 \end{table}
 		
@@ -234,10 +242,21 @@ R5 &  4.1, 4.2, 4.3\\
 \centering
 \begin{tabular}{p{0.2\textwidth} p{0.6\textwidth}}
 \toprule
-\textbf{Module} & \textbf{Test}\\
+\textbf{Test} & \textbf{Module}\\
 \midrule
-R1 & mHH, mDS.1 \\
+\multicolumn{2}{c}{Functional Requirements Testing} \\
+\midrule
+1 & M1, M3.1, M3.3, M2.2, M1.1 \\
+2 & M2.1 \\
+3 & M3.3 \\
+4 & M3.2, M1.1 \\
+\midrule
+\multicolumn{2}{c}{Non-functional Requirements Testing} \\
+\midrule
 
+\midrule
+\multicolumn{2}{c}{Automated Testing} \\
+\midrule
 \bottomrule
 \end{tabular}
 \caption{Trace Between Modules and Tests}
