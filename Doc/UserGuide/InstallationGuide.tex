@@ -1,0 +1,72 @@
+\documentclass{article}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\input{../Comments}
+\begin{document}
+
+\title{SE 3XA3: Installation Guide\\xPyCharts}
+
+\author{Team 4, xPy
+		\\ Hatim Rehman (rehmah3)
+		\\ Louis Bursey (burseylj)
+		\\ Sarthak Desai (desaisa3)
+}
+
+\date{}
+\maketitle
+\newpage
+
+\section{Prerequisites}
+The only dependency is Python 2.7.x. You can find it \href{https://www.python.org/downloads/}{\underline{here}}, directly from the makers.
+
+\section{Downloading the Source} 
+The source files for xPycharts can be found over at this \href{https://gitlab.cas.mcmaster.ca/rehmah3/XPYCharts_SE3XA3/tree/master/src} {\underline{link}}.\\ A download button exists on the upper right corner of the window. \\\\Note: Users may need a GitLab account to access the files.
+\section{Importing}
+Users may move the package into their existing project by simply copying the xPycharts folder into their python path. More information to do this can be found \href{http://stackoverflow.com/questions/3402168/permanently-add-a-directory-to-pythonpath}{\underline{here}}.
+Alternatively, users may choose to use xPycharts by copying the source files into their working project directories directly. 
+
+All python script will need to do the proper imports. Developers recommend using the statement
+\begin{verbatim}
+from xPycharts import *
+\end{verbatim}
+at the top of their python script(s) (under the assumption that the python file is in the same directory as xPycharts). 
+
+\section{Using xPycharts}
+Once the source files are properly imported, developers can begin using xPycharts.
+
+To begin, a Graph object needs to be instantiated. The following code shows how to instantiate an xy graph with 6 markings on each quadrant:
+\begin{verbatim}
+graph = xy.Graph( 6 )
+\end{verbatim}
+
+Users have access to the following functions under the Graph object :
+\begin{verbatim}
+graph.plot_points( ... )
+graph.plot_points_with_line( ... )
+graph.plot_function( ... )
+\end{verbatim}
+where we defined graph earlier (please do not confuse this local variable with the Graph object). \\\\
+The plot\_points() and plot\_points\_with\_line() methods take in a list of tuples, such as the following dataset:
+\begin{verbatim}
+dataset = [ (1, 1), (2, 2), (3, 4) ]
+\end{verbatim} 
+The plot\_function() method takes in any \textbf{python function} that takes in one parameter (float) and returns a float value. This means a user can use the built in python functions such as the ones from the math library. 
+\begin{verbatim}
+graph.plot_function( math.tan )
+\end{verbatim} 
+Users may even define their own functions, and pass them in to be graphed:
+
+\begin{verbatim}
+def func( x ):
+     return sin( x ) * sqrt( x )
+
+graph.plot_function( func )
+\end{verbatim} 
+
+\section{Uninstalling}
+To uninstall xPycharts, simply delete the source folder from your computer. \\\\That's it, really. 
+
+\section{Comments from the Developers}
+xPycharts is the work of three student developers from McMaster University. \\\\It was developed over a period of 3 months with the emphasis on portability and ease of use. This is why installing and uninstalling is super easy. \\\\For the curious, xPycharts uses Tkinter, a standard python library to handle all the graphical needs of the application. There are no other dependencies which makes this the perfect lightweight library for casual users.\\\\We hope you enjoy our work as much as we enjoyed developing it.
+\end{document}
