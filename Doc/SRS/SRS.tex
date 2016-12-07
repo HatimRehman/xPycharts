@@ -5,6 +5,7 @@
 \usepackage{tabularx}
 \usepackage{hyperref}
 \usepackage{mdframed}
+\usepackage{placeins}
 \hypersetup{
     colorlinks,
     citecolor=black,
@@ -44,6 +45,12 @@
 \toprule {\bf Date} & {\bf Version} & {\bf Notes}\\
 \midrule
 Oct. 10, 2016 & 1.0 & Revision 0\\
+Dec. 7, 2016 &  2.0 & Revision 1 \\
+ & & - Added mandated constraints, reformatted \\
+ & & - Added details about users, user environment \\
+ & & - Redid Work Partitioning \\
+ & & - Added input text format to FR \\
+ & & - Rewrote FR on interpolation \\
 \bottomrule
 \end{tabularx}
 \end{table}
@@ -70,9 +77,13 @@ The Customers of the project are the end users who will be using the graphing li
 \subsubsection{Other Stakeholders}
 Other stakeholders include the developers who are creating the project and who will be responsible for all future updates and maintenance.
 \subsection{Mandated Constraints}
-Description: The User must have Python 2.7 installed on their device.
-Rationale: User can only import and use the library inside Python 2.7
-Fit Criterion: The library will be able to be imported into Python 100\% of the time if Python 2.7 is installed on the system. If the user doesn't have Python 2.7 a link in the User Manual will lead 	the user to the appropriate download location.
+\textbf{Description:} The User must have Python 2.7 installed on their device.
+\textbf{Rationale:} User can only import and use the library inside Python 2.7
+\textbf{Fit Criterion:} The library will be able to be imported into Python 100\% of the time if Python 2.7 is installed on the system. If the user doesn't have Python 2.7 a link in the User Manual will lead 	the user to the appropriate download location.
+
+\textbf{Description:} The project must be completed by December 8th. 
+\textbf{Rationale:} Submission of the project is on December 8th
+\textbf{Fit Criterion:} Every task outlined in the Gantt chart is completed by December 8th.
 
 \subsection{Naming Conventions and Terminology}
 \begin{center}
@@ -94,6 +105,7 @@ Fit Criterion: The library will be able to be imported into Python 100\% of the 
 \end{center}
 \subsection{Relevant Facts and Assumptions}
 It is assumed here that graphing libraries are a valuable resource in educational, research and development environments and that each party involved will benefit from the production of this software. It is also assumed that the client currently only wants the project to produce line graphs and any further graphing capabilities may or may not be added depending on the client's decision and the time constraints.
+The user is assumed to have a working knowledge of the Python programming language, and is able to understand technical instructions in English. The user is assumed to have Python 2.7.x installed in their working environment, and to be working in either Windows, OSX, or a Linux distribution capable of running Python 2.7.x programs.
 \clearpage
 \section{Functional Requirements}
 
@@ -108,22 +120,20 @@ The context can be seen by the following visual, describing user interaction wit
 	\end{figure}
 	
 \subsubsection{Work Partitioning}
+	\begin{table}[!htbp]
 
-\begin{center}
-\begin{table}[!hpb]
-    \caption{Work Partitioning} 
-    \begin{tabular}{ |c|p{11cm}|}
-	\hline
-	Event No. & Event\\ \hline
-	1 & Create the (Cartesian) coordinate system that is centered within a window.\\ \hline
-	2 & Add labels to the coordinate system. \\ \hline
-	3 & Plot sample points.\\ \hline
-	4 & Construct a line that joins two points together.\\ \hline
-	5 & Finishing edits (i.e input checking and error handling).\\ \hline
-    \end{tabular}
-
+	\begin{tabularx}{\textwidth}{|X|X|X|X|}
+		\hline\\
+		\textbf{Event Name} & \textbf{Input} & \textbf{Output} & \textbf{Summary}\\ \hline
+	Dependent program creates a graph &  \# Markings & Window with markings & Create the (Cartesian) coordinate system that is centered within a window.\\ \hline
+	Dependent program inputs data set to be plotted & Data set & Window with plotted data set & Data set is plotted on the created window \\ \hline
+	Dependent program constructs a line joining points & Data set & Window with interpolated line through points & Construct a line that joins two points together.\\ \hline
+	User creates error in dependent program & Erroneous code & Appropriate error message & Finishing edits (i.e input checking and error handling).\\ \hline
+	\end{tabularx}
+		\caption{Work Partitioning}
+		\label{Table}
 \end{table}
-\end{center}
+\FloatBarrier
 
 \subsubsection{Individual Product Use Cases}
 
@@ -150,7 +160,7 @@ Because of the nature of the product, a universal use case exists:
 \begin{tabular}{ccc}Requirement \#: 1
 \end{tabular} \\
 %---
-\textbf{Description:} The software shall read data given to it.\\
+\textbf{Description:} The software shall read data given to it in the form of a list of tuples\\
 \textbf{Rationale:} Data is needed to construct a graph. \\
 \textbf{Originator:} Hatim Rehman \\
 \textbf{Fit Criterion:} The data used by the program is identical to the data given to it.\\
@@ -226,8 +236,8 @@ Because of the nature of the product, a universal use case exists:
 \begin{tabular}{ccc}Requirement \#: 5
 \end{tabular} \\
 %---
-\textbf{Description:} The software will connect a line that passes through all the data points if the data points are a function of x.\\
-\textbf{Rationale:} Imposing a constraint on only graphing functions ensures validity and correctness (a function only has one interpretation), whereas graphing relations introduces ambiguity in the shape of the line. \\
+\textbf{Description:} The library will use interpolation to plot a line through all data points\\
+\textbf{Rationale:} Having quick access to interpolation of the data set will be beneficial to the user \\
 \textbf{Originator:} Hatim Rehman \\
 \textbf{Fit Criterion:} A line passes through all the points if there is only one y value for each x.\\
 %---
@@ -701,5 +711,6 @@ The user document will have two major components to support the user. The first 
 
 The schedule of the project is shown by the following
  \href{run:../DevelopmentPlan/GanttChart.gan} {\underline{Gantt Chart}}.
+ 
 
 \end{document}
