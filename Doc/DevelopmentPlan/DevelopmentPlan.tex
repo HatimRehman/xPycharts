@@ -2,6 +2,8 @@
 \usepackage{hyperref}
 \usepackage{booktabs}
 \usepackage{tabularx}
+\input{../Comments}
+\begin{document}
 
 \title{SE 3XA3: Development Plan\\xPyCharts}
 
@@ -12,52 +14,41 @@
 }
 
 \date{}
+\maketitle
+\newpage
+\pagenumbering{roman}
+\tableofcontents
+\listoftables
+\listoffigures
 
-\input{../Comments}
 
-\begin{document}
 
 \textcolor{red}{Start filling this table, especially for deliverables - CM} \\
 \begin{table}[hp]
 \caption{Revision History} \label{TblRevisionHistory}
 \begin{tabularx}{\textwidth}{llX}
 \toprule
-\textbf{Date} & \textbf{Developer(s)} & \textbf{Change}\\
+\toprule {\bf Date} & {\bf Version} & {\bf Notes}\\
 \midrule
-Date1 & Name(s) & Description of changes\\
-Date2 & Name(s) & Description of changes\\
-... & ... & ...\\
+Sept. 30, 2016 & 0 & Revision 0\\
+Dec. 7, 2016 & 1 & Revision 1 \\
+ & & - Table of Contents \\
+ & & - Added "Prior to Demo" section to PoC plan\\
+ & & - External links where appropriate\\
+ & & - Project Review\\
 \bottomrule
 \end{tabularx}
 \end{table}
 
 \newpage
 
-\maketitle
+\section{Abstract} %Louis
 %Hatim
 
 The purpose of the xPyCharts Software Development plan is to collect all the necessary information to complete the project in one central document. Team members will refer to the development plan to understand what they need to do and why they need to do it. It will also be used as a reference for decisions that are made in the future
 
 This document describes the overall plan to be used by the xPyCharts project. It includes a Gantt Chart in the Project Schedule that shows a tentative flow of events required for the completion of the project.
-
-
 \textcolor{red}{ Consider just using a table of contents, and the above can be in a Abstract section - CM} \\
-The document consists of the following sub-sections:
-\begin{description}
-  \item[$\cdot$] Team Meeting Plan
-  \item[$\cdot$] Team Communication Plan
-  \item[$\cdot$] Team Member Roles
-  \item[$\cdot$] Git Workflow Plan
-  \item[$\cdot$] Proof of Concept Demonstration Plan
-  \item[$\cdot$] Technology
-  \item[$\cdot$] Coding Style
-  \item[$\cdot$] Project Schedule
-  \item[$\cdot$] Project Review
-  
-\end{description}
-
-The development plan will be revised in the future as necessary, and will be reviewed in the Project Review section. 
-
 \section{Team Meeting Plan} %Louis
 Our team will hold regular meetings on Tuesdays and Thursdays, for about two hours. We will meet either in a free room in MDCL or in the Thode Library.
 
@@ -102,6 +93,9 @@ Automated testing, however, will be a challenge if we want to compare two image 
 \item[$\bullet$]  \textbf{Required libraries and portability:} \\
 The program will use as many standard Python libraries as possible to ensure maximum portability. When an external library is required, preference will be given to the most updated library to ensure future maintainability. 
 
+\item[$\bullet$]  \textbf{Prior to demonstration:} \\
+What must be prioritized prior to the demonstration is finding a suitable, graphical interface library for python that is cross-platform, easily accessible, and easy to use. Development cannot begin until this is done so it is very important. A layout of module and functions would follow after this to make sure work is distributed properly and all the work is realized at the beginning stage so it can be fairly distributed.
+
 \end{description}
 
 \section{Technology} %Louis
@@ -110,13 +104,13 @@ This project will be developed in the Python programming language. We will use s
 \section{Coding Style} %Louis
 
 \textcolor{red}{Provide links to external content whenever possible  - CM} \\
-We will adhere to the PEP 8 for Python style. Thorough and meaningful commenting is expected in all code.
+We will adhere to the \href{https://www.python.org/dev/peps/pep-0008/}{\underline{PEP 8}} for Python style. Thorough and meaningful commenting is expected in all code.
 
 \section{Project Schedule}
 
 
 \textcolor{red}{Use more appropriate text to tell reader it is a link. With respect to the chart, adjust the resource section so that no person is over 100 percent. - CM} \\
- \href{run:../DevelopmentPlan/GanttChart.gan} {Gantt Chart}
+ \href{run:../DevelopmentPlan/GanttChart.gan} {\underline{Gantt Chart}}.
 %Will have pointer to Gantt chart
 
 \section{Project Review} 
