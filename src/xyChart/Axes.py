@@ -20,7 +20,7 @@ y_coordinates = { }
 def get_axes( window, markings, scale_x, scale_y ):
 	canvas = Canvas(window, width=600, height=600)#, background='lightgrey',) # create a canvas to draw on (inside the window)
 
-	canvas.pack() # no idea what this does
+	canvas.pack() 
 
 	canvas_height = int( canvas.cget("height") )
 	canvas_width = int( canvas.cget("width") )
