@@ -51,6 +51,8 @@ Dec. 7, 2016 &  2.0 & Revision 1 \\
  & & - Redid Work Partitioning \\
  & & - Added input text format to FR \\
  & & - Rewrote FR on interpolation \\
+ & & - Added health and safety information \\
+ J& & - Added justification for lack of costs \\ 
 \bottomrule
 \end{tabularx}
 \end{table}
@@ -263,7 +265,7 @@ Because of the nature of the product, a universal use case exists:
 Requirement \#: 1& Requirement Type: 10a & Event/Use case \#: \\
 \end{tabular} \\
 %---
-\textbf{Description:} The graphs produced should be visually appealing and look professional \\
+\textbf{Description:} The graphs should be rated as ``visually appealing'' by users \\
 \textbf{Rationale:} The programmer may be producing graphs for presentations, and will appreciate a good looking product \\
 \textbf{Originator:} Louis Bursey\\
 \textbf{Fit Criterion:} 70\% of people surveyed believe that graphs are visually appealing and look professional  \\
@@ -646,9 +648,8 @@ There are no cultural requirements for this project
 There are no legal requirements for this project
 \subsection{Health and Safety Requirements} %end Louis
 
-The library should not create any health or safety risks.
+Extended use of the library, or any computational device, can pose health risks. Users of the library should ensure that a good posture is maintained while using the library, to protect against back pain and long term scoliosis. Developers should pause development for 15 minutes every two hours to prevent the onset of carpal tunnel syndrome. They should also make sure to stop using the library for at least 8 consecutive hours per day, preferably while the sun is down. This will prevent sleep deprivation, which can cause a host of short term and long term physiological complications. It is important to maintain adequate nutritional intake while developing. The concerned developer should consult their local food guide for more information.
 
-\clearpage
 \section{Project Issues}
 
 \subsection{Open Issues}
@@ -688,7 +689,7 @@ Migration will not be an issue in this project. The library will be created for 
 \subsection{Risks}
 There are existing risks regarding the scaling and intervals of the data points, given that the project has currently set up to 500 data points as a upper limit to accurate functionality. Given that a user has a larger amount of data points that need plotting the program may not allow to do so without compromising the non functional requirement of generating graphs in reasonable timings. However, if the program is completely limited to only allowing users to enter a certain number of data points the users may yield inaccurate results in terms of data analysis if they can only input partial data.
 \subsection{Costs}
-There are no monetary costs associated with the project. All software being used is accessible for free.
+There are no monetary costs associated with the project. All software being used is accessible for free. Developers are using their own devices to build the project. The project is hosted for free on GitLab. Users will download the project from this repository.
 \subsection{User Documentation and Training}
 The user document will have two major components to support the user. The first document will provide users with a guide on how to unpack the library provided as an archived file and import it correctly into their workspace. The second document will be an API specification documentation that will provide support for the developers allowing them to quickly and efficiently incorporate the library functionalities into their program.
 \bibliographystyle{plainnat}
