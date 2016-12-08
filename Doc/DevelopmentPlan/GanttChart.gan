@@ -1,14 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?><project name="xPyCharts Project Schedule" company="xPyCharts" webLink="http://" view-date="2016-10-16" view-index="0" gantt-divider-location="688" resource-divider-location="300" version="2.8.1" locale="en_CA">
+<?xml version="1.0" encoding="UTF-8"?><project name="xPyCharts Project Schedule" company="xPyCharts" webLink="http://" view-date="2016-10-16" view-index="1" gantt-divider-location="701" resource-divider-location="253" version="2.8.1" locale="en_US">
     <description><![CDATA[This is a GanttProject representing the project schedule for the xPyCharts development. ]]></description>
     <view zooming-state="default:5" id="gantt-chart">
-        <field id="tpd3" name="Name" width="310" order="0"/>
-        <field id="tpd4" name="Begin date" width="186" order="1"/>
-        <field id="tpd5" name="End date" width="186" order="2"/>
-        <timeline><![CDATA[0,44]]></timeline>
+        <field id="tpd3" name="Name" width="315" order="0"/>
+        <field id="tpd4" name="Begin date" width="191" order="1"/>
+        <field id="tpd5" name="End date" width="191" order="2"/>
+        <timeline><![CDATA[0]]></timeline>
     </view>
     <view id="resource-table">
-        <field id="0" name="Name" width="198" order="0"/>
-        <field id="1" name="Default role" width="81" order="1"/>
+        <field id="0" name="Name" width="172" order="0"/>
+        <field id="1" name="Default role" width="77" order="1"/>
     </view>
     <!-- -->
     <calendars>
@@ -46,20 +46,15 @@
         <task id="20" name="Requirements Document Revision 0" color="#8cb6ce" meeting="false" start="2016-09-30" duration="6" complete="0" expand="true"/>
         <task id="21" name="Proof of Concept Demonstration" color="#8cb6ce" meeting="false" start="2016-10-07" duration="11" complete="0" expand="true"/>
         <task id="32" name="Internal Milestone 1: Output Window Module" color="#8cb6ce" meeting="false" start="2016-09-30" duration="6" complete="0" expand="true"/>
-        <task id="33" name="Internal Milestone 2: Output Format Module" color="#8cb6ce" meeting="false" start="2016-10-10" duration="5" complete="0" expand="true">
+        <task id="33" name="Internal Milestone 2: Output Format Module" color="#8cb6ce" meeting="false" start="2016-10-10" duration="5" complete="0" expand="false">
             <task id="45" name="Internal Milestone 3:  Data Structure Module / Exception Raising Module" color="#8cb6ce" meeting="false" start="2016-10-10" duration="5" complete="0" expand="true"/>
         </task>
         <task id="37" name="Internal Milestone 4: Plotting Module" color="#8cb6ce" meeting="false" start="2016-10-28" duration="6" complete="0" expand="true"/>
-        <task id="35" name="Internal Milestone 5: Polynomial Equations Module" color="#8cb6ce" meeting="false" start="2016-10-21" duration="6" complete="0" expand="true">
+        <task id="35" name="Internal Milestone 5: Polynomial Equations Module" color="#8cb6ce" meeting="false" start="2016-10-21" duration="6" complete="0" expand="false">
             <task id="46" name="Internal Milestone 6: Polynomial Solver Module" color="#8cb6ce" meeting="false" start="2016-10-21" duration="6" complete="0" expand="true"/>
         </task>
         <task id="22" name="Test Plan Revision 0" color="#8cb6ce" meeting="false" start="2016-10-21" duration="6" complete="0" expand="true"/>
-        <task id="44" name="Non Functional Requirements Testing" color="#8cb6ce" meeting="false" start="2016-08-22" duration="1" complete="0" expand="true">
-            <task id="56" name="Performance Requirements" color="#8cb6ce" meeting="false" start="2016-08-22" duration="1" complete="0" expand="true"/>
-            <task id="57" name="Look and Feel Requirements" color="#8cb6ce" meeting="false" start="2016-08-22" duration="1" complete="0" expand="true"/>
-            <task id="58" name="Usability and Humanity Requirements" color="#8cb6ce" meeting="false" start="2016-08-22" duration="1" complete="0" expand="true"/>
-        </task>
-        <task id="38" name="Functional Requirements Testing" color="#8cb6ce" meeting="false" start="2016-11-07" duration="5" complete="0" expand="true">
+        <task id="38" name="Functional Requirements Testing" color="#8cb6ce" meeting="false" start="2016-11-07" duration="5" complete="0" expand="false">
             <task id="63" name="Requirement 1" color="#8cb6ce" meeting="false" start="2016-11-07" duration="5" complete="0" expand="true" cost-manual-value="0.0" cost-calculated="true"/>
             <task id="65" name="Requirement 2" color="#8cb6ce" meeting="false" start="2016-11-07" duration="5" complete="0" expand="true" cost-manual-value="0.0" cost-calculated="true"/>
             <task id="67" name="Requirement 3" color="#8cb6ce" meeting="false" start="2016-11-07" duration="5" complete="0" expand="true" cost-manual-value="0.0" cost-calculated="true"/>
@@ -67,11 +62,21 @@
             <task id="71" name="Requirement 5" color="#8cb6ce" meeting="false" start="2016-11-07" duration="5" complete="0" expand="true" cost-manual-value="0.0" cost-calculated="true"/>
             <task id="43" name="Proof of Concept Testing" color="#8cb6ce" meeting="false" start="2016-11-07" duration="5" complete="0" expand="true"/>
         </task>
-        <task id="28" name="Design Document Revision 0" color="#8cb6ce" meeting="false" start="2016-10-28" duration="11" complete="0" expand="true"/>
+        <task id="28" name="Design Document Revision 0" color="#8cb6ce" meeting="false" start="2016-10-28" duration="11" complete="0" expand="false">
+            <task id="100" name="MG" meeting="false" start="2016-10-28" duration="7" complete="0" expand="true"/>
+            <task id="101" name="MIS" meeting="false" start="2016-11-07" duration="5" complete="0" expand="true"/>
+        </task>
         <task id="23" name="Revision 0 Demonstration" color="#8cb6ce" meeting="false" start="2016-11-11" duration="2" complete="0" expand="true"/>
         <task id="25" name="Final Demonstration (Rev 1)" color="#8cb6ce" meeting="true" start="2016-11-14" duration="0" complete="0" expand="true"/>
         <task id="26" name="Peer Eval of Other Team's Final Demo" color="#8cb6ce" meeting="true" start="2016-11-28" duration="0" complete="0" expand="true"/>
-        <task id="27" name="Final Documentation (Rev 1)" color="#8cb6ce" meeting="true" start="2016-12-07" duration="0" complete="0" expand="true"/>
+        <task id="27" name="Final Documentation (Rev 1)" color="#8cb6ce" meeting="true" start="2016-11-14" duration="0" complete="0" expand="true"/>
+        <task id="74" name="Test Report" color="#8cb6ce" meeting="false" start="2016-12-01" duration="5" complete="0" expand="true"/>
+        <task id="85" name="Non-Functional Requirements Testing" color="#8cb6ce" meeting="false" start="2016-10-31" duration="5" complete="0" expand="false">
+            <task id="93" name="Look and Feel Requirements Testing" meeting="false" start="2016-10-31" duration="1" complete="0" expand="true"/>
+            <task id="94" name="Performance Requirements Testing" meeting="false" start="2016-11-01" duration="1" complete="0" expand="true"/>
+            <task id="95" name="Usability Testing" meeting="false" start="2016-11-02" duration="1" complete="0" expand="true"/>
+            <task id="96" name="Operational and Environmental Requirements Testing" meeting="false" start="2016-11-02" duration="3" complete="0" expand="true"/>
+        </task>
     </tasks>
     <resources>
         <resource id="0" name="Hatim Rehman " function="1" contacts="rehmah@mcmaster.ca" phone=""/>
@@ -138,12 +143,8 @@
         <allocation task-id="21" resource-id="2" function="1" responsible="true" load="33.33"/>
         <allocation task-id="20" resource-id="2" function="1" responsible="true" load="33.33"/>
         <allocation task-id="19" resource-id="2" function="1" responsible="true" load="33.33"/>
-        <allocation task-id="44" resource-id="2" function="1" responsible="true" load="100.0"/>
         <allocation task-id="45" resource-id="2" function="1" responsible="true" load="33.33"/>
         <allocation task-id="46" resource-id="2" function="1" responsible="true" load="33.33"/>
-        <allocation task-id="56" resource-id="2" function="1" responsible="true" load="100.0"/>
-        <allocation task-id="57" resource-id="2" function="1" responsible="true" load="100.0"/>
-        <allocation task-id="58" resource-id="2" function="1" responsible="true" load="100.0"/>
     </allocations>
     <vacations/>
     <previous/>
