@@ -2,7 +2,7 @@
 # get_scale\n
 # Author: Louis Bursey\n
 # Function to get the appropriate max and mins for the scale of the graph\n
-# Returns a tuple in the format [x,y]
+#  @return a tuple in the format [x,y]
 #  @param data_set, the set of data being graphed, in a (x,y) dictionary
 #  @param round_to, an optional parameter to make the scale a multiple of round_to
 def get_scale(data_set, round_to=0) :

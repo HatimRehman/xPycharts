@@ -14,7 +14,9 @@ class Graph:
     # Outputs a graph with plotted data that is entered as a parameter.
     #  @param self The object pointer.
     #  @param n The number of markings to appear on the x and y axes
-    #  @param data The data to plot 
+    #  @param data The data to plot
+    #  @return returns nothing
+    
 	def __init__(self, n , data = None, title= None):
 		self.data = clean_data(data) if data is not None else None
 		
@@ -56,7 +58,8 @@ class Graph:
     # Outputs a graph with the coord parameter plotted. 
     #  @param self The object pointer.
     #  @param coord A dictionary with the format { 'x': <EM>value</EM>, 'y': <EM>value</EM> } 
-    #  @param kwargs Keyword arguments for Tkinter's create_circle() method 
+    #  @param kwargs Keyword arguments for Tkinter's create_circle() method
+    #  @return returns nothing
 	def plot_point(self, coord, **kwargs): #plots a coordinate, with stylings kwargs if they exist
 
 		translated_coord = self._get_translated_point(coord) #converts (x,y) to a point on the canvas' coordinate system
@@ -71,7 +74,8 @@ class Graph:
     # Outputs a graph with the data parameter plotted. 
     #  @param self The object pointer.
     #  @param data A list of tuples [ (x1, y1), (x2, y2), \...\ , (xn, yn) ]
-    #  @param kwargs Keyword arguments for Tkinter's create_circle() method  
+    #  @param kwargs Keyword arguments for Tkinter's create_circle() method
+    #  @return returns nothing
 	def plot_points(self, data = None, **kwargs):
 		try:
 			self.data = clean_data(data)
@@ -89,7 +93,8 @@ class Graph:
     #  Outputs a graph with the data parameter plotted. 
     #  @param self The object pointer.
     #  @param data A list of tuples [ (x1, y1), (x2, y2), \...\ , (xn, yn) ]
-    #  @param kwargs Keyword arguments for Tkinter's create_circle() method  
+    #  @param kwargs Keyword arguments for Tkinter's create_circle() method
+    #  @return returns nothing
 	def plot_points_with_line(self, data, **kwargs):
 		
 #		if self.data is None:
@@ -116,7 +121,8 @@ class Graph:
     #  @param self The object pointer.
     #  @param func A python function that takes in a double value and returns a double value
     #  @param x_interval A  list of double values that the function should pass through [ x1, \...\, xn ]
-    #  @param kwargs Keyword arguments for Tkinter's create_circle() method  
+    #  @param kwargs Keyword arguments for Tkinter's create_circle() method
+    #  @return returns nothing
 	def plot_function(self, func, x_interval = None, **kwargs): # plots a function, with styling kwargs if they exist
 		
 		x_interval = [x / 1000.0 for x in range(-self.markings*1000*self.scale_x, self.markings*1000*self.scale_x, 1)] if x_interval is None else x_interval
@@ -143,6 +149,7 @@ class Graph:
 	#  Multiplies the y coordinate by the scale ratio on the cartesian system, then subtracts it from the height of the screen.
     #  @param self The object pointer.
     #  @param coord A dictionary with the format { 'x': <EM>value</EM>, 'y': <EM>value</EM> }
+    #  @return returns a dictionary with x and y values
 	def _get_translated_point(self, coord):
 
 		x = self.graph_width/2  + coord['x']*self.x_offset
@@ -157,6 +164,7 @@ class Graph:
 	## Finds the lagrange polynomial on a value x, constructing the polynomial with the current dataset. Returns the new value y.
     #  @param self The object pointer.
     #  @param x A double value representing an x coordate
+    #  @return returns y value for a given x on the lagrange polynomial constructed using the current data set
 	def _Lagrange(self, x):
 		
 		dx = self.dx		

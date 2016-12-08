@@ -2,14 +2,14 @@
 ##If there are inconsistencies in the user input (for example a missing y value)the function prints an exception message.\n
 # Author: Sarthak Desai\n
 #@param data is the list of co-ordinate pairs inputted by the user.
-#
+#@exception raises exception if number of x and y values are not equal
 def clean_data(data):
 	
 	try:
 		x=[ x[0] for x in data  ]
 		y=[ y[1] for y in data  ]
 	except:
-		raise Exception("Inconsistent data")
+		raise Exception("Inconsistent data: You have more x values than y or vice versa")
 		return
 
 	mylist=[]
@@ -28,14 +28,14 @@ def clean_data(data):
 # Author: Sarthak Desai\n
 #@param x is a list of x values from all the co-ordinate pairs.
 #@param y is a list of y values from all the co-ordinate pairs.
-#
+#@exception raises exception if the data type for the values entered is not float
 def checktype(x, y):
 	for value in x:
 		if type (value) != int and type (value) != float:
-			raise Exception("Invalid input types in x")
+			raise Exception("Invalid input types in x: Data entered is not of the correct type ")
 	for value in y:
 		if type (value) != int and type (value) != float:
-			raise Exception("Invalid input types in y")
+			raise Exception("Invalid input types in y: Data entered is not of the correct type ")
 	checkT=True
 	return
 
