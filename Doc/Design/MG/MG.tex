@@ -8,6 +8,7 @@
 \usepackage{graphicx}
 \usepackage{float}
 \usepackage{hyperref}
+\usepackage{soul}
 \hypersetup{
     colorlinks,
     citecolor=black,
@@ -69,7 +70,7 @@ Nov. 13, 2016 & 1.0 & Revision 0\\
 \subsection{Overview}
 XPYCharts is a python based graphing library that is a recreation of the Jcharts graphing library available for Java developers. XPYCharts supports the production of scatter plots and line graphs that can be used for statistical analysis and in a learning environment for data visualization.
 \subsection{Context}
-This document will serve as the Module Guide (MG) for the SRS \textcolor{red}{(if you want to use acronyms, define them once like you did with MG - CM)} document of XPYCharts. The MG shows a decomposition of the modules of the software system and how these modules accomplish the functional/non-functional requirements previously stated within the SRS. The MG will also show how the software adheres to the principals of information hiding and data independence in order to create a modular structure. The MG document is followed by the Module Interface Specification (MIS) that describes from an external viewpoint the intended behavior of the module’s functions. 
+This document will serve as the Module Guide (MG) for the Software Requirement Specification (SRS) \textcolor{red}{(if you want to use acronyms, define them once like you did with MG - CM)} document of XPYCharts. The MG shows a decomposition of the modules of the software system and how these modules accomplish the functional/non-functional requirements previously stated within the SRS. The MG will also show how the software adheres to the principals of information hiding and data independence in order to create a modular structure. The MG document is followed by the Module Interface Specification (MIS) that describes from an external viewpoint the intended behavior of the module’s functions. 
 \subsection{Design Principles}
 The software system of XPYCharts is built with consideration to several design principals including Modular decomposition, data independence, encapsulation and information hiding. In addition the decomposed modules of the system interact with each other through a structure that ensures low coupling and high cohesion so that modules stay as independent of each other as possible. This type of design will allow for easier software maintenance and modification in the future releases of the product. Similarly information hiding allows secrecy to exist over the module implementation making it easier to use the modules at a higher level without having to worry about the way they were implemented. This is especially important to XPYCharts as it is a library and therefore developers using the library should not have to know how the library modules are implemented to be able to use them.
 \subsection{Document Structure}
@@ -130,11 +131,12 @@ actually be implemented.
 \item [\refstepcounter{mnum} \mthemnum \label{mBH}:] Behaviour-Hiding Module \\
 \setlength\parindent{24pt} M2.1 \label{mER}: Exception Raising Module \\
 \setlength\parindent{24pt} M2.2 \label{mOF}: Output Format Module \\
-\setlength\parindent{24pt} M2.3 \label{mPE}: Polynomial Equations Module
+\setlength\parindent{24pt} M2.3 \label{mPE}: Polynomial Equations Module\\
+\setlength\parindent{24pt} M2.4 \label{mPE}: Plotting Module
 \item [\refstepcounter{mnum} \mthemnum \label{mSD}:] Software Decision Module \\
 \setlength\parindent{24pt} M3.1 \label{mDS}: Data Structure Module \\
 \setlength\parindent{24pt} M3.2 \label{mPS}: Polynomial Solver Module \\
-\setlength\parindent{24pt} M3.3 \label{mP}: Plotting Module
+\setlength\parindent{24pt} \st{M3.3} \label{mP}: \st{Plotting Module}
 \end{description}
 \textcolor{red}{M3.3 may be in behaviour hiding if it is one of your requirements. - CM} \\
 \textcolor{red}{M2.1 if this is one of your requirements this is where it should be, just make sure it is for Rev 1 - CM} \\
@@ -154,13 +156,13 @@ actually be implemented.
 & Exception Raising Module\\
 & Output Format Module\\
 & Polynomial Equations Module\\
-
+& Plotting Module \\
 \midrule
 
 \multirow{3}{0.3\textwidth}{Software Decision Module} & 
 Data Structure Module\\
 & Polynomial Solver Module\\
-& Plotting Module \\
+&\st{Plotting Module} \\
 \bottomrule
 
 \end{tabular}
@@ -355,6 +357,7 @@ because they use modules from the lower levels.
 \end{center}
 \end{figure}
 \textcolor{red}{Above module is okay but I don't see how the initial data is getting in. Would it be at Plotting module or has the project shifted to graphing polynomial equations? - CM} \\
+\textcolor{green}{Use module was changed -Hatim} \\
 %\section*{References}
 
 \bibliographystyle {plainnat}
