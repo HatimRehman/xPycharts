@@ -12,9 +12,12 @@ class PieChart:
                 self.master = Tk()
                 self.master.resizable(0,0)
                 self.master.title("PieGraph")  #eventually set by user
-
-                self.pie = get_pie(self.master)
+                
+                self.screenfill = 0.9
+                
+                self.pie = get_pie(self.master, self.screenfill)
                 self.canvas_size = int(self.pie.cget("height"))
+
                 self.current_percent = 0      #will go around the pie, making slices
 
                 slices = len(self.data)
@@ -28,9 +31,13 @@ class PieChart:
                 #n/4096 chance of printing same number, shouldn't be a problem.
                 start=self.current_percent*360
                 extent=percent*360
+
+                top = self.canvas_size*self.screenfill
+                bottom = self.canvas_size* (1-self.screenfill)
+                
                 if( 359 < extent + start < 360): extent = 360 - start
-                self.pie.create_arc(self.canvas_size/4, self.canvas_size/4,
-                                    self.canvas_size*3/4, self.canvas_size*3/4,
+                self.pie.create_arc(top, top,
+                                    bottom, bottom,
                                     outline='black', 
                                     start=start,
                                     extent=percent*360,
@@ -54,7 +61,7 @@ class PieChart:
         
 if __name__ == '__main__':
 
-        colors = ['red', 'white', 'blue']
-        data = [("five percent", 5) , ("ten percent", 10), ("85 percent", 10)]
+        colors = ['red', 'green']
+        data = [("",1),("",6)]
         PieChart(data, colors)
         mainloop()
