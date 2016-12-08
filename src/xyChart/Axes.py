@@ -17,6 +17,7 @@ y_coordinates = { }
 #  @param markings The number of labels to put on each axis.
 #  @param scale_x The scale value to use on the x axis.
 #  @param scale_y The scale value to use on the y axis.
+#  @return returns a window with a graph
 def get_axes( window, markings, scale_x, scale_y ):
 	canvas = Canvas(window, width=600, height=600)#, background='lightgrey',) # create a canvas to draw on (inside the window)
 
@@ -49,6 +50,7 @@ def get_axes( window, markings, scale_x, scale_y ):
 #  @param markings The number of labels to put on each axis.
 #  @param scale_x The scale value to use on the x axis.
 #  @param scale_y The scale value to use on the y axis.
+#  @return returns nothing
 def _get_labels( canvas, markings, scale_x, scale_y ):#, scale, grid_points):
 
 	canvas_height = int( canvas.cget("height") )
@@ -85,6 +87,7 @@ def _get_labels( canvas, markings, scale_x, scale_y ):#, scale, grid_points):
 #  @param markings The number of labels to put on each axis.
 #  @param scale_x The scale value to use on the x axis.
 #  @param scale_y The scale value to use on the y axis.
+#  @return returns a dictionary with x and y values.
 def _get_translated_point( coord, x_offset, y_offset, canvas, scale_x, scale_y ):
 
 	canvas_height = int( canvas.cget("height") )
@@ -106,6 +109,7 @@ def _get_translated_point( coord, x_offset, y_offset, canvas, scale_x, scale_y )
 #  @param y The y coordinate
 #  @param h The height of the line
 #  @param kwargs Styling keyword arguments
+#  @return returns a x label on a graph
 def _create_horizontal_label(self, x, y, h, **kwargs):
 	return self.create_line(x, y-h, x, y+h, **kwargs ) and self.create_text(x,y+15, text=x_coordinates[x])
 Canvas.create_horizontal_label = _create_horizontal_label
@@ -117,6 +121,7 @@ Canvas.create_horizontal_label = _create_horizontal_label
 #  @param y The y coordinate
 #  @param h The height of the line
 #  @param kwargs Styling keyword arguments
+#  @return returns a y label on the graph
 def _create_vertical_label(self, x, y, w, **kwargs):
 	return self.create_line(x-w, y, x+w, y, **kwargs ) and self.create_text(x+15,y, text=y_coordinates[y])
 Canvas.create_vertical_label = _create_vertical_label
@@ -126,6 +131,7 @@ Canvas.create_vertical_label = _create_vertical_label
 #  @param y The y coordinate
 #  @param r The radius of the point
 #  @param kwargs Styling keyword arguments
+#  @return returns a circle
 def _create_circle(self, x, y, r, **kwargs):
     return self.create_oval(x-r, y-r, x+r, y+r, **kwargs)
 Canvas.create_circle = _create_circle

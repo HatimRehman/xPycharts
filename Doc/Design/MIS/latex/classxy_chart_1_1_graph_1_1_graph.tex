@@ -1,0 +1,262 @@
+\hypertarget{classxy_chart_1_1_graph_1_1_graph}{}\section{xy\+Chart.\+Graph.\+Graph Class Reference}
+\label{classxy_chart_1_1_graph_1_1_graph}\index{xy\+Chart.\+Graph.\+Graph@{xy\+Chart.\+Graph.\+Graph}}
+
+
+xy\+Graph constructing class~\newline
+ Author\+: Hatim Rehman~\newline
+ This class represents a graph object that can plot points with data contained within a list of tuples~\newline
+\mbox{[} (x1, y1), (x2, y2), ... , (xn, yn) \mbox{]}  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classxy_chart_1_1_graph_1_1_graph_a3abfa63d07c2b2ef5de027d332f56b8b}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self, n, \hyperlink{classxy_chart_1_1_graph_1_1_graph_a7b72c0a9156bafb64d165bed836dfa84}{data}=None, title=None)
+\begin{DoxyCompactList}\small\item\em The constructor method Takes in 3 parameters. \end{DoxyCompactList}\item 
+def \hyperlink{classxy_chart_1_1_graph_1_1_graph_a5720fad665cab6827e8c0b2bebcf4b49}{plot\+\_\+point} (self, \hyperlink{namespacexy_chart_1_1_graph_a3e2c4e3989f17aadcd35098ef933eab5}{coord}, kwargs)
+\begin{DoxyCompactList}\small\item\em Plot points method Takes in a coordinate to plot, with keyword args that may be used to style the coordinate. \end{DoxyCompactList}\item 
+def \hyperlink{classxy_chart_1_1_graph_1_1_graph_abe2443b75425bb20756edb1c5d7a5f9e}{plot\+\_\+points} (self, \hyperlink{classxy_chart_1_1_graph_1_1_graph_a7b72c0a9156bafb64d165bed836dfa84}{data}=None, kwargs)
+\begin{DoxyCompactList}\small\item\em Plot points method takes in multiple coordinates and calls the \hyperlink{classxy_chart_1_1_graph_1_1_graph_a5720fad665cab6827e8c0b2bebcf4b49}{plot\+\_\+point()} method from its own A\+PI on each method. \end{DoxyCompactList}\item 
+def \hyperlink{classxy_chart_1_1_graph_1_1_graph_a03674dbb283ff19949d1d79c68d80c7f}{plot\+\_\+points\+\_\+with\+\_\+line} (self, \hyperlink{classxy_chart_1_1_graph_1_1_graph_a7b72c0a9156bafb64d165bed836dfa84}{data}, kwargs)
+\begin{DoxyCompactList}\small\item\em Plot points with line method takes in multiple coordinates and calls the \hyperlink{classxy_chart_1_1_graph_1_1_graph_a5720fad665cab6827e8c0b2bebcf4b49}{plot\+\_\+point()} method from its own A\+PI on each method. \end{DoxyCompactList}\item 
+def \hyperlink{classxy_chart_1_1_graph_1_1_graph_ac9d04bd8df2a53b5b53674b1af092ec2}{plot\+\_\+function} (self, func, x\+\_\+interval=None, kwargs)
+\begin{DoxyCompactList}\small\item\em Plots a python function onto the graph Outputs a graph with the func parameter plotted. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classxy_chart_1_1_graph_1_1_graph_a7b72c0a9156bafb64d165bed836dfa84}{data}
+\item 
+\hyperlink{classxy_chart_1_1_graph_1_1_graph_a23ef5e78c3fda8de89faa08b378dd29c}{markings}
+\item 
+\hyperlink{classxy_chart_1_1_graph_1_1_graph_ac6595d8e36f18b0e0eba912f974492b4}{scale}
+\item 
+\hyperlink{classxy_chart_1_1_graph_1_1_graph_a14290cdae8508d92d377b480874481e6}{scale\+\_\+x}
+\item 
+\hyperlink{classxy_chart_1_1_graph_1_1_graph_a4a09b7541a5bedb0eea71ac365d11660}{scale\+\_\+y}
+\item 
+\hyperlink{classxy_chart_1_1_graph_1_1_graph_a06da66a2d6259bacbb9b7d36614c7099}{master}
+\item 
+\hyperlink{classxy_chart_1_1_graph_1_1_graph_adfd89c5e9eb416eb62a5c0a6f338cf68}{graph}
+\item 
+\hyperlink{classxy_chart_1_1_graph_1_1_graph_a5cbbbef1602d0c3c496b3bc82ed40313}{graph\+\_\+height}
+\item 
+\hyperlink{classxy_chart_1_1_graph_1_1_graph_aad74f7976665c249c231e233ea6b4e97}{graph\+\_\+width}
+\item 
+\hyperlink{classxy_chart_1_1_graph_1_1_graph_a6a3fbe9a7cd5e8bb8b2bc48ea122173b}{x\+\_\+offset}
+\item 
+\hyperlink{classxy_chart_1_1_graph_1_1_graph_aa941de9b39790840703904995115f6b6}{y\+\_\+offset}
+\item 
+\hyperlink{classxy_chart_1_1_graph_1_1_graph_abc33a3b9c42054124e5ffb8a8a89460e}{dx}
+\item 
+\hyperlink{classxy_chart_1_1_graph_1_1_graph_a645f28960a2362dabf78c4ae5f7450e7}{dy}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+xy\+Graph constructing class~\newline
+ Author\+: Hatim Rehman~\newline
+ This class represents a graph object that can plot points with data contained within a list of tuples~\newline
+\mbox{[} (x1, y1), (x2, y2), ... , (xn, yn) \mbox{]} 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classxy_chart_1_1_graph_1_1_graph_a3abfa63d07c2b2ef5de027d332f56b8b}{}\label{classxy_chart_1_1_graph_1_1_graph_a3abfa63d07c2b2ef5de027d332f56b8b} 
+\index{xy\+Chart\+::\+Graph\+::\+Graph@{xy\+Chart\+::\+Graph\+::\+Graph}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!xy\+Chart\+::\+Graph\+::\+Graph@{xy\+Chart\+::\+Graph\+::\+Graph}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def xy\+Chart.\+Graph.\+Graph.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{n,  }\item[{}]{data = {\ttfamily None},  }\item[{}]{title = {\ttfamily None} }\end{DoxyParamCaption})}
+
+
+
+The constructor method Takes in 3 parameters. 
+
+Outputs a graph with plotted data that is entered as a parameter. 
+\begin{DoxyParams}{Parameters}
+{\em self} & The object pointer. \\
+\hline
+{\em n} & The number of markings to appear on the x and y axes \\
+\hline
+{\em data} & The data to plot \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns nothing 
+\end{DoxyReturn}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classxy_chart_1_1_graph_1_1_graph_ac9d04bd8df2a53b5b53674b1af092ec2}{}\label{classxy_chart_1_1_graph_1_1_graph_ac9d04bd8df2a53b5b53674b1af092ec2} 
+\index{xy\+Chart\+::\+Graph\+::\+Graph@{xy\+Chart\+::\+Graph\+::\+Graph}!plot\+\_\+function@{plot\+\_\+function}}
+\index{plot\+\_\+function@{plot\+\_\+function}!xy\+Chart\+::\+Graph\+::\+Graph@{xy\+Chart\+::\+Graph\+::\+Graph}}
+\subsubsection{\texorpdfstring{plot\+\_\+function()}{plot\_function()}}
+{\footnotesize\ttfamily def xy\+Chart.\+Graph.\+Graph.\+plot\+\_\+function (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{func,  }\item[{}]{x\+\_\+interval = {\ttfamily None},  }\item[{}]{kwargs }\end{DoxyParamCaption})}
+
+
+
+Plots a python function onto the graph Outputs a graph with the func parameter plotted. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The object pointer. \\
+\hline
+{\em func} & A python function that takes in a double value and returns a double value \\
+\hline
+{\em x\+\_\+interval} & A list of double values that the function should pass through \mbox{[} x1, ...\textbackslash{}, xn \mbox{]} \\
+\hline
+{\em kwargs} & Keyword arguments for Tkinter\textquotesingle{}s create\+\_\+circle() method \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns nothing 
+\end{DoxyReturn}
+\hypertarget{classxy_chart_1_1_graph_1_1_graph_a5720fad665cab6827e8c0b2bebcf4b49}{}\label{classxy_chart_1_1_graph_1_1_graph_a5720fad665cab6827e8c0b2bebcf4b49} 
+\index{xy\+Chart\+::\+Graph\+::\+Graph@{xy\+Chart\+::\+Graph\+::\+Graph}!plot\+\_\+point@{plot\+\_\+point}}
+\index{plot\+\_\+point@{plot\+\_\+point}!xy\+Chart\+::\+Graph\+::\+Graph@{xy\+Chart\+::\+Graph\+::\+Graph}}
+\subsubsection{\texorpdfstring{plot\+\_\+point()}{plot\_point()}}
+{\footnotesize\ttfamily def xy\+Chart.\+Graph.\+Graph.\+plot\+\_\+point (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{coord,  }\item[{}]{kwargs }\end{DoxyParamCaption})}
+
+
+
+Plot points method Takes in a coordinate to plot, with keyword args that may be used to style the coordinate. 
+
+Outputs a graph with the coord parameter plotted. 
+\begin{DoxyParams}{Parameters}
+{\em self} & The object pointer. \\
+\hline
+{\em coord} & A dictionary with the format \{ \textquotesingle{}x\textquotesingle{}\+: {\itshape value}, \textquotesingle{}y\textquotesingle{}\+: {\itshape value} \} \\
+\hline
+{\em kwargs} & Keyword arguments for Tkinter\textquotesingle{}s create\+\_\+circle() method \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns nothing 
+\end{DoxyReturn}
+\hypertarget{classxy_chart_1_1_graph_1_1_graph_abe2443b75425bb20756edb1c5d7a5f9e}{}\label{classxy_chart_1_1_graph_1_1_graph_abe2443b75425bb20756edb1c5d7a5f9e} 
+\index{xy\+Chart\+::\+Graph\+::\+Graph@{xy\+Chart\+::\+Graph\+::\+Graph}!plot\+\_\+points@{plot\+\_\+points}}
+\index{plot\+\_\+points@{plot\+\_\+points}!xy\+Chart\+::\+Graph\+::\+Graph@{xy\+Chart\+::\+Graph\+::\+Graph}}
+\subsubsection{\texorpdfstring{plot\+\_\+points()}{plot\_points()}}
+{\footnotesize\ttfamily def xy\+Chart.\+Graph.\+Graph.\+plot\+\_\+points (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{data = {\ttfamily None},  }\item[{}]{kwargs }\end{DoxyParamCaption})}
+
+
+
+Plot points method takes in multiple coordinates and calls the \hyperlink{classxy_chart_1_1_graph_1_1_graph_a5720fad665cab6827e8c0b2bebcf4b49}{plot\+\_\+point()} method from its own A\+PI on each method. 
+
+Outputs a graph with the data parameter plotted. 
+\begin{DoxyParams}{Parameters}
+{\em self} & The object pointer. \\
+\hline
+{\em data} & A list of tuples \mbox{[} (x1, y1), (x2, y2), ... , (xn, yn) \mbox{]} \\
+\hline
+{\em kwargs} & Keyword arguments for Tkinter\textquotesingle{}s create\+\_\+circle() method \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns nothing 
+\end{DoxyReturn}
+\hypertarget{classxy_chart_1_1_graph_1_1_graph_a03674dbb283ff19949d1d79c68d80c7f}{}\label{classxy_chart_1_1_graph_1_1_graph_a03674dbb283ff19949d1d79c68d80c7f} 
+\index{xy\+Chart\+::\+Graph\+::\+Graph@{xy\+Chart\+::\+Graph\+::\+Graph}!plot\+\_\+points\+\_\+with\+\_\+line@{plot\+\_\+points\+\_\+with\+\_\+line}}
+\index{plot\+\_\+points\+\_\+with\+\_\+line@{plot\+\_\+points\+\_\+with\+\_\+line}!xy\+Chart\+::\+Graph\+::\+Graph@{xy\+Chart\+::\+Graph\+::\+Graph}}
+\subsubsection{\texorpdfstring{plot\+\_\+points\+\_\+with\+\_\+line()}{plot\_points\_with\_line()}}
+{\footnotesize\ttfamily def xy\+Chart.\+Graph.\+Graph.\+plot\+\_\+points\+\_\+with\+\_\+line (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{data,  }\item[{}]{kwargs }\end{DoxyParamCaption})}
+
+
+
+Plot points with line method takes in multiple coordinates and calls the \hyperlink{classxy_chart_1_1_graph_1_1_graph_a5720fad665cab6827e8c0b2bebcf4b49}{plot\+\_\+point()} method from its own A\+PI on each method. 
+
+Then calls its private function generating method that creates a polynomial that passes through each point using the Lagrange polynomial interpolation theorem. Outputs a graph with the data parameter plotted. 
+\begin{DoxyParams}{Parameters}
+{\em self} & The object pointer. \\
+\hline
+{\em data} & A list of tuples \mbox{[} (x1, y1), (x2, y2), ... , (xn, yn) \mbox{]} \\
+\hline
+{\em kwargs} & Keyword arguments for Tkinter\textquotesingle{}s create\+\_\+circle() method \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns nothing 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classxy_chart_1_1_graph_1_1_graph_a7b72c0a9156bafb64d165bed836dfa84}{}\label{classxy_chart_1_1_graph_1_1_graph_a7b72c0a9156bafb64d165bed836dfa84} 
+\index{xy\+Chart\+::\+Graph\+::\+Graph@{xy\+Chart\+::\+Graph\+::\+Graph}!data@{data}}
+\index{data@{data}!xy\+Chart\+::\+Graph\+::\+Graph@{xy\+Chart\+::\+Graph\+::\+Graph}}
+\subsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily xy\+Chart.\+Graph.\+Graph.\+data}
+
+\hypertarget{classxy_chart_1_1_graph_1_1_graph_abc33a3b9c42054124e5ffb8a8a89460e}{}\label{classxy_chart_1_1_graph_1_1_graph_abc33a3b9c42054124e5ffb8a8a89460e} 
+\index{xy\+Chart\+::\+Graph\+::\+Graph@{xy\+Chart\+::\+Graph\+::\+Graph}!dx@{dx}}
+\index{dx@{dx}!xy\+Chart\+::\+Graph\+::\+Graph@{xy\+Chart\+::\+Graph\+::\+Graph}}
+\subsubsection{\texorpdfstring{dx}{dx}}
+{\footnotesize\ttfamily xy\+Chart.\+Graph.\+Graph.\+dx}
+
+\hypertarget{classxy_chart_1_1_graph_1_1_graph_a645f28960a2362dabf78c4ae5f7450e7}{}\label{classxy_chart_1_1_graph_1_1_graph_a645f28960a2362dabf78c4ae5f7450e7} 
+\index{xy\+Chart\+::\+Graph\+::\+Graph@{xy\+Chart\+::\+Graph\+::\+Graph}!dy@{dy}}
+\index{dy@{dy}!xy\+Chart\+::\+Graph\+::\+Graph@{xy\+Chart\+::\+Graph\+::\+Graph}}
+\subsubsection{\texorpdfstring{dy}{dy}}
+{\footnotesize\ttfamily xy\+Chart.\+Graph.\+Graph.\+dy}
+
+\hypertarget{classxy_chart_1_1_graph_1_1_graph_adfd89c5e9eb416eb62a5c0a6f338cf68}{}\label{classxy_chart_1_1_graph_1_1_graph_adfd89c5e9eb416eb62a5c0a6f338cf68} 
+\index{xy\+Chart\+::\+Graph\+::\+Graph@{xy\+Chart\+::\+Graph\+::\+Graph}!graph@{graph}}
+\index{graph@{graph}!xy\+Chart\+::\+Graph\+::\+Graph@{xy\+Chart\+::\+Graph\+::\+Graph}}
+\subsubsection{\texorpdfstring{graph}{graph}}
+{\footnotesize\ttfamily xy\+Chart.\+Graph.\+Graph.\+graph}
+
+\hypertarget{classxy_chart_1_1_graph_1_1_graph_a5cbbbef1602d0c3c496b3bc82ed40313}{}\label{classxy_chart_1_1_graph_1_1_graph_a5cbbbef1602d0c3c496b3bc82ed40313} 
+\index{xy\+Chart\+::\+Graph\+::\+Graph@{xy\+Chart\+::\+Graph\+::\+Graph}!graph\+\_\+height@{graph\+\_\+height}}
+\index{graph\+\_\+height@{graph\+\_\+height}!xy\+Chart\+::\+Graph\+::\+Graph@{xy\+Chart\+::\+Graph\+::\+Graph}}
+\subsubsection{\texorpdfstring{graph\+\_\+height}{graph\_height}}
+{\footnotesize\ttfamily xy\+Chart.\+Graph.\+Graph.\+graph\+\_\+height}
+
+\hypertarget{classxy_chart_1_1_graph_1_1_graph_aad74f7976665c249c231e233ea6b4e97}{}\label{classxy_chart_1_1_graph_1_1_graph_aad74f7976665c249c231e233ea6b4e97} 
+\index{xy\+Chart\+::\+Graph\+::\+Graph@{xy\+Chart\+::\+Graph\+::\+Graph}!graph\+\_\+width@{graph\+\_\+width}}
+\index{graph\+\_\+width@{graph\+\_\+width}!xy\+Chart\+::\+Graph\+::\+Graph@{xy\+Chart\+::\+Graph\+::\+Graph}}
+\subsubsection{\texorpdfstring{graph\+\_\+width}{graph\_width}}
+{\footnotesize\ttfamily xy\+Chart.\+Graph.\+Graph.\+graph\+\_\+width}
+
+\hypertarget{classxy_chart_1_1_graph_1_1_graph_a23ef5e78c3fda8de89faa08b378dd29c}{}\label{classxy_chart_1_1_graph_1_1_graph_a23ef5e78c3fda8de89faa08b378dd29c} 
+\index{xy\+Chart\+::\+Graph\+::\+Graph@{xy\+Chart\+::\+Graph\+::\+Graph}!markings@{markings}}
+\index{markings@{markings}!xy\+Chart\+::\+Graph\+::\+Graph@{xy\+Chart\+::\+Graph\+::\+Graph}}
+\subsubsection{\texorpdfstring{markings}{markings}}
+{\footnotesize\ttfamily xy\+Chart.\+Graph.\+Graph.\+markings}
+
+\hypertarget{classxy_chart_1_1_graph_1_1_graph_a06da66a2d6259bacbb9b7d36614c7099}{}\label{classxy_chart_1_1_graph_1_1_graph_a06da66a2d6259bacbb9b7d36614c7099} 
+\index{xy\+Chart\+::\+Graph\+::\+Graph@{xy\+Chart\+::\+Graph\+::\+Graph}!master@{master}}
+\index{master@{master}!xy\+Chart\+::\+Graph\+::\+Graph@{xy\+Chart\+::\+Graph\+::\+Graph}}
+\subsubsection{\texorpdfstring{master}{master}}
+{\footnotesize\ttfamily xy\+Chart.\+Graph.\+Graph.\+master}
+
+\hypertarget{classxy_chart_1_1_graph_1_1_graph_ac6595d8e36f18b0e0eba912f974492b4}{}\label{classxy_chart_1_1_graph_1_1_graph_ac6595d8e36f18b0e0eba912f974492b4} 
+\index{xy\+Chart\+::\+Graph\+::\+Graph@{xy\+Chart\+::\+Graph\+::\+Graph}!scale@{scale}}
+\index{scale@{scale}!xy\+Chart\+::\+Graph\+::\+Graph@{xy\+Chart\+::\+Graph\+::\+Graph}}
+\subsubsection{\texorpdfstring{scale}{scale}}
+{\footnotesize\ttfamily xy\+Chart.\+Graph.\+Graph.\+scale}
+
+\hypertarget{classxy_chart_1_1_graph_1_1_graph_a14290cdae8508d92d377b480874481e6}{}\label{classxy_chart_1_1_graph_1_1_graph_a14290cdae8508d92d377b480874481e6} 
+\index{xy\+Chart\+::\+Graph\+::\+Graph@{xy\+Chart\+::\+Graph\+::\+Graph}!scale\+\_\+x@{scale\+\_\+x}}
+\index{scale\+\_\+x@{scale\+\_\+x}!xy\+Chart\+::\+Graph\+::\+Graph@{xy\+Chart\+::\+Graph\+::\+Graph}}
+\subsubsection{\texorpdfstring{scale\+\_\+x}{scale\_x}}
+{\footnotesize\ttfamily xy\+Chart.\+Graph.\+Graph.\+scale\+\_\+x}
+
+\hypertarget{classxy_chart_1_1_graph_1_1_graph_a4a09b7541a5bedb0eea71ac365d11660}{}\label{classxy_chart_1_1_graph_1_1_graph_a4a09b7541a5bedb0eea71ac365d11660} 
+\index{xy\+Chart\+::\+Graph\+::\+Graph@{xy\+Chart\+::\+Graph\+::\+Graph}!scale\+\_\+y@{scale\+\_\+y}}
+\index{scale\+\_\+y@{scale\+\_\+y}!xy\+Chart\+::\+Graph\+::\+Graph@{xy\+Chart\+::\+Graph\+::\+Graph}}
+\subsubsection{\texorpdfstring{scale\+\_\+y}{scale\_y}}
+{\footnotesize\ttfamily xy\+Chart.\+Graph.\+Graph.\+scale\+\_\+y}
+
+\hypertarget{classxy_chart_1_1_graph_1_1_graph_a6a3fbe9a7cd5e8bb8b2bc48ea122173b}{}\label{classxy_chart_1_1_graph_1_1_graph_a6a3fbe9a7cd5e8bb8b2bc48ea122173b} 
+\index{xy\+Chart\+::\+Graph\+::\+Graph@{xy\+Chart\+::\+Graph\+::\+Graph}!x\+\_\+offset@{x\+\_\+offset}}
+\index{x\+\_\+offset@{x\+\_\+offset}!xy\+Chart\+::\+Graph\+::\+Graph@{xy\+Chart\+::\+Graph\+::\+Graph}}
+\subsubsection{\texorpdfstring{x\+\_\+offset}{x\_offset}}
+{\footnotesize\ttfamily xy\+Chart.\+Graph.\+Graph.\+x\+\_\+offset}
+
+\hypertarget{classxy_chart_1_1_graph_1_1_graph_aa941de9b39790840703904995115f6b6}{}\label{classxy_chart_1_1_graph_1_1_graph_aa941de9b39790840703904995115f6b6} 
+\index{xy\+Chart\+::\+Graph\+::\+Graph@{xy\+Chart\+::\+Graph\+::\+Graph}!y\+\_\+offset@{y\+\_\+offset}}
+\index{y\+\_\+offset@{y\+\_\+offset}!xy\+Chart\+::\+Graph\+::\+Graph@{xy\+Chart\+::\+Graph\+::\+Graph}}
+\subsubsection{\texorpdfstring{y\+\_\+offset}{y\_offset}}
+{\footnotesize\ttfamily xy\+Chart.\+Graph.\+Graph.\+y\+\_\+offset}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/sarth/\+Desktop/3\+X\+A3/\+X\+P\+Y\+Charts\+\_\+\+S\+E3\+X\+A3/src/xy\+Chart/\hyperlink{_graph_8py}{Graph.\+py}\end{DoxyCompactItemize}

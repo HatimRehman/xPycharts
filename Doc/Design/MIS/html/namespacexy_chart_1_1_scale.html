@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.12"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: InputParser Namespace Reference</title>
+<title>My Project: xyChart.Scale Namespace Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -56,42 +56,46 @@ $(function() {
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacexy_chart.html">xyChart</a></li><li class="navelem"><a class="el" href="namespacexy_chart_1_1_scale.html">Scale</a></li>  </ul>
+</div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">InputParser Namespace Reference</div>  </div>
+<div class="title">xyChart.Scale Namespace Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a78eaa27b614b5d2df44f32bc64d545d3"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_input_parser.html#a78eaa27b614b5d2df44f32bc64d545d3">clean_data</a> (data)</td></tr>
-<tr class="memdesc:a78eaa27b614b5d2df44f32bc64d545d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function breaks apart the user input and assigns the coordinate pairs to a dictionary (data structure).  <a href="#a78eaa27b614b5d2df44f32bc64d545d3">More...</a><br /></td></tr>
-<tr class="separator:a78eaa27b614b5d2df44f32bc64d545d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0252c2663de05263dfe64d97f6410cdf"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_input_parser.html#a0252c2663de05263dfe64d97f6410cdf">checktype</a> (x, y)</td></tr>
-<tr class="memdesc:a0252c2663de05263dfe64d97f6410cdf"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function checks if the data input type is correct(i.e.  <a href="#a0252c2663de05263dfe64d97f6410cdf">More...</a><br /></td></tr>
-<tr class="separator:a0252c2663de05263dfe64d97f6410cdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fc5f2fc7312451b91adac079fff0ae7"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacexy_chart_1_1_scale.html#a9fc5f2fc7312451b91adac079fff0ae7">get_scale</a> (data_set, round_to=0)</td></tr>
+<tr class="memdesc:a9fc5f2fc7312451b91adac079fff0ae7"><td class="mdescLeft">&#160;</td><td class="mdescRight">get_scale<br />
+ Author: Louis Bursey<br />
+ Function to get the appropriate max and mins for the scale of the graph<br />
+ <a href="#a9fc5f2fc7312451b91adac079fff0ae7">More...</a><br /></td></tr>
+<tr class="separator:a9fc5f2fc7312451b91adac079fff0ae7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a0252c2663de05263dfe64d97f6410cdf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0252c2663de05263dfe64d97f6410cdf">&sect;&nbsp;</a></span>checktype()</h2>
+<a id="a9fc5f2fc7312451b91adac079fff0ae7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9fc5f2fc7312451b91adac079fff0ae7">&sect;&nbsp;</a></span>get_scale()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">def InputParser.checktype </td>
+          <td class="memname">def xyChart.Scale.get_scale </td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
+          <td class="paramname"><em>data_set</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>y</em>&#160;</td>
+          <td class="paramname"><em>round_to</em> = <code>0</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -101,41 +105,15 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>This function checks if the data input type is correct(i.e. </p>
-<p>integers or floats). If data type is not correct function outputs an exception message.<br />
- Author: Sarthak Desai<br />
- </p><dl class="params"><dt>Parameters</dt><dd>
+<p>get_scale<br />
+ Author: Louis Bursey<br />
+ Function to get the appropriate max and mins for the scale of the graph<br />
+</p>
+<dl class="section return"><dt>Returns</dt><dd>a tuple in the format [x,y] </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">x</td><td>is a list of x values from all the co-ordinate pairs. </td></tr>
-    <tr><td class="paramname">y</td><td>is a list of y values from all the co-ordinate pairs. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a78eaa27b614b5d2df44f32bc64d545d3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a78eaa27b614b5d2df44f32bc64d545d3">&sect;&nbsp;</a></span>clean_data()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">def InputParser.clean_data </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>data</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>This function breaks apart the user input and assigns the coordinate pairs to a dictionary (data structure). </p>
-<p>If there are inconsistencies in the user input (for example a missing y value)the function prints an exception message.<br />
- Author: Sarthak Desai<br />
- </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">data</td><td>is the list of co-ordinate pairs inputted by the user. </td></tr>
+    <tr><td class="paramname">data_set,the</td><td>set of data being graphed, in a (x,y) dictionary </td></tr>
+    <tr><td class="paramname">round_to,an</td><td>optional parameter to make the scale a multiple of round_to </td></tr>
   </table>
   </dd>
 </dl>
