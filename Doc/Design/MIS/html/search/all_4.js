@@ -1,10 +1,10 @@
 var searchData=
 [
-  ['get_5faxes',['get_axes',['../namespace_axes.html#a3c548e5160c57a4d0d4214e0e075f614',1,'Axes']]],
-  ['get_5fscale',['get_scale',['../namespace_scale.html#a7373795883c9c2c762635b7b67b53980',1,'Scale']]],
-  ['graph',['Graph',['../namespace_graph.html',1,'Graph'],['../class_graph_1_1_graph.html#a8864e0afea9463d5f7c19d0db528a398',1,'Graph.Graph.graph()'],['../namespace_graph.html#a233b6b041f2233754b883f7877a39fbb',1,'Graph.Graph()']]],
-  ['graph',['Graph',['../class_graph_1_1_graph.html',1,'Graph']]],
+  ['get_5faxes',['get_axes',['../namespacexy_chart_1_1_axes.html#a0e4135e0b6ce42f16613edb584cc2068',1,'xyChart::Axes']]],
+  ['get_5fscale',['get_scale',['../namespacexy_chart_1_1_scale.html#a9fc5f2fc7312451b91adac079fff0ae7',1,'xyChart::Scale']]],
+  ['graph',['graph',['../classxy_chart_1_1_graph_1_1_graph.html#adfd89c5e9eb416eb62a5c0a6f338cf68',1,'xyChart.Graph.Graph.graph()'],['../namespacexy_chart_1_1_graph.html#a98b3e64a8154411b646bfd625526d45c',1,'xyChart.Graph.graph()']]],
+  ['graph',['Graph',['../classxy_chart_1_1_graph_1_1_graph.html',1,'xyChart::Graph']]],
   ['graph_2epy',['Graph.py',['../_graph_8py.html',1,'']]],
-  ['graph_5fheight',['graph_height',['../class_graph_1_1_graph.html#a5b96246e91f3e2ccf0f19119848b9f61',1,'Graph::Graph']]],
-  ['graph_5fwidth',['graph_width',['../class_graph_1_1_graph.html#a9d1f6105ebc5552ee56febfd95e8ff30',1,'Graph::Graph']]]
+  ['graph_5fheight',['graph_height',['../classxy_chart_1_1_graph_1_1_graph.html#a5cbbbef1602d0c3c496b3bc82ed40313',1,'xyChart::Graph::Graph']]],
+  ['graph_5fwidth',['graph_width',['../classxy_chart_1_1_graph_1_1_graph.html#aad74f7976665c249c231e233ea6b4e97',1,'xyChart::Graph::Graph']]]
 ];

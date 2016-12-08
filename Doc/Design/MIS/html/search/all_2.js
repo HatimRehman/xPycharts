@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['checktype',['checktype',['../namespace_input_parser.html#a0252c2663de05263dfe64d97f6410cdf',1,'InputParser']]],
-  ['clean_5fdata',['clean_data',['../namespace_input_parser.html#a78eaa27b614b5d2df44f32bc64d545d3',1,'InputParser']]],
-  ['coord',['coord',['../namespace_graph.html#af7871e2e7cce2b271673d8be423ba0d1',1,'Graph']]]
+  ['checktype',['checktype',['../namespacexy_chart_1_1_input_parser.html#ad26c1f522837c6f85672237307b04239',1,'xyChart::InputParser']]],
+  ['clean_5fdata',['clean_data',['../namespacexy_chart_1_1_input_parser.html#a191949c9ebdf33fe93b75b8a82f222e5',1,'xyChart::InputParser']]],
+  ['coord',['coord',['../namespacexy_chart_1_1_graph.html#a3e2c4e3989f17aadcd35098ef933eab5',1,'xyChart::Graph']]],
+  ['coord1',['coord1',['../namespacexy_chart_1_1_graph.html#a9918deaf97fee10618afa250ca5d73eb',1,'xyChart::Graph']]]
 ];

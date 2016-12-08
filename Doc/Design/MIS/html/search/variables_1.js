@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['graph',['graph',['../class_graph_1_1_graph.html#a8864e0afea9463d5f7c19d0db528a398',1,'Graph.Graph.graph()'],['../namespace_graph.html#a233b6b041f2233754b883f7877a39fbb',1,'Graph.Graph()']]],
-  ['graph_5fheight',['graph_height',['../class_graph_1_1_graph.html#a5b96246e91f3e2ccf0f19119848b9f61',1,'Graph::Graph']]],
-  ['graph_5fwidth',['graph_width',['../class_graph_1_1_graph.html#a9d1f6105ebc5552ee56febfd95e8ff30',1,'Graph::Graph']]]
+  ['data',['data',['../classxy_chart_1_1_graph_1_1_graph.html#a7b72c0a9156bafb64d165bed836dfa84',1,'xyChart::Graph::Graph']]],
+  ['dx',['dx',['../classxy_chart_1_1_graph_1_1_graph.html#abc33a3b9c42054124e5ffb8a8a89460e',1,'xyChart::Graph::Graph']]],
+  ['dy',['dy',['../classxy_chart_1_1_graph_1_1_graph.html#a645f28960a2362dabf78c4ae5f7450e7',1,'xyChart::Graph::Graph']]]
 ];

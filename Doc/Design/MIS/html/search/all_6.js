@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['markings',['markings',['../class_graph_1_1_graph.html#a2b6f5b97b6e3bbc3f4892f61f2e4c13e',1,'Graph::Graph']]],
-  ['master',['master',['../class_graph_1_1_graph.html#a40721968f5bd764c0bf522441d4d190b',1,'Graph::Graph']]]
+  ['markings',['markings',['../classxy_chart_1_1_graph_1_1_graph.html#a23ef5e78c3fda8de89faa08b378dd29c',1,'xyChart::Graph::Graph']]],
+  ['master',['master',['../classxy_chart_1_1_graph_1_1_graph.html#a06da66a2d6259bacbb9b7d36614c7099',1,'xyChart::Graph::Graph']]]
 ];

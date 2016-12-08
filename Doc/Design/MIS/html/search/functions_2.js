@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['get_5faxes',['get_axes',['../namespace_axes.html#a3c548e5160c57a4d0d4214e0e075f614',1,'Axes']]],
-  ['get_5fscale',['get_scale',['../namespace_scale.html#a7373795883c9c2c762635b7b67b53980',1,'Scale']]]
+  ['get_5faxes',['get_axes',['../namespacexy_chart_1_1_axes.html#a0e4135e0b6ce42f16613edb584cc2068',1,'xyChart::Axes']]],
+  ['get_5fscale',['get_scale',['../namespacexy_chart_1_1_scale.html#a9fc5f2fc7312451b91adac079fff0ae7',1,'xyChart::Scale']]]
 ];
