@@ -182,11 +182,14 @@ def coord(x,y):
 
 if __name__ == '__main__':
 
-	#Graph = Graph(6, [ (1,1 ), (2,4 ), ( -3, -6), (7, -12 )  ])
-#	Graph = Graph(1); Graph.plot_function( sin )
+        graph = Graph(6, [ (1,1 ), (2,4 ), ( -3, -6), (7, -12 )  ])
+#       Graph = Graph(1); Graph.plot_function( sin )
 
-	Graph = Graph( 6 , [ (-4,4), (-2,1), (-1,1) , (1,1), (2,2), (4,5), (5,33) ], "Relation between x and y") 
-	Graph.plot_points_with_line( [ (-4,6), (-3,-6), (-1,11) , (1,14), (2,22), (4,25), (5,13) ], fill = "red" );
-	Graph.plot_points_with_line( [ (-4,4), (-2,1), (-1,1) , (1,1), (2,2), (4,5), (5,33) ], fill = "blue" );
-	
-	mainloop() # runs window indefinitely
+#       Graph = Graph( 6 , [ (-4,4), (-2,1), (-1,1) , (1,1), (2,2), (4,5), (5,33) ], "Relation between x and y") 
+#       Graph.plot_points_with_line( [ (-4,6), (-3,-6), (-1,11) , (1,14), (2,22), (4,25), (5,13) ], fill = "red" );
+#       Graph.plot_points_with_line( [ (-4,4), (-2,1), (-1,1) , (1,1), (2,2), (4,5), (5,33) ], fill = "blue" );
+        
+#       mainloop() # runs window indefinitely
+
+        coord1 = coord(-5,3)
+        print graph._get_translated_point(coord1)
