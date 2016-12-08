@@ -10,11 +10,11 @@
     urlcolor=blue
 }
 \usepackage[round]{natbib}
-\title{SE 3XA3: Test Report\\Title of Project}
-\author{Team \#, Team Name
-		\\ Student 1 name and macid
-		\\ Student 2 name and macid
-		\\ Student 3 name and macid
+\title{SE 3XA3: Test Report\\xPycharts}
+\author{Team 4, xPy
+		\\ Hatim Rehman (rehmah3)
+		\\ Louis Bursey (burseylj)
+		\\ Sarthak Desai (desaisa3)
 }
 \date{\today}
 \input{../Comments}
@@ -29,14 +29,14 @@
 \begin{tabularx}{\textwidth}{p{3cm}p{2cm}X}
 \toprule {\bf Date} & {\bf Version} & {\bf Notes}\\
 \midrule
-Date 1 & 1.0 & Notes\\
-Date 2 & 1.1 & Notes\\
+Dec. 7, 2016 &  1.0 & Revision 1 \\
 \bottomrule
 \end{tabularx}
 \end{table}
+
 \newpage
 \pagenumbering{arabic}
-This document ...
+
 
 \section{Functional Requirements Evaluation}
 
@@ -189,7 +189,7 @@ Description:  This test was used to check of the usability of the library in thr
 Test: 8.1 - Pass\\\\
 Result: The goal of being able to create all graphs with only the assistance of the user guide in 20 minutes was achieved by majority of the testers. 83\% of the testers completed the task within the given time frame surpassing the requirement of 80\%.\\\\
 Description: This test was to access whether the error messages produced by the library were sufficient in helping the testers identify the error. \\\\
-Test: 8.2 - Fail\\\\
+Test: 8.2 - Fail\\\\ 	\label{sec:8.2}
 Result: The goal of having at least 80\% of users understand the error messages was not achieved as only 75\% of the testers were clearly able to understand the errors and correct them. This means a revision of the error messages must be done and the messages need to be made more clear for user understanding.
 
 		
@@ -199,27 +199,38 @@ Description: This test for performance uses a Sine Function that plots 12000 poi
 Test: 9.1 - Pass\\\\
 Result: The test returned results that were that suggested that the graphs were created quickly and within the time frame. The test’s original expectation suggested that each graph should be produced in no more than 5 seconds however it only took approximately 1.7 seconds for the graph to be plotted.
 
+\subsection{Robustness}
+Robustness tests are tested alongside the comparison to existing library tests. Specifically, sections \hyperref[sec:11.1]{11.1}, \hyperref[sec:11.2]{11.2}, \hyperref[sec:11.4]{11.4}. These tests existed to see how jCharts, the original library would deal with erroneous data, which made sense to do. 
+
 \subsection{Operational and Environmental}
 
 Description: The purpose of this test was to ensure that the library is functional on different operating systems given that they have Python 2.7 installed onto the system. On each of the operating systems a test program (that works on the original platform) run on Python.\\\\
 Test: 10.1 - Pass\\\\
 Result: All operating systems were able to handle the task and in each case graphs were produced without any errors or issues.
 
-	
+		
 \section{Comparison to Existing Implementation}	
 
-Description: This test was compare how the XPYCharts and jCharts libraries deal with unexpected inputs. It was expected that the XPYCharts would not be able to deal with this input and an error will result. jCharts library was expected to catch this exception and output a message.\\\\
-Test: 11.1 - Pass\\\\
-Result: The test shows that the XPYCharts library cannot deal with such inputs and so changes must be made to the how it deals with unexpected inputs. When jCharts was provided with the same input it was able to catch the exception and gave back a message.\\\\
+\underline{Test: 11.1}\\\\ \label{sec:11.1}
+Description: This test was compare how the XPYCharts and jCharts libraries deal with infinite range inputs. It was expected that the XPYCharts would not be able to deal with this input and an error will result. jCharts library was expected to catch this exception and output a message.\\\\
+
+Result: PASS. The test shows that the XPYCharts library cannot deal with such inputs and so changes must be made to the how it deals with unexpected inputs. When jCharts was provided with the same input it was able to catch the exception and gave back a message.\\\\
+
+
+\underline{Test: 11.2}\\\\ \label{sec:11.2}
 Description:  Goal was to compare the results of entering an empty list of data into the library and compare whether XPYCharts deals with this input in a similar manner to the jCharts library.\\\\
-Test: 11.2 - Pass\\\\
-Result: Both graphing libraries produced an empty graph when given as input an empty list of data. This means that XPYCharts faithfully recreates this aspect of the jCharts library.\\\\
+
+Result: PASS. Both graphing libraries produced an empty graph when given as input an empty list of data. This means that XPYCharts faithfully recreates this aspect of the jCharts library.\\\\
+
+\underline{Test: 11.3}\\\\
 Description: This test was to compare how the two libraries deal with a long list of repeated inputs. It is expected that a good library would be able to ignore such repetitions and not take a long time by just graphing one of the inputs. In this case it is expected that jCharts would be able to deal with such a situation and would simply ignore the repetitions and not take a long time to make the graph. On the other hand it is expected that XPYCharts will take a considerably long time according to the current implementation. \\\\
-Test: 11.3 - Pass\\\\
-Result: jCharts was able to quickly graph the input without being stalled out due to the long list of repeated inputs. XPYCharts took considerably longer to graph the same set of inputs. This was the expected output, however it means that changes must be made to the XPYCharts library to deal with such a situation.\\\\
+
+Result: PASS. jCharts was able to quickly graph the input without being stalled out due to the long list of repeated inputs. XPYCharts took considerably longer to graph the same set of inputs. This was the expected output, however it means that changes must be made to the XPYCharts library to deal with such a situation.\\\\
+
+\underline{Test: 11.4}\\\\\label{sec:11.4}
 Description: This test is to compare how the two libraries deal with erroneous inputs where some of the values are (x,y,z) coordinates and not just (x,y). Recall the scope of XPYCharts only covers the XY plane. It was expected that in this case XPYCharts would simply avoid the z value and graph the tuple as a XY tuple. jCharts is expected to catch this exception return a message.\\\\
-Test: 11.4- Pass\\\\
-Result: XPYCharts graphs the tuple as a XY tuple as expected. However this is not ideal as an error message should be produced letting the user know that a (x,y,z) tuple cannot be expected. jCharts gives an error message as expected.\\
+
+Result: PASS. XPYCharts graphs the tuple as a XY tuple as expected. However this is not ideal as an error message should be produced letting the user know that a (x,y,z) tuple cannot be expected. jCharts gives an error message as expected.\\
 
 \section{Unit Testing}\label{sec:unittest}
 
@@ -335,11 +346,13 @@ As seen in the Area of Testing \hyperref[sec:3.1]{3.1} and \hyperref[sec:3.2]{3.
 After manual code evaluation, it was realized by the developers that this was because an instantiated graph defaults to drawing the axes under the assumption of the data given to it. Because the test case was instantiating the Graph object with NoneType data, the graph would default to drawing the axes with a scale of 1 (therefore, the max values of magnitude 6, for the 6 markings). When calling the plot\_...() methods, it would draw on a canvas already painted in the initializer. 
 
 To fix this, a few extra lines were added to the plot\_...() methods where they would call the init() method to reinitialize the graph canvas and paint it with the appropriate axes. 
-\textbf{The two test cases passed once these changes were complete.}  
+\textbf{The two test cases passed once these changes were complete.}  \\
+
+Additionally, according to the results of test case \hyperref[sec:8.2]{8.2} changes were made to the input parser to output better error messages so that the users can understand what they did wrong while inputting the data.
 \section{Automated Testing}
 Because of the timeframe of the project, the extent of the automated testing was \hyperref[sec:unittest]{unit testing}, and testing of source code (seen in the test case below) using the online tool \href{https://www.pylint.org}{Pylint}.
 
-Additionally, according to the results of test case 8.2 changes were made to the input parser to output better error messages so that the users can understand what they did wrong while inputting the data.
+
 
 \subsubsection{Area of Testing 5}		
 	\paragraph{Testing of source code.}
