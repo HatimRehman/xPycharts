@@ -316,7 +316,7 @@ Note: see \hyperref[sec:3.1.1]{3.1.1}.
 		
 \subsubsection{Look and feel}
 \begin{enumerate}
-\item{\textbf{Test ID \#1\\}}
+\item{\textbf{Test ID \#7.1\\}}
 Type: Structural, Dynamic, Manual
 					
 Initial State:  Program is ready to produce one of each graph with random data.
@@ -331,7 +331,7 @@ How test will be performed: Each user in the test group will be presented with a
 
 \subsubsection{Usability}
 \begin{enumerate}
-\item{\textbf{Test ID \#2,3,4,5\\}}
+\item{\textbf{Test ID \#8.1\\}}
 Type: Structural, Dynamic, Manual
 					
 Initial State:  Library is available on computer, IDLE is open, a dataset is downloaded on computer. User group has some knowledge of Python.
@@ -342,7 +342,7 @@ Output/Result: 80\% of users are able to produce each graph without assistance. 
 					
 How test will be performed: The test group will be given a computer with IDLE open, and a directory on their desktop containing the documentation for this project and sample datasets. They will be asked to produce one of each graph available in this library and will not be given any assistance by the testers. They will be timed. When error messages are created, the user when surveyed will report 80\% of the time that they could understand what the error was.
 		
-\item{\textbf{Test ID \#5.1\\}}
+\item{\textbf{Test ID \#8.2\\}}
 Type: Structural, Dynamic, Manual
 					
 Initial State:    Library is available on computer, IDLE is open, a dataset and a series of programs that incorrectly implement the library are downloaded on computer. User group has been acquainted with the library.
@@ -357,51 +357,27 @@ How test will be performed: Users will be asked to run programs that incorrectly
  
  \subsubsection{Performance}
 \begin{enumerate}
-\item{\textbf{Test ID \#6,9,10 \\}}
+\item{\textbf{Test ID \#9.1 \\}}
 Type: Structural, Dynamic, Automatic
 					
-Initial State:    Library is available on computer, minimal other programs are open
+Initial State:    Library is available on computer, minimal other programs are open, Graph(6) instantiated
 					
-Input/Condition: Script is executed with random datasets, averaging 500 points in a set
+Input/Condition: a Sine function which is produced by plotting 12000 points (Math.sin).
 					
-Output/Result: Results written to text file. Graphs never take more than 20 seconds to produce, and never stall out the program
+Output/Result: Graphs never take more than 5 seconds to produce, and never stall out the program.
 					
-How test will be performed: A script will repeatedly make a random data set, and time how long it takes to make each graph based on that data set. It will time the generation of the graphs and record this in a text file. After executing many times it will confirm that no graph took more than 20 seconds to produce, and that it did not stall out during execution.
+How test will be performed: A Sine function will be inputted that is plotted by producing 12000 individual points on the graphs. The time required to produce the graph will be recorded using the standard library time.
+
 
  \end{enumerate} 
- 
-  \subsubsection{Performance}
-\begin{enumerate}
-\item{\textbf{Test ID \#6,9,10 \\}}
-Type: Structural, Dynamic, Automatic
-					
-Initial State:    Library is available on computer, minimal other programs are open. Automatic testing script is on computer.
-					
-Input/Condition: Script is executed with random datasets, averaging 500 points in a set
-					
-Output/Result: Results written to text file. Graphs never take more than 20 seconds to produce, and never stall out the program
-					
-How test will be performed: A script will repeatedly make a random data set, and time how long it takes to make each graph based on that data set. It will time the generation of the graphs and record this in a text file. After executing many times it will confirm that no graph took more than 20 seconds to produce, and that it did not stall out during execution.
 
- \end{enumerate} 
  
   \subsubsection{Operational and Environment}
 \begin{enumerate}
-\item{\textbf{Test ID \#11,12,13,15 \\}}
+\item{\textbf{Test ID \#10.1 \\}}
 Type: Structural, Dynamic, Manual
 					
 Initial State:    Test uses Mac, Windows, Linux computers. Python is installed on computer, program that generates each graph with random dataset is on USB stick with the library (stored as zip file)
-					
-Input/Condition: Program is executed on computers.
-					
-Output/Result: All graphs are produced without error.
-					
-How test will be performed: A USB key with a test program will be inserted into computers running Windows 10, Mac OS 10.9+, and the latest Ubuntu LTS. The program will run successfully.
-
-\item{\textbf{Test ID \#11 \\}}
-Type: Structural, Dynamic, Manual
-					
-Initial State:    Library is available on Mac, Windows, Linux computer. Python is installed on computer, program that generates each graph with random dataset is on USB stick
 					
 Input/Condition: Program is executed on computers.
 					
@@ -422,7 +398,7 @@ Once again, it is important to note that because of limited resources, not every
 \subsubsection{Area of Testing 1}		
 	\paragraph{Negative and Positive infinities as (x, y).}
 		\begin{enumerate}
-			\item{\textbf{Test ID \#1.1\\}}
+			\item{\textbf{Test ID \#11.1\\}}
 			\textbf{Type:} Functional, Dynamic, Manual\\
 			\textbf{Initial State:} Instantiate Graph(6) object with 6 markings on each quadrant. Instantiate axisChart object (jCharts).\\	
 			\textbf{Input:} The list [( NEGATIVE\_INFINITY, NEGATIVE\_INFINITY),  (POSITIVE\_INFINITY, POSITIVE\_INFINITY) ]\\
@@ -438,7 +414,7 @@ Once again, it is important to note that because of limited resources, not every
 \subsubsection{Area of Testing 2}		
 	\paragraph{None object as input.}
 		\begin{enumerate}
-			\item{\textbf{Test ID \#2.1\\}}
+			\item{\textbf{Test ID \#11.2\\}}
 			\textbf{Type:} Functional, Dynamic, Manual\\
 			\textbf{Initial State:} Instantiate Graph(6) object with 6 markings on each quadrant. Instantiate axisChart object (jCharts).\\	
 			\textbf{Input:} The list [ ]\\
@@ -456,10 +432,10 @@ Some (x, y) repeated n times where n is a very large number.
 This area of testing covers the program's speed and efficiency (i.e a non functional requirement).
 An efficient library would remove duplicates from the input and would complete this task in ~O(k) time, where k is the time it takes to remove or ignore the duplicates from the input. In contrast, a non efficient system would take ~O(n) time.		
 		\begin{enumerate}
-			\item{\textbf{Test ID \#3.1\\}}
+			\item{\textbf{Test ID \#11.3\\}}
 			\textbf{Type:} Functional, Dynamic, Manual\\
 			\textbf{Initial State:} Instantiate Graph(6) object with 6 markings on each quadrant. Instantiate axisChart object (jCharts).\\	
-			\textbf{Input:} The list [ (1, 1), ? , (1, 1) ] with n spaces in between. \\
+			\textbf{Input:} The list [ (1, 1), ... , (1, 1) ] with n spaces in between. \\
 			\textbf{Output:}   xPycharts would take a considerably long time. jCharts returns caught exception. \\
 			\textbf{How test will be performed:}
 				\begin{itemize}[label={--}]
@@ -471,7 +447,7 @@ An efficient library would remove duplicates from the input and would complete t
 \subsubsection{Area of Testing 4}
 	\paragraph{Some (x, y, z) coordinates in input.}
 		\begin{enumerate}
-			\item{\textbf{Test ID \#4.1\\}}
+			\item{\textbf{Test ID \#11.4\\}}
 			\textbf{Type:} Functional, Dynamic, Manual\\
 			\textbf{Initial State:} Instantiate Graph(6) object with 6 markings on each quadrant. Instantiate axisChart object (jCharts).\\	
 			\textbf{Input:} The list [ (1, 1, 1), (2, 2), (3, 3) ] \\

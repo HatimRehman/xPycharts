@@ -176,14 +176,50 @@ This document ...
 	
 
 \section{Nonfunctional Requirements Evaluation}
+\subsection{Look and Feel}
+
+Description: These tests were conducted to ensure that the output graphs that are produced by the library are visually appealing to the user. This was a consideration as the library may be used to create graphs that may be used in presentations, reports and other academic or research environments. It is important that the graphs look professional and appealing.\\\\
+Test: 7.1 - Pass\\\\
+Results: 75\% of the testers said that the graphs produced by the library were visually appealing in the user survey that was conducted. This satisfied the requirement to have at least 70\% of users who find the graphs visually appealing. Since, the requirement was satisfied no changes were required to the implementation
+
+
 \subsection{Usability}
+
+Description:  This test was used to check of the usability of the library in through a timed task provided to the testers. The goal was to have testers create all the graphs independent of any assistance from the developers except a user guide document. \\\\
+Test: 8.1 - Pass\\\\
+Result: The goal of being able to create all graphs with only the assistance of the user guide in 20 minutes was achieved by majority of the testers. 83\% of the testers completed the task within the given time frame surpassing the requirement of 80\%.\\\\
+Description: This test was to access whether the error messages produced by the library were sufficient in helping the testers identify the error. \\\\
+Test: 8.2 - Fail\\\\
+Result: The goal of having at least 80\% of users understand the error messages was not achieved as only 75\% of the testers were clearly able to understand the errors and correct them. This means a revision of the error messages must be done and the messages need to be made more clear for user understanding.
+
 		
 \subsection{Performance}
-\subsection{etc.}
+
+Description: This test for performance uses a Sine Function that plots 12000 points to produce a Sine function graph. The standard time library was used to time how long it takes to produce the graph. The aim was to have the graph produced in under 5 seconds\\\\
+Test: 9.1 - Pass\\\\
+Result: The test returned results that were that suggested that the graphs were created quickly and within the time frame. The test’s original expectation suggested that each graph should be produced in no more than 5 seconds however it only took approximately 1.7 seconds for the graph to be plotted.
+
+\subsection{Operational and Environmental}
+
+Description: The purpose of this test was to ensure that the library is functional on different operating systems given that they have Python 2.7 installed onto the system. On each of the operating systems a test program (that works on the original platform) run on Python.\\\\
+Test: 10.1 - Pass\\\\
+Result: All operating systems were able to handle the task and in each case graphs were produced without any errors or issues.
+
 	
 \section{Comparison to Existing Implementation}	
-This section will not be appropriate for every project.
 
+Description: This test was compare how the XPYCharts and jCharts libraries deal with unexpected inputs. It was expected that the XPYCharts would not be able to deal with this input and an error will result. jCharts library was expected to catch this exception and output a message.\\\\
+Test: 11.1 - Pass\\\\
+Result: The test shows that the XPYCharts library cannot deal with such inputs and so changes must be made to the how it deals with unexpected inputs. When jCharts was provided with the same input it was able to catch the exception and gave back a message.\\\\
+Description:  Goal was to compare the results of entering an empty list of data into the library and compare whether XPYCharts deals with this input in a similar manner to the jCharts library.\\\\
+Test: 11.2 - Pass\\\\
+Result: Both graphing libraries produced an empty graph when given as input an empty list of data. This means that XPYCharts faithfully recreates this aspect of the jCharts library.\\\\
+Description: This test was to compare how the two libraries deal with a long list of repeated inputs. It is expected that a good library would be able to ignore such repetitions and not take a long time by just graphing one of the inputs. In this case it is expected that jCharts would be able to deal with such a situation and would simply ignore the repetitions and not take a long time to make the graph. On the other hand it is expected that XPYCharts will take a considerably long time according to the current implementation. \\\\
+Test: 11.3 - Pass\\\\
+Result: jCharts was able to quickly graph the input without being stalled out due to the long list of repeated inputs. XPYCharts took considerably longer to graph the same set of inputs. This was the expected output, however it means that changes must be made to the XPYCharts library to deal with such a situation.\\\\
+Description: This test is to compare how the two libraries deal with erroneous inputs where some of the values are (x,y,z) coordinates and not just (x,y). Recall the scope of XPYCharts only covers the XY plane. It was expected that in this case XPYCharts would simply avoid the z value and graph the tuple as a XY tuple. jCharts is expected to catch this exception return a message.\\\\
+Test: 11.4- Pass\\\\
+Result: XPYCharts graphs the tuple as a XY tuple as expected. However this is not ideal as an error message should be produced letting the user know that a (x,y,z) tuple cannot be expected. jCharts gives an error message as expected.\\
 
 \section{Unit Testing}\label{sec:unittest}
 
