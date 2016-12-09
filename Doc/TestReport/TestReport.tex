@@ -368,6 +368,20 @@ Result: PASS. XPYCharts graphs the tuple as a XY tuple as expected. However this
 			\textbf{Input:} Non tuple-list variable\\
 			\textbf{Assertion:} Throws Inconsistent Data error\\
 			
+			\begin{table}[h!]
+			  \centering
+			  \caption{Test cases}
+			  \begin{tabular}{|c|c|}
+			  	\toprule
+			   	 Input\\
+			   	 \midrule
+			   	 $\sin$ \\
+			   	 $``cat''$ \\
+			   	 $100$ \\
+			   	 \bottomrule
+			  \end{tabular}
+			\end{table}
+			
 			\textbf{Result:} PASS
 			
 			\item{\textbf{Test ID \#5.2\\}}
@@ -433,7 +447,7 @@ Result: PASS. XPYCharts graphs the tuple as a XY tuple as expected. However this
 			   	 \midrule
 			   	 $[ (-4,4), (-2.5,1), (-1,1) , (1,1), (2,2.2), (4,5), (5,33.5)], round\_to = 2 $  & $[6, 34.0]$\\
 			   	 $[ (-4,6), (-3,-6), (-1,11) , (1.2,14), (2,22), (4,25), (5,13) ]], round\_to = 7 $ & $[7, 28]$ \\
-			   	 $[ (-4,4), (-4, 5.5) ]$ & $[5, 6.0]], round\_to = 1$\\
+			   	 $[ (-4,4), (-4, 5.5) ], round\_to = 1$ & $[5, 6.0]$\\
 			   	 \bottomrule
 			  \end{tabular}
 			\end{table}
