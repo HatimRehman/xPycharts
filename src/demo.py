@@ -1,8 +1,8 @@
 from xPycharts import *
 
 
-dataset =  [ (float("-inf"), float("-inf")),  (float("inf"), float("inf")) ]\
-#dataset2 = [ (1,-1), (2,-1), (3,-2), (4,-3), (5,-5) ]
+# dataset =  [ (float("-inf"), float("-inf")),  (float("inf"), float("inf")) ]\
+dataset = [ (1,-1), (2,-1), (3,-2), (4,-3), (5,-5) ]
 
 def func(x):
 	return sin(x) * x
